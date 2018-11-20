@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout12"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextBankCode12"
+        style="@style/login"
+        android:hint="@string/bank_code"
+        android:inputType="textCapCharacters"
+        android:maxLength="30"
+        app:fontFamily="@font/opensans_regular" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextNumber12"
+        style="@style/login"
+        android:hint="@string/account_number"
+        android:inputType="textCapCharacters"
+        android:maxLength="50"
+        app:fontFamily="@font/opensans_regular" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/chooseAccountType12"
+        style="@style/choose_languages"
+        android:hint="@string/add_bank_bank_account_type" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAccountType12"
+        style="@style/filter_drop"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerAccountType12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_7"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginTop="@dimen/mdp_10"
+            tools:listitem="@layout/row_choose_language" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextTaxId12"
+        style="@style/login"
+        android:hint="@string/tax_id_bank_account_holder_tax_id"
+        android:inputType="textCapCharacters"
+        android:maxLength="50"
+        app:fontFamily="@font/opensans_regular" />
+
+
+</LinearLayout>

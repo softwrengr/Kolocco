@@ -1,0 +1,851 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/toolbar_main_title"
+                android:includeFontPadding="false"
+                android:text="@string/toolbar_experience_details_new"
+                app:fontFamily="@font/aquatico_regular" />
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_110"
+                    android:layout_below="@+id/imageSlider"
+                    android:layout_centerHorizontal="true">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/drawable_half_round">
+
+                        <ImageView
+                            android:id="@+id/imageViewProfile"
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="@dimen/dp_75"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/user_round" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ratingView"
+                        android:layout_width="@dimen/dp_38"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginBottom="@dimen/mdp_2"
+                        android:background="@drawable/drawable_white_circul"
+                        android:clickable="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:src="@drawable/home_star" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewRatingValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:includeFontPadding="false"
+                                android:paddingTop="@dimen/dp_2"
+                                android:text="0"
+                                android:textColor="@color/yellow"
+                                android:textSize="@dimen/sp_8"
+                                app:fontFamily="@font/opensans_regular_title" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <!--This used to set name-->
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewLocalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:padding="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/exp_call" />
+
+                <ImageView
+                    android:id="@+id/imageViewChat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/exp_chat" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonShareYourExperience"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/share_you_experience"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/dashboard_main_space">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/visitor_dashboard_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/appointment_summery_experience"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_4"
+                android:orientation="vertical">
+
+                <include layout="@layout/exp_local_row_layout" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/dashboard_main_space">
+
+                <View style="@style/bottom_line" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/dashboard_main_space">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSportEquipments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:includeFontPadding="false"
+                            android:text="@string/sport_equipments_n"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewCheckEquipmets"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="@dimen/dp_95"
+                                android:layout_marginBottom="@dimen/dp_3"
+                                android:layout_marginTop="@dimen/dp_3"
+                                android:background="@drawable/drawable_select_date_select_time"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/dp_6"
+                                android:paddingTop="@dimen/dp_6"
+                                android:paddingHorizontal="@dimen/dp_6"
+                                android:text="@string/check_equipments"
+                                android:textColor="@color/buttonColor"
+                                android:textSize="@dimen/sp_10"
+                                app:fontFamily="@font/opensans_regular" />
+                        </LinearLayout>
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewSportEquipmentsValue"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Skis, Goggles, Sticks"
+                            android:visibility="gone"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/viewEquipment"
+                    style="@style/bottom_line" />
+
+
+                <LinearLayout style="@style/dashboard_main_space"></LinearLayout>
+                <!--Nice to meet you section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_payment_status"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewPaymentStatus"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/yellow"
+                            app:fontFamily="@font/opensans_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_appointment_status"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewStatus"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/yellow"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+                <!--Date and Time section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_date"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewDate"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/textViewTime"
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_time"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewTime"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+                <!--Date and Time section end -->
+
+                <!--Duration and participants section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_duration"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewDuration"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_participants"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewParticipants"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+                <!--Duration and participants section end -->
+
+
+                <!--Meeting Spot section start -->
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/order_detail_meeting_spot"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewMeetingLocation"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="@dimen/dp_180"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center">
+
+
+                        <ImageView
+                            android:id="@+id/imageViewStaticMap"
+                            android:layout_width="@dimen/dp_105"
+                            android:layout_height="@dimen/dp_55"
+                            android:layout_gravity="end|center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/place" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="@dimen/dp_55"
+                            android:background="@drawable/drawable_white_gradint" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <View style="@style/bottom_line" />
+
+                <!--Meeting Spot section end -->
+
+            </LinearLayout>
+
+            <!--Review section start -->
+
+            <LinearLayout
+                android:id="@+id/lineraLayoutPanding"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/dashboard_main_space">
+                <!--Receipt section start -->
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView"
+                    style="@style/visitor_dashboard_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/activity_duration_summery_new"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerAddParticipants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    tools:listitem="@layout/row_add_participants_with_price" />
+
+
+                <!--Receipt total activity section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/appointment_summery_total_activity"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecTotalAct"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$0"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Receipt total activity section section end -->
+
+
+                <!--Refund section start -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutRefAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/received_objection_total_refundable_amount_new"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/sp_11"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRefundValue"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="$0"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/sp_11"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Refund section start -->
+
+
+                <!--Receipt Fees for booking section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/textViewBookingFeesText"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/booking_fee"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecFeesFBookingPrice"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="$00"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Receipt Fees for booking section end -->
+
+                <!--Referral section section end -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutReferralAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/referral_amount"
+                            android:textColor="@color/red"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewReferralValue"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="$0"
+                            android:textColor="@color/red"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Referral booking section end -->
+
+                <!--Receipt total booking section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/appointment_summery_total_booking"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecTotalBooking"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="$0"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Receipt total booking section section end -->
+
+                <View style="@style/bottom_line" />
+
+                <!--Receipt section end -->
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNewAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/total_amount"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewNewAmountValue"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="$0"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewNewAmount"
+                    style="@style/bottom_line"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

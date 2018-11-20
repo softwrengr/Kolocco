@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/drawable_ract"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:ems="25"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp_5"
+        android:text="@string/uploading_images"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:fontFamily="@font/opensans_regular_title" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/row_progress_multipale" />
+
+</LinearLayout>

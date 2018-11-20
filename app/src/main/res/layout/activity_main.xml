@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/placeHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/mdp_7"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_rect"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSearch"
+            style="@style/bottom_linear">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radioButtonSearch"
+                style="@style/home_bottom_tool"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_bottom_exp_local"
+                android:text="@string/home_tab_explore" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMap"
+            style="@style/bottom_linear">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radioButtonMap"
+                style="@style/home_bottom_tool"
+                android:drawableTop="@drawable/selector_bottom_search"
+                android:text="@string/home_tab_search" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutKooloco"
+            style="@style/bottom_linear">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radioButtonKooloco"
+                style="@style/home_bottom_tool"
+                android:drawableTop="@drawable/selector_bottom_kooloco"
+                android:text="@string/home_tab_adventures" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRecentChat"
+            style="@style/bottom_linear">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radioButtonRecentChat"
+                    style="@style/home_bottom_tool"
+                    android:drawableTop="@drawable/selector_bottom_recent_chat"
+                    android:text="@string/home_tab_chat" />
+
+                <ImageView
+                    android:id="@+id/imageViewCount"
+                    android:layout_width="@dimen/dp_10"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_gravity="center|top"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:background="@drawable/drawable_button"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutProfile"
+            style="@style/bottom_linear">
+
+            <android.support.v7.widget.AppCompatRadioButton
+                android:id="@+id/radioButtonProfile"
+                style="@style/home_bottom_tool"
+                android:drawableTop="@drawable/selector_bottom_profile"
+                android:text="@string/home_tab_account" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

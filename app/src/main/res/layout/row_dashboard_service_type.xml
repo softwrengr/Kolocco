@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/dp_90"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_3"
+    android:paddingEnd="@dimen/dp_5"
+    android:paddingTop="@dimen/dp_3">
+    <ImageView
+        android:id="@+id/imageViewService"
+        android:layout_width="@dimen/dp_35"
+        android:layout_height="@dimen/dp_35"
+        android:layout_gravity="start"
+        android:scaleType="centerCrop"
+        android:src="@drawable/session_new" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:layout_gravity="start"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewServicePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:clickable="false"
+            android:includeFontPadding="false"
+            android:text="$50"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_10"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewAs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:clickable="false"
+            app:fontFamily="@font/opensans_regular_title"
+            android:includeFontPadding="false"
+            android:text="/hr"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_8" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextViewServiceType"
+        android:layout_gravity="start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        app:fontFamily="@font/opensans_regular"
+        android:paddingTop="@dimen/dp_2"
+        android:text="Session"
+        android:textColor="@color/greyText"
+        android:textSize="@dimen/sp_9" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextViewServiceDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:clickable="false"
+        app:fontFamily="@font/opensans_regular"
+        android:paddingTop="@dimen/dp_2"
+        android:text=""
+        android:textColor="@color/greyText"
+        android:textSize="@dimen/sp_8"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imageViewSelection"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_1"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@drawable/drawable_dashboard_select_service_line" />
+
+
+</LinearLayout>

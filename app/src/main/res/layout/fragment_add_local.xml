@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/add_local_n"
+                    app:fontFamily="@font/aquatico_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        style="@style/dashboard_main_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/customTextSearchLocation"
+            style="@style/choose_languages"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:cursorVisible="true"
+            android:drawableRight="@drawable/create_organization_search_icon"
+            android:editable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="@string/search_locals"
+            android:imeOptions="actionDone"
+            android:textColorHint="@color/greyText"
+            app:fontFamily="@font/opensans_regular" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewNoLocalFound"
+                        style="@style/appointment_booked_new"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp_9"
+                        android:layout_marginStart="@dimen/dp_9"
+                        android:gravity="start"
+                        android:text="@string/no_local_found_new"
+                        android:textAlignment="center"
+                        android:textColor="@color/greyText"
+                        android:visibility="gone"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerLocalList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_5"
+                        tools:listitem="@layout/row_org_assign_local" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60" />
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutStep2"
+                style="@style/dashboard_main_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <LinearLayout style="@style/button_next">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/buttonContinue"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/button_next" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

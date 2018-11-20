@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/toolbar_main_title"
+                android:includeFontPadding="false"
+                android:text="@string/toolbar_organization_dashboard"
+                app:fontFamily="@font/aquatico_regular" />
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarViewAvailability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    app:mcv_arrowColor="@color/buttonColor"
+                    app:mcv_dateTextAppearance="@style/calnderHaderMyappointmentDay"
+                    app:mcv_headerTextAppearance="@style/calnderHaderMyappointment"
+                    app:mcv_selectionColor="@color/buttonColor"
+                    app:mcv_showOtherDates="out_of_range"
+                    app:mcv_tileSize="@dimen/sp_30"
+                    app:mcv_weekDayLabels="@array/weekDayTitle"
+                    app:mcv_weekDayTextAppearance="@style/calnderHaderMyappointmentWeek" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_60"
+                            android:layout_height="@dimen/dp_60"
+                            android:src="@drawable/drawable_ovel_blue" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center_horizontal"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dp_5"
+                            android:paddingEnd="@dimen/dp_12"
+                            android:paddingStart="@dimen/dp_12"
+                            android:paddingTop="@dimen/dp_5">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/textViewDays"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:includeFontPadding="false"
+                                android:text="20"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_15"
+                                app:fontFamily="@font/opensans_regular_title" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/textViewMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Jun"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_11"
+                                app:fontFamily="@font/opensans_regular" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View style="@style/bottom_line" />
+
+            <LinearLayout
+                style="@style/dashboard_main_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_orgnization_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/visitors"
+                        android:textColor="@color/buttonColor"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewLocalValue"
+                        style="@style/visitor_orgnization_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:includeFontPadding="false"
+                        android:text=""
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/sp_10"
+                        app:fontFamily="@font/opensans_regular_title" />
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewNoData"
+                    style="@style/visitor_orgnization_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/no_order_found"
+                    android:textAlignment="center"
+                    android:textColor="@color/greyText"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerOrganization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/row_local_organization_dashboard" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

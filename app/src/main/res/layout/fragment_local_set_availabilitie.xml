@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_set_availabilities"
+                    app:fontFamily="@font/aquatico_regular" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/dashboard_main_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_3"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:ems="4"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_days"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities"
+                    android:layout_marginStart="@dimen/mdp_18"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_start_time"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_avaibility_to"
+                    android:includeFontPadding="false"
+                    android:text="@string/to"
+                    android:visibility="gone"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_end_time"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_mon"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime1"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime1"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose1"
+                        style="@style/set_avaibility_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_tue"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime2"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime2"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose2"
+                        style="@style/set_avaibility_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_wed"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime3"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime3"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose3"
+                        style="@style/set_avaibility_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_thu"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime4"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime4"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose4"
+                        style="@style/set_avaibility_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_fri"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime5"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime5"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose5"
+                        style="@style/set_avaibility_close" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_sat"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime6"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime6"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose6"
+                        style="@style/set_avaibility_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_availabilities_days"
+                    android:layout_gravity="center"
+                    android:ems="5"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_availabilities_sun"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewStartTime7"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/set_avaibility_to"
+                        android:includeFontPadding="false"
+                        android:text="@string/to"
+                        app:fontFamily="@font/opensans_regular" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewEndTime7"
+                        style="@style/set_avaibility_time"
+                        android:hint="@string/select_here_time"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        android:id="@+id/imageViewClose7"
+                        style="@style/set_avaibility_close" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonSave"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/button_save" />
+
+            </LinearLayout>
+
+            <View style="@style/bottom_line" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAcceptButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_3"
+                android:visibility="visible">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextDisableSport"
+                    style="@style/home_icon_title"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/set_availability_disable_sport"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/disable_sports"
+                    android:textColor="@color/orange"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextSetSpecialAvaibility"
+                    style="@style/home_icon_title"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/set_availability_calender"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_special_availabilities"
+                    android:textColor="@color/buttonColor"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25" />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

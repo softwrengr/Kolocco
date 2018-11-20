@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_12"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/what_are_you_nup_to"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_15"
+        app:fontFamily="@font/aquatico_regular" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+        tools:listitem="@layout/onboarding_row" />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_margin="@dimen/dp_10"
+        app:piv_radius="@dimen/dp_4"
+        app:piv_selectedColor="@color/buttonColor"
+        app:piv_unselectedColor="@color/greyLine" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_25"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonNo"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_button_red_shadow"
+            android:text="@string/button_no" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonYes"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/button_yes" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewSkipIntro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:lines="1"
+        android:padding="@dimen/dp_5"
+        android:text="@string/skip_intro"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_13"
+        app:fontFamily="@font/opensans_regular" />
+
+</LinearLayout>

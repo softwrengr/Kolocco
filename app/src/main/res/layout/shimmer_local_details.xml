@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <!--This RelativeLayout  used to set image slide and profile image-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:layout_collapseMode="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/imageSlider1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_185"
+                        android:background="@color/shimmer_background_color"
+                        app:layout_collapseMode="parallax" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_110"
+                    android:layout_below="@+id/imageSlider1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mdp_50"
+                    android:gravity="center">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="@dimen/dp_75"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/drawable_shimor_round" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="@dimen/dp_38"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginBottom="@dimen/mdp_2"
+                        android:background="@drawable/drawable_white_circul"
+                        android:clickable="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_13"
+                                android:layout_height="@dimen/dp_13"
+                                android:layout_gravity="center"
+                                android:background="@color/shimmer_background_color"
+                                android:clickable="false" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/dp_2"
+                                android:background="@color/shimmer_background_color"
+                                android:clickable="false"
+                                android:includeFontPadding="false"
+                                android:text="0.0"
+                                android:textColor="@color/shimmer_background_color"
+                                android:textSize="@dimen/sp_8"
+                                app:fontFamily="@font/opensans_regular_title" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_anchorGravity="bottom">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:layout_marginVertical="@dimen/dp_3"
+                    android:background="@color/shimmer_background_color"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/shimmer_background_color"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular_title"
+                    tools:text="Doris Cadiz" />
+                <!--This used to set name-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--This LinearLayout used to set space between start end-->
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+            <!--Nice to meet you section start -->
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/dashboard_nice_to_meet_you"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+
+                style="@style/visitor_dashboard_details_text_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shimmer_background_color"
+                android:textColor="@color/shimmer_background_color"
+                app:fontFamily="@font/opensans_regular" />
+
+            <View style="@style/bottom_line" />
+
+            <!--Nice to meet you section end -->
+
+
+            <!--Language and distance section start -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/shimmer_background_color"
+                        android:includeFontPadding="false"
+                        android:text="@string/dashboard_languages"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+
+                        style="@style/visitor_dashboard_details_text_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/shimmer_background_color"
+                        android:text=""
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/shimmer_background_color"
+                        android:includeFontPadding="false"
+                        android:text="@string/dashboard_distance"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/shimmer_background_color"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular"
+                        tools:text="8 km" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/bottom_line" />
+
+            <!--Language and distance section end -->
+
+            <!--Location section start -->
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_105"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_gravity="end|center"
+                        android:background="@color/shimmer_background_color"
+                        android:scaleType="centerCrop"
+                        android:textColor="@color/shimmer_background_color" />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_115"
+                        android:background="@color/shimmer_background_color"
+                        android:includeFontPadding="false"
+                        android:text="@string/dashboard_location"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_100"
+                        android:background="@color/shimmer_background_color"
+                        android:includeFontPadding="false"
+                        android:text="@string/dashboard_location"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <View style="@style/bottom_line" />
+
+            <!--Location section end -->
+        </LinearLayout>
+        <!--Certificates section start -->
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/dashboard_main_space">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/visitor_dashboard_details_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/shimmer_background_color"
+                    android:includeFontPadding="false"
+                    android:text="@string/title_certifications"
+
+                    android:textColor="@color/shimmer_background_color"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_5" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/shimmer_background_color"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Hossegor, France"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/shimmer_background_color"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Hossegor, France"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:background="@color/shimmer_background_color"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Hossegor, France"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/shimmer_background_color"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="Hossegor, France"
+                        android:textColor="@color/shimmer_background_color"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/dashboard_main_space">
+
+                <View style="@style/bottom_line" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--Certificates section end -->
+        <LinearLayout style="@style/dashboard_main_space">
+            <!--Sport type section start -->
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/shimmer_background_color"
+                android:includeFontPadding="false"
+                android:text="@string/experiences_new"
+                android:textColor="@color/shimmer_background_color"
+                app:fontFamily="@font/opensans_regular_title" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

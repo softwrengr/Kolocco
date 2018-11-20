@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/toolbar_main_title"
+                android:includeFontPadding="false"
+                android:text="@string/organization_details"
+                app:fontFamily="@font/aquatico_regular" />
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/imageViewRightMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/dot"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imageViewShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_8"
+                android:visibility="invisible"
+                android:src="@drawable/share_b" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewImageSlide"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_165"
+                        tools:listitem="@layout/row_dashboard_slider_image" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blackFilter" />
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginBottom="@dimen/dp_7"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:visibility="invisible"
+                        app:ci_animator="@anim/indicator"
+                        app:ci_height="@dimen/dp_5"
+                        app:ci_width="@dimen/dp_5" />
+
+                    <com.rd.PageIndicatorView
+                        android:id="@+id/pageIndicatorView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginBottom="@dimen/dp_7"
+                        android:layout_marginEnd="@dimen/dp_13"
+                        app:piv_count="4"
+                        app:piv_radius="@dimen/dp_3"
+                        app:piv_selectedColor="@color/white"
+                        app:piv_unselectedColor="@color/white" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_110"
+                    android:layout_below="@+id/imageSlider"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/mdp_56">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/drawable_half_round">
+
+                        <ImageView
+                            android:id="@+id/imageViewProfile"
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="@dimen/dp_75"
+                            android:layout_margin="@dimen/dp_4"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/user_round" />
+
+                    </FrameLayout>
+
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/dashboard_main_space"
+                android:layout_marginTop="@dimen/mdp_7">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:includeFontPadding="false"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewIntroduction"
+                    style="@style/visitor_orgnization_details_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <View style="@style/bottom_line" />
+
+                <!--Meeting Spot section start -->
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|start"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/dashboard_location"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewLocation"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="@dimen/dp_180"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center">
+
+                        <ImageView
+                            android:id="@+id/imageViewStaticMap"
+                            android:layout_width="@dimen/dp_105"
+                            android:layout_height="@dimen/dp_55"
+                            android:layout_gravity="end|center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/place" />
+
+                        <ImageView
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="@dimen/dp_55"
+                            android:background="@drawable/drawable_white_gradint" />
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+                <View style="@style/bottom_line" />
+
+                <!--Meeting Spot section end -->
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/visitor_orgnization_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/experiences_new"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewActivityTypes"
+                    style="@style/visitor_orgnization_details_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <View style="@style/bottom_line" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPaymentRule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_orgnization_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/organization_set_payment_rule_for_you"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewPaymentRuleText"
+                        style="@style/visitor_orgnization_details_text_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <View style="@style/bottom_line" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/visitor_orgnization_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/sport_title_s"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <com.nex3z.flowlayout.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/flowLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/mdp_4"
+                    android:layout_marginStart="@dimen/mdp_4">
+
+                </com.nex3z.flowlayout.FlowLayout>
+
+
+                <View style="@style/bottom_line" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/visitor_orgnization_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/affiliated_locals_by_sports"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <com.nex3z.flowlayout.FlowLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/flowLayoutLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/mdp_4"
+                    android:layout_marginStart="@dimen/mdp_4">
+
+                </com.nex3z.flowlayout.FlowLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewNoLocalFound"
+                    style="@style/appointment_booked_new"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/dp_9"
+                    android:layout_marginStart="@dimen/dp_9"
+                    android:gravity="center"
+                    android:text="@string/no_local_found_new"
+                    android:textAlignment="center"
+                    android:textColor="@color/greyText"
+                    android:visibility="gone"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewLocal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/row_visitor_org_local" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutExitOrg"
+                style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonCancel"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_button_red_shadow"
+                    android:text="@string/button_exit_group" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDeleteOrg"
+                style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonDeleteOrg"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_button_red_shadow"
+                    android:text="@string/button_delete_org" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearPrivew"
+                style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonConfirm"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/drawable_button"
+                    android:text="@string/button_confirm" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

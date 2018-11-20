@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_month_wise_earnings"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            android:background="@drawable/drawable_white_rect"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewPriceTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dp_3"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular_title"
+                    tools:text="6000" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|center"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:paddingEnd="@dimen/dp_3"
+                    android:paddingStart="@dimen/dp_3"
+                    android:text="@string/total_earnings"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_11"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerMonth"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_5"
+            tools:listitem="@layout/row_local_earning_all_month" />
+
+    </LinearLayout>
+</LinearLayout>

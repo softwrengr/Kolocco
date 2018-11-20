@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <FrameLayout
+                            android:id="@+id/imageSlider"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v4.view.ViewPager
+                                android:id="@+id/viewPager"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerViewImageSlide"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_185"
+                                app:layout_collapseMode="parallax"
+                                tools:listitem="@layout/row_dashboard_slider_image" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_185"
+                                android:background="@drawable/top_layer" />
+
+                            <me.relex.circleindicator.CircleIndicator
+                                android:id="@+id/indicator"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="end|bottom"
+                                android:layout_marginBottom="@dimen/dp_7"
+                                android:layout_marginEnd="@dimen/dp_15"
+                                android:visibility="invisible"
+                                app:ci_animator="@anim/indicator"
+                                app:ci_height="@dimen/dp_5"
+                                app:ci_width="@dimen/dp_5" />
+
+                            <com.rd.PageIndicatorView
+                                android:id="@+id/pageIndicatorView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="end|bottom"
+                                android:layout_marginBottom="@dimen/dp_7"
+                                android:layout_marginEnd="@dimen/dp_15"
+                                app:piv_radius="@dimen/dp_3"
+                                app:piv_dynamicCount="true"
+                                app:piv_count="0"
+                                app:piv_selectedColor="@color/white"
+                                app:piv_unselectedColor="@color/whitetrans_indictor" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="@dimen/dp_100"
+                            android:layout_height="@dimen/dp_110"
+                            android:layout_below="@+id/imageSlider"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/mdp_50"
+                            android:gravity="center">
+
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/drawable_half_round">
+
+                                <ImageView
+                                    android:id="@+id/imageViewProfile"
+                                    android:layout_width="@dimen/dp_75"
+                                    android:layout_height="@dimen/dp_75"
+                                    android:layout_margin="@dimen/dp_2"
+                                    android:src="@drawable/user_round" />
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:id="@+id/ratingView"
+                                android:layout_width="@dimen/dp_38"
+                                android:layout_height="@dimen/dp_38"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginBottom="@dimen/mdp_2"
+                                android:background="@drawable/drawable_white_circul"
+                                android:clickable="false">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:clickable="false"
+                                        android:src="@drawable/home_star" />
+
+                                    <android.support.v7.widget.AppCompatTextView
+                                        android:id="@+id/customTextViewRatingValue"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:clickable="false"
+                                        android:includeFontPadding="false"
+                                        android:paddingTop="@dimen/dp_2"
+                                        android:text="0.0"
+                                        android:textColor="@color/yellow"
+                                        android:textSize="@dimen/sp_8"
+                                        app:fontFamily="@font/opensans_regular_title" />
+                                </LinearLayout>
+
+                            </FrameLayout>
+
+                        </FrameLayout>
+
+                        <!--  <ImageView
+                              android:id="@+id/imageViewBack"
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:layout_alignParentStart="true"
+                              android:layout_centerVertical="false"
+                              android:layout_marginStart="@dimen/dp_5"
+                              android:layout_marginTop="@dimen/dp_10"
+                              android:padding="@dimen/dp_7"
+                              android:src="@drawable/dashboard_details_arrow" />-->
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_anchorGravity="bottom">
+
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewLocalName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/dp_3"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_12"
+                            app:fontFamily="@font/opensans_regular_title"
+                            tools:text="Doris Cadiz" />
+                        <!--This used to set name-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:minHeight="?attr/actionBarSize"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/toolbarTitle"
+                                style="@style/toolbar_main_title"
+                                android:includeFontPadding="false"
+                                android:text="@string/become_a_local"
+                                android:visibility="gone"
+                                app:fontFamily="@font/aquatico_regular" />
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/imageViewBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp_7"
+                            android:src="@drawable/back_arrow" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_70"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp_7"
+                            android:gravity="end"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatCheckBox
+                                android:id="@+id/checkboxFav"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:button="@drawable/selector_home_fav"
+                                android:buttonTint="@color/black"
+                                android:checked="false"
+                                android:paddingBottom="@dimen/dp_7"
+                                android:paddingEnd="@dimen/dp_7"
+                                android:paddingTop="@dimen/dp_6"
+                                android:visibility="invisible" />
+
+                            <com.like.LikeButton
+                                android:id="@+id/star_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="end"
+                                android:layout_marginEnd="@dimen/mdp_7"
+                                android:visibility="gone"
+                                app:icon_size="@dimen/dp_13"
+                                app:icon_type="heart"
+                                app:like_drawable="@drawable/home_favorite_sel"
+                                app:unlike_drawable="@drawable/home_favorite_un_sel" />
+
+                            <ImageView
+                                android:id="@+id/imageViewShare"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/dp_8"
+                                android:src="@drawable/share_b" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </android.support.v7.widget.Toolbar>
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--This RelativeLayout  used to set image slide and profile image-->
+
+                <!--This LinearLayout used to set space between start end-->
+
+                <LinearLayout style="@style/dashboard_main_space">
+
+                    <!--Nice to meet you section start -->
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/dashboard_nice_to_meet_you"
+                        android:visibility="gone"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewNTMY"
+                        style="@style/visitor_dashboard_details_text_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fontFamily="@font/opensans_regular"
+                        tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non lacinia velit. Suspendisse potenti. Donec at arcu venenatis, commodo tortor. " />
+
+                    <View style="@style/bottom_line" />
+
+                    <!--Nice to meet you section end -->
+
+
+                    <!--Language and distance section start -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/visitor_dashboard_details_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/dashboard_languages"
+                                app:fontFamily="@font/opensans_regular_title" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewLanguage"
+                                style="@style/visitor_dashboard_details_text_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dp_5"
+                                android:text=""
+                                app:fontFamily="@font/opensans_regular" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/visitor_dashboard_details_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/dashboard_distance"
+                                app:fontFamily="@font/opensans_regular_title" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewDistance"
+                                style="@style/visitor_dashboard_details_text_value"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:fontFamily="@font/opensans_regular"
+                                tools:text="8 km" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View style="@style/bottom_line" />
+
+                    <!--Language and distance section end -->
+
+                    <!--Location section start -->
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:id="@+id/frameLayoutMap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|center">
+
+
+                            <ImageView
+                                android:id="@+id/imageViewStaticMap"
+                                android:layout_width="@dimen/dp_105"
+                                android:layout_height="@dimen/dp_55"
+                                android:layout_gravity="end|center"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:layout_width="@dimen/dp_75"
+                                android:layout_height="@dimen/dp_55"
+                                android:background="@drawable/drawable_white_gradint" />
+
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|start"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/visitor_dashboard_details_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/dashboard_location"
+                                app:fontFamily="@font/opensans_regular_title" />
+
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewLocation"
+                                style="@style/visitor_dashboard_details_text_value"
+                                android:layout_width="@dimen/dp_180"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                app:fontFamily="@font/opensans_regular" />
+
+                        </LinearLayout>
+
+
+                    </FrameLayout>
+
+                    <View style="@style/bottom_line" />
+
+                    <!--Location section end -->
+                </LinearLayout>
+                <!--Certificates section start -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutCertification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/dashboard_main_space">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/title_certifications"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_5" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/textViewCertificates"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:drawableStart="@drawable/dash_award"
+                            android:gravity="center|start"
+                            android:textAlignment="viewStart"
+                            app:fontFamily="@font/opensans_regular"
+                            tools:text="Expert qualified in" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/dp_5"
+                            android:drawableStart="@drawable/desh_checked"
+                            android:gravity="center"
+                            android:text="@string/verified_and_approved"
+                            android:textAlignment="center"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/dashboard_main_space">
+
+                        <View style="@style/bottom_line" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Certificates section end -->
+                <LinearLayout style="@style/dashboard_main_space">
+                    <!--Sport type section start -->
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/experiences_new"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewExp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:orientation="horizontal"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    tools:listitem="@layout/home_new_row_exp" />
+
+                <LinearLayout style="@style/dashboard_main_space">
+
+                    <View style="@style/bottom_line" />
+
+                    <!--Sport type section end -->
+
+                </LinearLayout>
+
+
+                <!--Achievements section start -->
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutAchievements"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout style="@style/dashboard_main_space">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/dashboard_achievements"
+                            app:fontFamily="@font/opensans_regular_title"
+
+                            />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_5" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerAchievements"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:orientation="horizontal"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        tools:listitem="@layout/row_dashboard_certificate_archivment_image" />
+
+                    <LinearLayout style="@style/dashboard_main_space">
+
+                        <View style="@style/bottom_line" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Achievements section end -->
+
+
+                <LinearLayout
+                    style="@style/dashboard_main_space"
+                    android:layout_height="wrap_content">
+
+                    <!--Associated_with section start -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutOrg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/dashboard_associated_with"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+
+                        <LinearLayout
+                            android:id="@+id/linearLayoutOrganization"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:background="@drawable/drawable_dashboard_rectangle_small_corner_with_border"
+                            android:orientation="horizontal"
+                            android:paddingEnd="@dimen/dp_5"
+                            android:paddingStart="@dimen/dp_5">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/customTextViewOrgName"
+                                    style="@style/visitor_dashboard_details_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:includeFontPadding="false"
+                                    app:fontFamily="@font/opensans_regular_title"
+                                    tools:text="Biking in the BORO" />
+
+
+                                <android.support.v7.widget.AppCompatTextView
+                                    android:id="@+id/customTextViewOrgDescWithLocation"
+                                    style="@style/visitor_dashboard_details_text_value"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textColor="@color/greyText"
+                                    app:fontFamily="@font/opensans_regular" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_7" />
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/imageViewOrgImage"
+                                android:layout_width="@dimen/dp_50"
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_gravity="center"
+                                android:src="@drawable/user_round" />
+
+                        </LinearLayout>
+
+                        <!--     <View style="@style/bottom_line" />-->
+
+                        <!--Associated_with section end -->
+
+
+                        <!--Cancellation_policy section start -->
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_5" />
+
+                        <View style="@style/bottom_line" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/dashboard_main_space">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/mdp_3"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/dashboard_reviews"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRatingCount"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:layout_marginStart="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            app:fontFamily="@font/opensans_regular_title"
+                            tools:text="(36)" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|end">
+
+                            <android.support.v7.widget.AppCompatRatingBar
+                                android:id="@+id/ratingBar"
+                                style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:progress="0"
+                                android:rating="0"
+                                android:theme="@style/RatingBar" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerReviews"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_5"
+                        android:layout_marginStart="@dimen/dp_5"
+                        android:clickable="false"
+                        tools:listitem="@layout/row_dashboard_review" />
+
+                    <include layout="@layout/layout_no_review_found" />
+
+                </FrameLayout>
+
+                <LinearLayout style="@style/dashboard_main_space">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewReadAll"
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        app:fontFamily="@font/opensans_regular_title"
+                        tools:text="Read all 36 reviews" />
+
+                    <View
+                        android:id="@+id/viewHide"
+                        style="@style/bottom_line" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_35"
+        android:layout_marginStart="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonBookNow"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/book_me_new" />
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:layout_gravity="center">
+
+        <include layout="@layout/shimmer_local_details" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,75 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.google.gms:google-services:4.0.1'
+        classpath "io.realm:realm-gradle-plugin:4.3.1"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+ext {
+    SupportLibraryVersion = '27.1.1'
+}
+
+ext.dep = [
+
+        //Support Design
+        SupportAppCompat   : "com.android.support:appcompat-v7:$SupportLibraryVersion",
+        SupportDesign      : "com.android.support:design:$SupportLibraryVersion",
+
+        //ButterKnife
+        ButterKnife        : "com.jakewharton:butterknife:8.7.0",
+        ButterKnifeCompiler: "com.jakewharton:butterknife-compiler:8.7.0",
+
+        //RxJava
+        RxJava             : "io.reactivex.rxjava2:rxjava:2.0.6",
+
+        //OkHttp
+        OkHttp             : "com.squareup.okhttp3:okhttp:3.4.1",
+        OkHttpLogging      : "com.squareup.okhttp3:logging-interceptor:3.4.1",
+
+        //Retrofit
+        RetroFit           : "com.squareup.retrofit2:retrofit:2.2.0",
+        JsonConverter      : "com.squareup.retrofit2:converter-gson:2.2.0",
+        RxJavaAdapter      : "com.squareup.retrofit2:adapter-rxjava2:2.2.0",
+
+        //Dagger
+        Dagger             : "com.google.dagger:dagger:2.11",
+        DaggerCompiler     : "com.google.dagger:dagger-compiler:2.11",
+        JavaxAnotation     : "javax.annotation:jsr250-api:1.0",
+
+        //Picasso
+        Picasso            : "com.squareup.picasso:picasso:2.5.2",
+
+        //GSON
+        GSON               : "com.google.code.gson:gson:2.8.0",
+
+        //Common Utils
+        APACHE_COMMON_LANG : 'org.apache.commons:commons-lang3:3.5',
+        APACHE_COMMON_IO   : 'org.apache.commons:commons-io:2.4'
+]

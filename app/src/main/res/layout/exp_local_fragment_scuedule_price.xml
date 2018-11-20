@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/schedule_amp_price"
+                    app:fontFamily="@font/aquatico_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    style="@style/dashboard_main_space"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/exp_title_textview"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/schedule_price_set_the_maximum_number_of_participants"
+                        android:visibility="gone"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/dp_10" />
+
+                    <LinearLayout
+                        style="@style/exp_home_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/price_rul_text"
+                            android:layout_marginStart="@dimen/dp_6"
+                            android:includeFontPadding="false"
+                            android:text="@string/maximum_participants"
+                            android:textColor="@color/black"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:paddingEnd="@dimen/dp_5"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/editTextValuePart"
+                            style="@style/price_rul_edittext"
+                            android:layout_marginEnd="@dimen/dp_6"
+                            android:hint="0"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:textColorHint="@color/greyText" />
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/exp_title_textview"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/schedule_price_add_the_weekly_availabilities"
+                        app:fontFamily="@font/opensans_regular" />
+
+
+                    <FrameLayout
+                        style="@style/exp_home_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/exp_local_row_schedule_price_day" />
+
+                    </FrameLayout>
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewTitle"
+                        style="@style/exp_title_textview"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:text="@string/days_availabilities_and_price"
+                        android:visibility="gone"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerSlots"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                        tools:listitem="@layout/exp_local_row_schedule_price" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutAddPicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_round_corner_white"
+                        android:clickable="true"
+                        android:foreground="@drawable/ripple_animation"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imageViewAddSport"
+                            style="@style/images_add_bottom" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+
+                        <LinearLayout style="@style/button_next">
+
+                            <android.support.v7.widget.AppCompatButton
+                                android:id="@+id/buttonNext"
+                                style="@style/button"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:text="@string/button_next" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginBottom="@dimen/dp_10"
+                            android:layout_marginHorizontal="@dimen/dp_4"
+                            android:background="@color/greyLine" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text_value_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/we_get_between_3_and_7_commission_on_each_ntransaction_in_order_to_cover_our_platform_s_costs_nand_better_connect_the_adventures"
+                            android:textAlignment="center"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_15" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_80"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

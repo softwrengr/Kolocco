@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            style="@style/dashboard_main_space"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/rating_text_title"
+                android:includeFontPadding="false"
+                android:text="@string/rate_review_how_was_your_experience"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_13"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <ImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_60"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/user_round" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewLocalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:padding="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_13"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView1"
+                    style="@style/rating_text_title"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarOnTime"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/mdp_12"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:isIndicator="false"
+                    android:rating="5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:theme="@style/RatingBar" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView2"
+                    style="@style/rating_text_title"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text=""
+
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarFriendly"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/mdp_12"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:isIndicator="false"
+                    android:rating="5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:theme="@style/RatingBar" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView3"
+                    style="@style/rating_text_title"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarRespectful"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/mdp_12"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:isIndicator="false"
+                    android:rating="5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:theme="@style/RatingBar" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView4"
+                    style="@style/rating_text_title"
+                    android:layout_weight="1"
+                    android:includeFontPadding="false"
+                    android:text=""
+
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBarEnjoyable"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/mdp_12"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:isIndicator="false"
+                    android:rating="5"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    android:theme="@style/RatingBar" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/greyLine" />
+
+
+            <com.kooloco.util.FirstCapEditText
+                android:id="@+id/customTexteditTextWriteNow"
+                style="@style/visitor_dashboard_details_text_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_15"
+                android:background="@drawable/drawable_round_border_grey"
+                android:gravity="top"
+                android:hint="@string/rating_write_your_review"
+                android:lines="5"
+                android:padding="@dimen/dp_12"
+                android:textColor="@color/blackTextColor"
+                android:textColorHint="@color/hintTextColor"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5" />
+
+            <LinearLayout style="@style/button_next">
+
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonSubmit"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_submit" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

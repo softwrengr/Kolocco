@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout11"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextAccountNumber11"
+        style="@style/login"
+        android:hint="@string/account_number"
+        android:inputType="textCapCharacters"
+        android:maxLength="50"
+        app:fontFamily="@font/opensans_regular" />
+
+</LinearLayout>

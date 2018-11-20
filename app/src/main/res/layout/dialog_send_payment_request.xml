@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:layout_width="@dimen/dp_300"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_dialog_round"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/dp_30"
+        android:src="@drawable/accept_ord_popup_payment_request" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:ems="25"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp_3"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:text="@string/your_payment_request_is_sent_to_the_visitor_will_come_back_to_you_shortly"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:fontFamily="@font/opensans_regular_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@color/greyLine" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_width="@dimen/dp_170"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_35"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonThanks"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/thanks" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/imageViewServic"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_80"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_3"
+            android:scaleType="centerCrop"
+            android:src="@drawable/temp_3"
+            app:siShape="@drawable/shape_rounded_rectangle"
+            app:siSquare="false" />
+
+        <ImageView
+            android:id="@+id/imageViewPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/play_btn"
+            android:visibility="gone" />
+
+
+        <FrameLayout
+            android:id="@+id/frameLayoutFilt"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_80"
+            android:layout_gravity="center"
+            android:background="@drawable/img_layer"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/delete_icon" />
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

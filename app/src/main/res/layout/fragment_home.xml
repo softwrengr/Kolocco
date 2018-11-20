@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_home_c" />
+
+    <ViewFlipper
+        android:id="@+id/viewFliper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_7"
+                android:layout_marginStart="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_3"
+                android:background="@drawable/drawable_round_corner_small_white">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewFilter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:drawableStart="@drawable/home_explore_icon_sel"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/sport_date_time_location_activity_language"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="visible"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewNoData"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|top"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:includeFontPadding="false"
+                        android:text="@string/no_local_found"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="@dimen/sp_12"
+                        android:visibility="gone"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerViewHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:visibility="visible"
+                        tools:listitem="@layout/row_home" />
+
+                    <include layout="@layout/layout_no_local" />
+
+                </FrameLayout>
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fragmentMap"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:visibility="visible" />
+
+    </ViewFlipper>
+
+</LinearLayout>

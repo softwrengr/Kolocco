@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_2"
+    android:layout_marginTop="@dimen/dp_2"
+    android:background="@drawable/drawable_round_corner_small_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_8"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewPaymentRules"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:text="Payment Rule 1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <ImageView
+                android:id="@+id/imageViewEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/org_edit" />
+
+            <ImageView
+                android:id="@+id/imageViewDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/org_delete" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_3" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewPaymentRulesValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:text="@string/payment_entirely_transferred_to_the_organization"
+            android:textColor="@color/greyText"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutExpand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@color/greyLine" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewNoLocalFound"
+                style="@style/appointment_booked_new"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/no_local_assign"
+                android:textColor="@color/greyText"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewLocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/row_org_set_payment_local" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewExpand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:padding="@dimen/dp_7"
+            android:src="@drawable/selector_select_activity"
+            app:tint="@color/greyText" />
+
+    </LinearLayout>
+
+</LinearLayout>

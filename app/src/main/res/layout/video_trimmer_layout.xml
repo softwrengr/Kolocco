@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/videoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <com.kooloco.scalablevideoview.ScalableVideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+
+            android:layout_height="match_parent"
+            app:scalableType="centerInside" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/buttonPlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/video_edit_play" />
+    </FrameLayout>
+
+
+    <com.kooloco.trimmer.VideoSeekBarView
+        android:id="@+id/videoSeekBarView"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/videoLayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <com.kooloco.trimmer.VideoTimelineView
+        android:id="@+id/videoTimeLineView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/videoSeekBarView" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewVideoDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoTimeLineView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/button_new_cancel" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonDone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/button_new_done" />
+
+    </LinearLayout>
+
+</RelativeLayout>

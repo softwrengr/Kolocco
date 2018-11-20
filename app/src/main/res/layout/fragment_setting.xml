@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_settings"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                style="@style/dashboard_main_space"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_edit_text"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextNotification"
+                        style="@style/become_a_local"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="@string/settings_notification"
+                        android:padding="@dimen/dp_12"
+                        app:fontFamily="@font/opensans_regular"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/checkBoxNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:button="@drawable/selector_settings"
+                            android:checked="true"
+                            android:clickable="false" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutNotificationByEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_edit_text"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextNotificationByEmail"
+                        style="@style/become_a_local"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="0dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:cursorVisible="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:text="@string/settings_notification_by_email"
+                        android:padding="@dimen/dp_12"
+                        app:fontFamily="@font/opensans_regular"
+                        tools:ignore="HardcodedText" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="@dimen/dp_10"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/checkBoxNotificationByEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:button="@drawable/selector_settings"
+                            android:checked="true"
+                            android:clickable="false" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewChangePassword"
+                    style="@style/choose_languages"
+                    android:drawableRight="@drawable/select_date_arrow"
+                    android:text="@string/settings_change_password"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewAddPaymentDetails"
+                    style="@style/choose_languages"
+                    android:drawableRight="@drawable/select_date_arrow"
+                    android:text="@string/settings_add_payment_details"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewAddBankDetails"
+                    style="@style/choose_languages"
+                    android:drawableRight="@drawable/select_date_arrow"
+                    android:text="@string/settings_add_bank_details"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewTermsAndCondition"
+                    style="@style/choose_languages"
+                    android:drawableRight="@drawable/select_date_arrow"
+                    android:text="@string/settings_terms_and_conditions"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <ImageView
+            android:id="@+id/imageViewLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_7"
+            android:src="@drawable/settings_logout" />
+    </LinearLayout>
+</LinearLayout>

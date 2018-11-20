@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_round_corner_small_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_6">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewProfile"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:layout_gravity="start"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_5"
+                android:src="@drawable/user_round" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:text="12"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:text="June"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_9"
+                app:fontFamily="@font/opensans_regular_title" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_2"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewName"
+                style="@style/visitor_dashboard_review_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:text="Kathleen Anderson"
+                android:textColor="@color/buttonColor"
+                app:fontFamily="@font/opensans_regular_title" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewServiceType"
+                style="@style/order_history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Discoveries"
+                android:textColor="@color/greyText"
+                app:fontFamily="@font/opensans_regular" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewServiceName"
+                style="@style/order_history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Skiing : Freeride, Freestyle"
+                android:textColor="@color/greyText"
+                app:fontFamily="@font/opensans_regular" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewAddress"
+                style="@style/order_history_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hood Avenue San Diego, CA 9210"
+                android:textColor="@color/greyText"
+                app:fontFamily="@font/opensans_regular" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkboxFav"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/mdp_3"
+                    android:layout_marginTop="@dimen/mdp_3"
+                    android:button="@drawable/selector_home_fav"
+                    android:checked="true"
+                    android:paddingBottom="@dimen/dp_3"
+                    android:paddingStart="@dimen/dp_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="0dp"
+                    android:includeFontPadding="false"
+                    android:text="S25"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_11"
+                    app:fontFamily="@font/opensans_regular_title" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="@dimen/dp_9"
+                    android:layout_marginEnd="0dp"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/home_distance"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:text="8 km"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_9"
+                    app:fontFamily="@font/opensans_regular" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

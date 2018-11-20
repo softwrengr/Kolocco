@@ -1,0 +1,65 @@
+  private void cropImage(String mCurrentPhotoPath) {
+        if (mCurrentPhotoPath!=null&& !(mCurrentPhotoPath.isEmpty()))
+        {
+            //Log.e("File::",mCurrentPhotoPath);
+            CropImage cropImage=new CropImage();
+            cropImage.setFileName(mCurrentPhotoPath)
+                    .setRequestCode(Common.RequestCode.CROP_IMAGE_ACTIVITY_REQUEST_CODE)
+                    .start(getContext(),this);
+        }
+    }
+
+
+
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        if (requestCode == Common.RequestCode.REQUEST_TAKE_PHOTO && resultCode == Activity.RESULT_OK) {
+
+            if (mCurrentPhotoPath != null) {
+                cropImage(mCurrentPhotoPath);
+            }
+        } else if (requestCode == Common.RequestCode.RESULT_LOAD_IMAGE && resultCode == Activity.RESULT_OK) {
+
+            if (data != null) {
+                Uri selectedImage = data.getData();
+                if (selectedImage != null) {
+                    String[] filePathColumn = {MediaStore.Images.Media.DATA};
+                    Cursor cursor = getActivity().getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+                    if (cursor != null) {
+                        cursor.moveToFirst();
+                        int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                        mCurrentPhotoPath = cursor.getString(columnIndex);
+                        cursor.close();
+                        if (mCurrentPhotoPath.contains(".gif")) {
+                            dismiss();
+                            imagePickerResult.onResult("Ooops!");
+                        }
+                        else
+                        cropImage(mCurrentPhotoPath);
+                    }
+
+                }
+            }
+        }else if (requestCode==Common.RequestCode.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode==Activity.RESULT_OK)
+        {
+            if (data!=null)
+            {
+                if (data.getExtras()!=null) {
+                    if (data.getExtras().getString("ImageData")!=null&& !(data.getExtras().getString("ImageData").isEmpty()))
+                    {
+                        if (imagePickerResult!=null)
+                        imagePickerResult.onResult(data.getExtras().getString("ImageData"));
+                        dismiss();
+                    }
+                }
+            }
+        }
+
+    }
+
+Picasso                         : "com.squareup.picasso:picasso:2.5.2",
+Cropper                         : "com.isseiaoki:simplecropview:1.1.6"
+

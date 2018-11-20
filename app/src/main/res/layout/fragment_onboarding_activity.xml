@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top|center"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp_25"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/discover_your_next_sport_adventure_with_kooloco"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_15"
+            android:textAllCaps="true"
+            app:fontFamily="@font/aquatico_regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/mdp_17"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatImageView
+                style="@style/on_board_activity_icon"
+                android:src="@drawable/lesson_new"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatImageView
+                style="@style/on_board_activity_icon"
+                android:src="@drawable/discover_new_boarding" />
+
+            <android.support.v7.widget.AppCompatImageView
+                style="@style/on_board_activity_icon"
+                android:src="@drawable/discovery_new"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@drawable/activity_back" />
+
+        <LinearLayout
+            style="@style/button_next"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/dp_35">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonLetsStart"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/button_let_s_start" />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

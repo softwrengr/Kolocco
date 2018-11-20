@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_2"
+    android:layout_marginTop="@dimen/dp_2"
+    android:background="@drawable/drawable_round_corner_small_white"
+    android:orientation="horizontal">
+
+    <RadioButton
+        android:id="@+id/radioButtonSelectBank"
+        style="@style/raise_obj_radio"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:button="@null"
+        android:clickable="true"
+        android:drawableLeft="@drawable/selector_raise_obj"
+        android:gravity="center|start"
+        android:padding="@dimen/dp_7" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_5">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewBankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dp_3"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular_title"
+            tools:text="Panjab National Bank" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewAccountNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:gravity="start"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dp_3"
+            android:textColor="@color/greyText"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular_title"
+            tools:text="************1100" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/imageViewDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:clickable="false"
+        android:padding="@dimen/dp_9"
+        android:src="@drawable/org_delete" />
+
+</LinearLayout>

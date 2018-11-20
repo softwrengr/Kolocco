@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/dashboard_main_space"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/buttonColor"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_15"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:scaleType="centerInside"
+
+            android:src="@drawable/messages_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/appointment_booked_new"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/uh"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/appointment_booked_new"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/did_the_postman_forget_you"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:fontFamily="@font/opensans_regular" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/appointment_booked_new"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@string/it_seems_that_you_didn_t_connect_with_anyone_yet_book_your_first_experience_and_connect_with_the_local_to_get_next_level"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:fontFamily="@font/opensans_regular" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30" />
+
+        <LinearLayout
+            style="@style/button_next"
+            android:layout_width="@dimen/dp_200"
+            android:layout_gravity="center">
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonOkDone"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_button_white_shadow"
+                android:text="@string/let_s_find_a_local_new"
+                android:textColor="@color/buttonColor" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNoDataSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_15"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:scaleType="centerInside"
+
+            android:src="@drawable/messages_icon" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/appointment_booked_new"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/uh"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                android:layout_marginEnd="@dimen/dp_5"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/appointment_booked_new"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/did_the_postman_forget_you"
+                android:textColor="@color/white"
+                android:visibility="visible"
+                app:fontFamily="@font/opensans_regular" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/appointment_booked_new"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@string/it_seems_that_you_didn_t_connect_with_anyone_yet_book_your_first_experience_and_connect_with_the_local_to_get_next_level_new"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:fontFamily="@font/opensans_regular" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30" />
+
+        <LinearLayout
+            style="@style/button_next"
+            android:layout_width="@dimen/dp_200"
+            android:layout_gravity="center">
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonOkDoneS"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/drawable_button_white_shadow"
+                android:text="@string/button_ok_go_it"
+                android:textColor="@color/buttonColor" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

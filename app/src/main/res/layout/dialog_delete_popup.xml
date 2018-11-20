@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:layout_width="@dimen/dp_300"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_dialog_round"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_20" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:ems="25"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp_3"
+        android:text="@string/are_you_sure_you_want_to_delete"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:fontFamily="@font/opensans_regular_title" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewDeleteMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:ems="25"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp_5"
+        android:text=""
+        android:textColor="@color/greyText"
+        android:textSize="@dimen/sp_12"
+        app:fontFamily="@font/opensans_regular_title" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_5"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonNo"
+            style="@style/button_grey"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/no_thanks" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonYes"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/button_yes" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

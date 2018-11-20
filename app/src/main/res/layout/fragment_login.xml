@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:weightSum="2">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLogo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bg_login_new"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:translationY="-1080dp">
+
+        <ImageView
+            android:id="@+id/imageViewLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:src="@drawable/login_logo" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:translationZ="@dimen/dp_2"
+        android:elevation="@dimen/dp_2"
+        android:translationY="1080dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/loginEditTextEmail"
+                style="@style/login"
+                android:hint="@string/login_enter_email"
+                android:inputType="textEmailAddress"
+                app:fontFamily="@font/opensans_regular" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/loginEditTextPassword"
+                    style="@style/login"
+                    android:hint="@string/login_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textWebPassword"
+                    android:maxLength="40"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewLost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center|end"
+                    android:layout_marginEnd="@dimen/dp_25"
+                    android:text="@string/login_lost"
+                    android:paddingTop="@dimen/dp_7"
+                    android:paddingBottom="@dimen/dp_7"
+                    android:paddingStart="@dimen/dp_7"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/buttonLogin"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/login_arrow" />
+
+                <ImageView
+                    android:id="@+id/buttonGooglePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/login_with_google" />
+
+                <ImageView
+                    android:id="@+id/buttonFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:src="@drawable/login_with_facebook" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewDont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login_don_t_have_an_account"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_11"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:includeFontPadding="false"
+                    android:text="@string/login_dont_sign_up"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_11"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

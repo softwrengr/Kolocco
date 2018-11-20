@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/selector_complate"
+        android:drawablePadding="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_8"
+        android:paddingTop="@dimen/dp_8"
+        android:text="Session"
+        android:textColor="@drawable/selector_select_date_time_text"
+        android:textSize="@dimen/sp_10"
+        app:fontFamily="@font/opensans_regular" />
+
+    <View style="@style/bottom_line_s_m" />
+</LinearLayout>

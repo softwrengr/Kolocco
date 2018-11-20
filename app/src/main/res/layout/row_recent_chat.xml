@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:background="@drawable/drawable_round_corner_small_white_no_elevation"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageViewProfile"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_gravity="start"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/user_round" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:padding="@dimen/dp_3"
+                android:text="Doris Cadiz"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextOrderId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingStart="@dimen/dp_3"
+                android:text="@string/order_id"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_9"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:lines="1"
+                android:paddingBottom="@dimen/dp_2"
+                android:paddingStart="@dimen/dp_3"
+                android:text="Hello, how are you?"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_9"
+                app:fontFamily="@font/opensans_regular" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_4"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewLive"
+                    android:layout_width="@dimen/dp_5"
+                    android:layout_height="@dimen/dp_5"
+                    android:layout_gravity="center"
+                    android:src="@drawable/drawable_recent_chat_green"
+                    android:visibility="visible" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_5"
+                    android:text="Now"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_9"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewChatCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_margin="@dimen/dp_5"
+                android:height="@dimen/dp_18"
+                android:background="@drawable/drawable_button"
+                android:clickable="false"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:lines="1"
+                android:minWidth="@dimen/dp_18"
+                android:paddingEnd="@dimen/dp_5"
+                android:paddingStart="@dimen/dp_5"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_9"
+                android:visibility="invisible"
+                app:fontFamily="@font/opensans_regular" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

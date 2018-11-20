@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/define_percentage"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/dashboard_main_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/receipt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/a_b_d_please_enter_your_percentage_which_would"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_9"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDefPer"
+                style="@style/login"
+                android:hint="@string/a_b_d_define_percentage"
+                android:inputType="number"
+                app:fontFamily="@font/opensans_regular" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/receipt_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:text="@string/and"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/sp_10"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <!--Note section start -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/receipt_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/a_b_d_please_add_bank_details_of"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_9"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+            </LinearLayout>
+            <!--Note section end -->
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextBankName"
+                style="@style/login"
+                android:hint="@string/a_b_d_bank_name"
+                android:inputType="textPersonName"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextAccountHolderName"
+                style="@style/login"
+                android:hint="@string/a_b_d_account_holder_name"
+                android:inputType="textPersonName"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextAccountNumber"
+                style="@style/login"
+                android:hint="@string/a_b_d_account_number"
+                android:inputType="number"
+                android:maxLength="16"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextRoutingNumber"
+                style="@style/login"
+                android:hint="@string/a_b_d_routing_numbers"
+                android:inputType="number"
+                android:maxLength="9"
+                app:fontFamily="@font/opensans_regular" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_15" />
+
+            <LinearLayout style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonSubmit"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_submit" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

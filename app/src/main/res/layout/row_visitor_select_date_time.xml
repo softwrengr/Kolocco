@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDisable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewTimeDisable"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_2"
+            android:background="@drawable/selector_select_date_time_background"
+            android:button="@null"
+            android:checked="true"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:text="16:00 am"
+            android:textAlignment="center"
+            android:textColor="@drawable/selector_select_date_time_text"
+            android:textSize="@dimen/sp_9"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutBooked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewTimeBooked"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_2"
+            android:background="@drawable/drawable_select_time_booked"
+            android:button="@null"
+            android:checked="true"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:text="00:00 am"
+            android:textAlignment="center"
+            android:textColor="@color/greyText"
+            android:textSize="@dimen/sp_9"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewTimeSelected"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_2"
+            android:background="@drawable/drawable_select_time_selected_un_select"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:text="00:00 am"
+            android:textAlignment="center"
+            android:textColor="@color/selector_blue_white"
+            android:textSize="@dimen/sp_9"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSelectedStTEn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewTimeSelectedStTEn"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_2"
+            android:background="@drawable/drawable_select_time_selected_select"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5"
+            android:text="00:00 am"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_9"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5" />
+
+    </LinearLayout>
+
+</LinearLayout>

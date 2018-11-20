@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_110"
+                    android:layout_below="@+id/imageSlider"
+                    android:layout_centerHorizontal="true">
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/drawable_half_round">
+
+                        <ImageView
+                            android:id="@+id/imageViewProfile"
+                            android:layout_width="@dimen/dp_75"
+                            android:layout_height="@dimen/dp_75"
+                            android:layout_margin="@dimen/dp_2"
+                            android:src="@drawable/user_round" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/ratingView"
+                        android:layout_width="@dimen/dp_38"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_gravity="center|bottom"
+                        android:layout_marginBottom="@dimen/mdp_2"
+                        android:background="@drawable/drawable_white_circul"
+                        android:clickable="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:src="@drawable/home_star" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewRatingValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:includeFontPadding="false"
+                                android:paddingTop="@dimen/dp_2"
+                                android:text="0.0"
+                                android:textColor="@color/yellow"
+                                android:textSize="@dimen/sp_8"
+                                app:fontFamily="@font/opensans_regular_title" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <!--This used to set name-->
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewLocalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_25"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:padding="@dimen/dp_3"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <LinearLayout style="@style/dashboard_main_space">
+                <!--Receipt section start -->
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textView"
+                    style="@style/visitor_dashboard_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/activity_duration_summery_new"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerAddParticipants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    tools:listitem="@layout/row_add_participants_with_price" />
+
+
+                <!--Receipt total activity section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/appointment_summery_total_activity"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecTotalAct"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Receipt total activity section section end -->
+
+                <!--Receipt Fees for booking section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/commission_per"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecFeesFBookingPrice"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="00"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Receipt Fees for booking section end -->
+
+
+                <!--Receipt total booking section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/local_earning"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecTotalBooking"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="0"
+                            android:textColor="@color/buttonColor"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Receipt total booking section section end -->
+
+                <View style="@style/bottom_line" />
+
+                <!--Receipt section end -->
+            </LinearLayout>
+
+            <LinearLayout style="@style/dashboard_main_space">
+                <!--Receipt section start -->
+
+
+                <LinearLayout style="@style/button_next">
+
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/buttonOk"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/ok" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

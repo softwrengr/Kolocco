@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewEmail"
+            style="@style/visitor_dashboard_details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/dp_3"
+            android:paddingTop="@dimen/dp_3"
+            android:text=""
+            android:textColor="@color/greyText"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewPrice"
+            style="@style/visitor_dashboard_details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:text="$00"
+            android:textColor="@color/greyText"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular_title" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

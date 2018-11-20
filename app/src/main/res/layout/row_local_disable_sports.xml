@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_round_corner_small_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_7"
+        android:layout_marginTop="@dimen/dp_7"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewServiceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawableEnd="@drawable/accept_ord_detail_edit"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingStart="@dimen/dp_15"
+            android:paddingTop="@dimen/dp_5"
+            android:text="Surfing"
+            android:textColor="@drawable/selector_disable_service"
+            android:textSize="@dimen/sp_10"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_7"
+            android:background="@color/greyLine" />
+
+        <CheckBox
+            android:id="@+id/checkBoxNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:button="@drawable/selector_settings"
+            android:checked="true"
+            android:clickable="false" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:background="@color/greyLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_7"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_7"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewStartTime1"
+                style="@style/set_avaibility_time"
+                android:layout_weight="1"
+                android:hint="@string/start_date"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/greyText"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/set_avaibility_to"
+                android:layout_weight="1"
+                android:includeFontPadding="false"
+                android:text="@string/to"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewEndTime1"
+                style="@style/set_avaibility_time"
+                android:layout_weight="1"
+                android:hint="@string/end_date"
+                android:includeFontPadding="false"
+                android:textColor="@color/black"
+                android:textColorHint="@color/greyText"
+                app:fontFamily="@font/opensans_regular" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

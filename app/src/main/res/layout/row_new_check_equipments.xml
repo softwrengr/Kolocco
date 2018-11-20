@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_15"
+    android:layout_marginStart="@dimen/dp_15"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:drawablePadding="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:text="Session"
+            android:textColor="@drawable/selector_select_date_time_text"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:text="Checked"
+            android:textColor="@drawable/selector_select_date_time_text"
+            android:textSize="@dimen/sp_11"
+            app:fontFamily="@font/opensans_regular" />
+
+        <FrameLayout
+            android:id="@+id/frameLayoutClose"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewCancel"
+                android:layout_width="@dimen/dp_9"
+                android:layout_height="@dimen/dp_9"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_5"
+                android:background="@drawable/close_new"
+                android:padding="@dimen/dp_10"
+                android:scaleType="centerInside"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <View style="@style/bottom_line_s_m" />
+</LinearLayout>

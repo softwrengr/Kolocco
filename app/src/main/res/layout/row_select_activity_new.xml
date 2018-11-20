@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_3"
+    android:layout_marginStart="@dimen/dp_3"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutFest"
+        android:layout_width="@dimen/dp_7"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutRow"
+            android:layout_width="@dimen/dp_110"
+            android:layout_height="@dimen/dp_170"
+            android:background="@drawable/drawable_round_corner_white"
+            android:clickable="true"
+            android:foreground="@drawable/ripple_animation"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageViewService"
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_85"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:clickable="false"
+                android:padding="@dimen/dp_5"
+                android:scaleType="centerCrop"
+                android:src="@drawable/home_skiing" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_7" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:padding="@dimen/dp_3"
+                android:text="Session"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10"
+                app:fontFamily="@font/opensans_regular_title" />
+
+
+            <ImageView
+                android:id="@+id/imageViewExpand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/selector_select_activity"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageViewTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:clickable="false"
+            android:src="@drawable/ic_checked" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutLast"
+        android:layout_width="@dimen/dp_227"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>

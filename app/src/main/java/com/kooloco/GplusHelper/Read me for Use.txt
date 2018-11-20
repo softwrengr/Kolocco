@@ -1,0 +1,47 @@
+1. Project Setup
+    1.1 Generate SHA1.
+        1.1.1 Gradle -> app -> Task -> android -> signingReport.
+    1.2 Create App in google developer using this SHA1 key and Package name.
+    1.3 Get Json config file and put it on app folder of your app.
+    1.4 Put below gradle in gradle file
+        compile 'com.google.code.gson:gson:2.6.2'
+        compile 'com.google.android.gms:play-services-auth:9.0.2'
+2. Application side.
+    2.1 Put GplusHelper package in your app.
+
+    2.2 Create GplusHelper class object as below in onCreate Method.
+             gPlusHelper = new GPlusHelper(MainActivity.this, getApplicationContext());
+
+    2.3 Override onActivityResult app and put below code in this method.
+            gPlusHelper.OnResult(requestCode, resultCode, salonDetail);
+    2.4 Now put below code in your view click event and get whole user detail of user in IGplusTaskComplete calback like below.
+             gPlusHelper.onLogin(RC_SIGN_IN, new IGooglePlusTaskComplete<GoogleSignInAccount>() {
+                                @Override
+                                public void onTaskComplete(boolean success, @Nullable GoogleSignInAccount salonDetail) {
+                                    if (success) {
+                                        Toast.makeText(MainActivity.this, "Welcome " + salonDetail.getDisplayName(), Toast.LENGTH_SHORT).show();
+                                    } else {
+                                        Toast.makeText(MainActivity.this, "Fail to login", Toast.LENGTH_SHORT).show();
+                                    }
+
+                                }
+                            });
+     2.5 also override onPause() and onResume() and put code as below.
+              @Override
+                protected void onPause() {
+                    super.onPause();
+                    gPlusHelper.disconnectClient();
+                }
+
+                @Override
+                protected void onResume() {
+                    super.onResume();
+                    gPlusHelper.connectClient();
+                }
+
+
+
+
+
+
+--------------------------------------------------- Best of Luck -------------------------------------------------------------------------

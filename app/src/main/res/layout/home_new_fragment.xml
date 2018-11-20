@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--This LinearLayout used to set space between start end-->
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_155">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home_new_back" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/dp_7"
+                            android:text="@string/action_sports_adventures"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/sp_15"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/dp_210"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/home_local_and_exp_drawable_toolbar"
+                            android:elevation="@dimen/dp_2"
+                            android:translationZ="@dimen/dp_2">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewFilter"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableEnd="@drawable/month_wise_earning_arrow"
+                                android:drawableTint="@color/black"
+                                android:padding="@dimen/dp_8"
+                                android:text="@string/where_when_where"
+                                android:textColor="@color/greyText"
+                                android:textSize="@dimen/sp_13"
+                                app:fontFamily="@font/opensans_regular" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_7" />
+
+                    <!--
+                    Recommended exp section start
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutRecommededExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/recommended_experiences"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerRecommendedExp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_exp" />
+                    </LinearLayout>
+                    <!--
+                    Recommended exp section end
+                    -->
+
+                    <!--
+                    Sports section start
+                    -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/text_sports"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerSport"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_sport" />
+                    </LinearLayout>
+                    <!--
+                    Sports section end
+                    -->
+
+                    <!--
+                 Local section start
+                 -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutNearLocal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/near_local_exp"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerNearLocalExp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_local" />
+                    </LinearLayout>
+                    <!--
+                 Local section end
+                 -->
+                    <!--
+                    Trendy section start
+                    -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutTrendyExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/trendy_exp"
+                            android:textSize="@dimen/sp_13"
+
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerTrendyExp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_exp" />
+                    </LinearLayout>
+                    <!--
+                    Trendy section end
+                    -->
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutSpotLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/top_sport_destination"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerTopSportLocation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_location" />
+                    </LinearLayout>
+                    <!--
+                     New experiences section start
+                    -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutNewExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/new_exp"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerNewExp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_exp" />
+                    </LinearLayout>
+                    <!--
+                     New experiences section end
+                    -->
+
+
+                    <!--
+                    Staff experiences section start
+                   -->
+                    <LinearLayout
+                        android:id="@+id/linearLayoutStaffExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/dp_13"
+                            android:layout_marginVertical="@dimen/dp_3"
+                            android:includeFontPadding="false"
+                            android:text="@string/staff_picks"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerStaffPicks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                            tools:listitem="@layout/home_new_row_exp" />
+                    </LinearLayout>
+                    <!--
+                     Staff experiences section end
+                    -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_15" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

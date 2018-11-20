@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_meeting_location"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/imageChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:visibility="invisible"
+                android:src="@drawable/chat" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:gravity="center"
+                android:padding="@dimen/dp_3"
+                android:text="@string/click_on_the_map_to_set_the_matting_spot"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_8"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_7"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/customEditTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:drawablePadding="@dimen/dp_7"
+                android:drawableRight="@drawable/meeting_location_search"
+                android:editable="false"
+                android:ellipsize="end"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:includeFontPadding="false"
+                android:paddingBottom="@dimen/dp_15"
+                android:paddingTop="@dimen/dp_13"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_10"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCheckBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_3">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customEditTextSetName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:text="@string/meeting_location_let"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkboxChoose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:button="@null"
+                    android:checked="false"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/selector_duration"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/greyText">
+
+            <FrameLayout
+                android:id="@+id/map"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageViewPin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/map_current_location_icon" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/button_next">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/buttonSetLocation"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/button_set_location" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_15" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

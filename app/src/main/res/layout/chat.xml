@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text=""
+                    app:fontFamily="@font/aquatico_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarstaus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/online_chat"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_8"
+                    android:visibility="visible"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutViewLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewViewLocalDashboard"
+            style="@style/appointment_booked"
+            android:layout_width="match_parent"
+            android:layout_gravity="start"
+            android:layout_margin="0dp"
+            android:background="@color/colorPrimaryDark"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/chat_arrow"
+            android:gravity="start|center"
+            android:padding="@dimen/dp_4"
+            android:paddingEnd="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_15"
+            android:text="@string/view_order_details"
+            android:textAlignment="viewStart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            app:fontFamily="@font/opensans_regular" />
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewChat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            tools:listitem="@layout/row_chat" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.3dp"
+            android:background="@color/greyLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/imageViewAttachment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/dp_10"
+                android:src="@drawable/chat_attached_icon"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_7"
+                android:background="@color/greyLine"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/cancellation_type_here"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLines="5"
+                android:padding="@dimen/dp_7"
+                android:textColorHint="@color/hintTextColor"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_11"
+                app:fontFamily="@font/opensans_regular" />
+
+            <FrameLayout
+                android:id="@+id/textViewSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="@string/chat_send"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_13"
+                    app:fontFamily="@font/opensans_regular_title" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
+

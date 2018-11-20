@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <View
+        android:id="@+id/viewFast"
+        android:layout_width="@dimen/dp_7"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExpRoot"
+        style="@style/exp_home_style"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_145">
+
+        <ImageView
+            android:id="@+id/imageViewService"
+            android:layout_width="@dimen/dp_75"
+            android:layout_height="@dimen/dp_85"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:clickable="false"
+            android:padding="@dimen/dp_5"
+            android:scaleType="centerInside"
+            android:src="@drawable/home_skiing" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:clickable="false"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dp_3"
+            android:text="Session"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_13"
+            app:fontFamily="@font/opensans_regular_title" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

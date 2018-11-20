@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/dashboard_main_space"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_marginStart="@dimen/dp_5"
+    android:visibility="visible">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:scaleType="centerInside"
+            android:src="@drawable/locals_icon"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/appointment_booked_new"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/oops"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_11"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/dp_5"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/appointment_booked_new"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="@string/no_review_found"
+                android:textColor="@color/white"
+                app:fontFamily="@font/opensans_regular" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/appointment_booked_new"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:text="@string/choose_less_filters_to_get_more_changes_to_find_local_around_you"
+            android:textAlignment="center"
+            android:textColor="@color/greyText"
+            android:visibility="gone"
+            app:fontFamily="@font/opensans_regular" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_30"
+            android:visibility="gone" />
+
+        <LinearLayout
+            style="@style/button_next"
+            android:layout_width="@dimen/dp_200"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonResetFilter"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/reset_filters" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

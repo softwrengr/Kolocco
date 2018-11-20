@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_3"
+    android:background="@drawable/drawable_round_corner_small_white_new"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewImageSlide"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_165"
+            android:layout_margin="@dimen/dp_2"
+            tools:listitem="@layout/row_home_slider_image" />
+
+
+        <ImageView
+            android:id="@+id/imageViewLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="@dimen/dp_3"
+            android:padding="@dimen/dp_7"
+            android:src="@drawable/home_left_arrow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/imageViewRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:padding="@dimen/dp_7"
+            android:src="@drawable/home_right_arrow"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/checkboxFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/dp_3"
+            android:button="@drawable/selector_home_fav"
+            android:checked="true"
+            android:padding="@dimen/dp_7"
+            android:visibility="visible" />
+
+        <com.like.LikeButton
+            android:id="@+id/star_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:visibility="gone"
+            app:icon_size="@dimen/dp_13"
+            app:icon_type="heart"
+            app:like_drawable="@drawable/home_favorite_sel"
+            app:unlike_drawable="@drawable/home_favorite_un_sel" />
+
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:paddingBottom="@dimen/dp_10"
+            app:piv_radius="@dimen/dp_3"
+            app:piv_selectedColor="@color/white"
+            app:piv_unselectedColor="@color/white" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mdp_27"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/flowLayoutImgProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_2"
+                    android:background="@drawable/drawable_white_circ">
+
+                    <ImageView
+                        android:id="@+id/imageViewProfile"
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="@dimen/dp_45"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_2"
+                        android:layout_toEndOf="@+id/ratingView"
+                        android:background="@drawable/user_round"
+                        android:clickable="false"
+                        android:visibility="visible" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/ratingView"
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/mdp_10"
+                    android:background="@drawable/drawable_white_circul"
+                    android:clickable="false"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:src="@drawable/home_star" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRatingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:includeFontPadding="false"
+                            android:paddingTop="@dimen/dp_2"
+                            android:text="4"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/sp_8"
+                            app:fontFamily="@font/opensans_regular_title" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:text="R"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatRatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/mdp_2"
+                    android:progress="4"
+                    android:rating="4.5"
+                    android:theme="@style/RatingBar" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/map_pin_home"
+                    android:drawablePadding="@dimen/dp_5"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:paddingTop="@dimen/dp_2"
+                    android:text="8 km"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_120"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewLowestPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginEnd="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:includeFontPadding="false"
+                    android:text="$ 20.00/hr"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_14"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_8" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerViewService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="@dimen/dp_3"
+                    android:orientation="horizontal"
+                    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_home_service_image" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerServiceType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:listitem="@layout/row_home_service_type" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutRow"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:button="@drawable/selector_org" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_9"
+            android:layout_marginStart="@dimen/dp_9"
+            android:clickable="false"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewName"
+                style="@style/cancellation_policies_main"
+                android:includeFontPadding="false"
+                android:text="@string/strict_policy"
+                android:clickable="false"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewDisc"
+                style="@style/cancell_pol_sub_text"
+                android:clickable="false"
+                android:text="@string/cancel_up_to_30_days_before_your_activity_and_get_a_full_refund_including_all_fees_cancel_within_30_days_of_the_activity_and_get_a_50_refund_of_the_total_nightly_rate_as_well_as_a_full_refund"
+                app:fontFamily="@font/opensans_regular" />
+
+            <View style="@style/bottom_line" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

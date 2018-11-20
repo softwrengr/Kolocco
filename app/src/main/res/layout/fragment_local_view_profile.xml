@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_110"
+                android:layout_below="@+id/imageSlider"
+                android:layout_centerHorizontal="true">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drawable_half_round">
+
+                    <ImageView
+                        android:id="@+id/imageViewProfile"
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_75"
+                        android:layout_margin="@dimen/dp_2"
+                        android:src="@drawable/user_round" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/ratingView"
+                    android:layout_width="@dimen/dp_38"
+                    android:layout_height="@dimen/dp_38"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="@dimen/mdp_2"
+                    android:background="@drawable/drawable_white_circul"
+                    android:clickable="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:src="@drawable/home_star" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRatingValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:includeFontPadding="false"
+                            android:paddingTop="@dimen/dp_2"
+                            android:text="0"
+                            android:textColor="@color/yellow"
+                            android:textSize="@dimen/sp_8"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/dp_4"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_black" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_6" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewLocalName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dp_3"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            app:fontFamily="@font/opensans_regular_title" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:padding="@dimen/dp_3"
+            android:text="@string/view_profile_edit_details"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_12"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_4" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/dp_7"
+            android:background="@color/greyLine" />
+
+        <!--Profile details  section start -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/view_profile_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/view_profile_currency"
+
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewCurrency"
+                    style="@style/view_profile_details_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/greyLine" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewLanguages"
+                    style="@style/view_profile_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/spoken_languages"
+                    android:drawableEnd="@drawable/accept_ord_detail_edit"
+                    android:drawablePadding="@dimen/dp_7"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewLanguages"
+                    style="@style/view_profile_details_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/greyLine" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewAppointmentValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dp_3"
+                    android:text="00"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_14"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/view_profile_details_text_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/view_profile_appointments"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewOrderHistory"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_2"
+                    android:background="@drawable/drawable_select_date_select_time"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_6"
+                    android:paddingTop="@dimen/dp_6"
+                    android:text="@string/profile_order_history"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_10"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/greyLine" />
+
+        <!--Profile details  section end -->
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+
+            <!--Sport type section start -->
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/appointment_summery_experience_new"
+                app:fontFamily="@font/opensans_regular_title" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewExp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_4"
+            android:clickable="false"
+            android:visibility="visible"
+            tools:listitem="@layout/exp_local_row_create" />
+
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewNoDataExperiences"
+                style="@style/local_profile_no_data"
+                android:text="@string/add_experiences_no_data"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/bottom_line" />
+
+
+            <!--Nice to meet you section start -->
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@string/dashboard_nice_to_meet_you"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/customTextViewNTMY"
+                style="@style/visitor_dashboard_details_text_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                app:fontFamily="@font/opensans_regular" />
+
+            <View
+                android:id="@+id/viewNTYM"
+                style="@style/bottom_line" />
+
+            <!--Nice to meet you section end -->
+
+            <!--Location section start -->
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center"
+                    android:visibility="visible">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewStaticMap"
+                        android:layout_width="@dimen/dp_105"
+                        android:layout_height="@dimen/dp_55"
+                        android:layout_gravity="end|center"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_75"
+                        android:layout_height="@dimen/dp_55"
+                        android:background="@drawable/drawable_white_gradint" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|start"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewLocationEdit"
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableEnd="@drawable/accept_ord_detail_edit"
+                        android:drawablePadding="@dimen/dp_7"
+                        android:includeFontPadding="false"
+                        android:text="@string/dashboard_location"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewNoDataLocation"
+                        style="@style/local_profile_no_data"
+                        android:text="@string/button_set_location"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/customTextViewLocation"
+                        style="@style/visitor_dashboard_details_text_value"
+                        android:layout_width="@dimen/dp_180"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <View style="@style/bottom_line" />
+
+            <!--Location section end -->
+
+        </LinearLayout>
+
+        <!--Certificates section start -->
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewCertificates"
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/accept_ord_detail_edit"
+                android:drawablePadding="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:text="@string/dashboard_certificates"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewNoDataCertificates"
+                style="@style/local_profile_no_data"
+                android:text="@string/add_certificates"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View
+                android:id="@+id/viewCerticicates"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerCertificates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_local_view_profile_certificate_archivment_image" />
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+            <View style="@style/bottom_line" />
+
+        </LinearLayout>
+
+        <!--Certificates section end -->
+
+        <!--Achievements section start -->
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewAchievements"
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/accept_ord_detail_edit"
+                android:drawablePadding="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:text="@string/dashboard_achievements"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewNoDataAchivements"
+                style="@style/local_profile_no_data"
+                android:text="@string/add_achivements"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View
+                android:id="@+id/viewAchivements"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5" />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerAchievements"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_local_view_profile_certificate_archivment_image" />
+
+        <LinearLayout style="@style/dashboard_main_space">
+
+            <View style="@style/bottom_line" />
+
+        </LinearLayout>
+
+        <!--Achievements section end -->
+
+        <LinearLayout
+            style="@style/dashboard_main_space"
+            android:layout_height="wrap_content">
+
+            <!--Associated_with section start -->
+
+            <LinearLayout
+                android:id="@+id/linearLayoutOrg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/visitor_dashboard_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/dashboard_associated_with"
+
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutOrganization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/drawable_dashboard_rectangle_small_corner_with_border"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:paddingStart="@dimen/dp_5">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewOrgName"
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/dp_7"
+                            android:includeFontPadding="false"
+                            android:text=""
+
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewOrgDescWithLocation"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/greyText"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_5" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageViewOrgImage"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_gravity="center"
+                        android:src="@drawable/user_round" />
+
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+            </LinearLayout>
+
+            <!--Associated_with section end -->
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExperienseImageEdit"
+                style="@style/visitor_dashboard_details_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/accept_ord_detail_edit"
+                android:drawablePadding="@dimen/dp_7"
+                android:includeFontPadding="false"
+                android:text="@string/my_images"
+
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewNoDataExperienceImages"
+                style="@style/local_profile_no_data"
+                android:text="@string/add_my_images"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View
+                android:id="@+id/viewExpereince"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_5" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/row_visitor_organization_detail_org_images" />
+
+            <View style="@style/bottom_line" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_25" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

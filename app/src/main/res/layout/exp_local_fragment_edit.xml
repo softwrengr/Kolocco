@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/edit_experiences_title"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/dashboard_main_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <include layout="@layout/exp_local_row_layout" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutInCompleteStep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewStepCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:clickable="false"
+                    android:padding="@dimen/dp_3"
+                    android:text="@string/steps_left"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar
+                    android:id="@+id/segmented_progressbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_20"
+                    android:clickable="false"
+                    app:container_color="@color/greyLine"
+                    app:fill_color="@color/buttonColor"
+                    app:gap_size="@dimen/dp_1"
+                    app:segment_count="9" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:clickable="false"
+                    android:padding="@dimen/dp_3"
+                    android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. "
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_11"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewAdminApprove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:textAlignment="center"
+                android:text="@string/your_exp_is_wait"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/sp_10"
+                android:visibility="visible"
+                android:maxLines="2"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpDetails"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/exp_details"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpCategory"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/exp_category"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View
+                style="@style/profile_botton"
+                android:visibility="gone" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpSport"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/exp_sport_cat"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpSchedulePrice"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/schedule_amp_price"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpOtherDetails"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/exp_other_details"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpOtherDetailsAnotherFields"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/add_another_fields"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpMeetingSpot"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/meeting_spot"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpSetSpecialAvailabbilities"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/toolbar_set_special_availabilities"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpDisableTheExperience"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/exp_disable_the_experience"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpEquipmentChecklist"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/toolbar_check_sport_eaquipments"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewExpCancellationPolicy"
+                style="@style/profile_text"
+                android:drawableRight="@drawable/month_wise_earning_arrow"
+                android:includeFontPadding="false"
+                android:text="@string/dashboard_cancellation_policy"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_20" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

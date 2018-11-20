@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingEnd="@dimen/dp_5"
+    android:paddingStart="@dimen/dp_5"
+    android:paddingTop="@dimen/dp_5">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:ems="25"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp_5"
+        android:text="@string/uploading_images"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_12"
+        app:fontFamily="@font/opensans_regular_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageViewUpload"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_5" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progress_bar_multi"
+            android:secondaryProgress="100" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewCount"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:includeFontPadding="false"
+            android:text="0 %"
+            android:textAlignment="center"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_16"
+            android:visibility="visible"
+            app:fontFamily="@font/opensans_regular_title" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:background="@color/greyLine" />
+</LinearLayout>

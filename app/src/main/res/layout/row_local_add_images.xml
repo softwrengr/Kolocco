@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_round_corner_small_white"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_7">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+            android:id="@+id/imageViewAddImages"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_3"
+            android:gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/temp_1"
+            app:siShape="@drawable/shape_rounded_rectangle"
+            app:siSquare="true" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewTitle"
+            style="@style/upload_certificate_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Demo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_11"
+            app:background="@null" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewEdit"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_6"
+                android:src="@drawable/edit_new_big" />
+
+            <ImageView
+                android:id="@+id/imageViewClose"
+                android:layout_width="@dimen/dp_25"
+                android:layout_height="@dimen/dp_25"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/close_new" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

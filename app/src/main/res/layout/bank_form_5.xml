@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextBranchName5"
+        style="@style/login"
+        android:hint="@string/branch_name"
+        android:inputType="text"
+        app:fontFamily="@font/opensans_regular" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextCity5"
+        style="@style/login"
+        android:hint="@string/city"
+        android:inputType="text"
+        app:fontFamily="@font/opensans_regular" />
+
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextProvince5"
+        style="@style/login"
+        android:hint="@string/province"
+        android:inputType="text"
+        app:fontFamily="@font/opensans_regular" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextNumber5"
+        style="@style/login"
+        android:hint="@string/account_number"
+        android:inputType="textCapCharacters"
+        android:maxLength="50"
+        app:fontFamily="@font/opensans_regular" />
+
+</LinearLayout>

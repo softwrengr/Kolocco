@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbar"
+            app:contentInsetStart="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_edit_personal_details"
+                    app:fontFamily="@font/aquatico_regular" />
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_7"
+                    android:src="@drawable/back_arrow" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_75"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/drawable_white_circul">
+
+                <ImageView
+                    android:id="@+id/imageViewProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="0.25dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_round" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:text="@string/upload_profile_picture"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <LinearLayout
+                style="@style/dashboard_main_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/exp_title_textview"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginStart="@dimen/dp_1"
+                    android:text="@string/profile_first_name"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <com.kooloco.util.FirstCapEditText
+                    android:id="@+id/editTextFirstName"
+                    style="@style/login"
+                    android:cursorVisible="true"
+                    android:hint="@string/profile_first_name"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/exp_title_textview"
+                    android:layout_marginVertical="@dimen/dp_7"
+                    android:text="@string/profile_last_name"
+                    android:layout_marginStart="@dimen/dp_1"
+
+                    app:fontFamily="@font/opensans_regular" />
+
+                <com.kooloco.util.FirstCapEditText
+                    android:id="@+id/editTextLastName"
+                    style="@style/login"
+                    android:cursorVisible="true"
+                    android:hint="@string/profile_last_name"
+                    android:inputType="textPersonName|textCapSentences"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/exp_title_textview"
+                    android:layout_marginVertical="@dimen/dp_7"
+                    android:text="@string/profile_email"
+                    android:layout_marginStart="@dimen/dp_1"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editTextEmail"
+                    style="@style/login"
+                    android:clickable="false"
+                    android:cursorVisible="true"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/profile_email"
+                    android:inputType="textEmailAddress"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/local_side_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/profile_password"
+                    android:textColor="@color/buttonColor"
+                    android:visibility="gone"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editTextPassword"
+                    style="@style/login"
+                    android:cursorVisible="true"
+                    android:hint="@string/profile_password"
+                    android:inputType="textWebPassword"
+                    android:text="123456789"
+                    android:visibility="gone"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewTelephoneNumber"
+                    style="@style/exp_title_textview"
+                    android:layout_marginVertical="@dimen/dp_7"
+                    android:text="@string/become_a_local_telephone"
+                    android:layout_marginStart="@dimen/dp_1"
+
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <FrameLayout
+                    android:id="@+id/frameLayoutTelephoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/becomALocalEditTextTelphone"
+                        style="@style/become_a_local"
+                        android:hint="@string/become_a_local_telephone"
+                        android:inputType="phone"
+                        android:maxLength="15"
+                        android:paddingStart="@dimen/dp_75"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextCountryCode"
+                        style="@style/choose_languages"
+                        android:layout_width="@dimen/dp_82"
+                        android:layout_gravity="center|start"
+                        android:drawableRight="@drawable/sport_activity_down_arrow"
+                        android:background="@null"
+                        android:text="+41" />
+
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_round_corner_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_12">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/exp_title_textview"
+                            android:text="@string/profile_introduce_your_self_400"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <View style="@style/bottom_line" />
+
+                    <com.kooloco.util.FirstCapEditText
+                        android:id="@+id/editTextIntroducation"
+                        style="@style/editText_exp_details"
+                        android:layout_marginStart="@dimen/dp_2"
+                        android:hint="@string/become_a_local_type_here"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:lines="5"
+                        android:maxLength="400"
+                        android:maxLines="6"
+                        android:minLines="5"
+                        android:text="" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+
+            <LinearLayout style="@style/dashboard_main_space">
+
+                <LinearLayout style="@style/button_next">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/buttonUpdate"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/button_update" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+

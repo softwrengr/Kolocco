@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        android:background="@color/white"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/become_a_local"
+                    android:visibility="invisible"
+                    app:fontFamily="@font/aquatico_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_black" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/what_s_left"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:fontFamily="@font/opensans_regular_title"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerStepInComplete"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerStepInComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/appCompatTextView2"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView"
+                tools:listitem="@layout/row_step_complete" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/appCompatTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:includeFontPadding="false"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@string/allready_completed"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_15"
+                app:fontFamily="@font/opensans_regular_title"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerStepComplete"
+                app:layout_constraintTop_toBottomOf="@+id/recyclerStepInComplete" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerStepComplete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2"
+                tools:listitem="@layout/row_step_complete" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

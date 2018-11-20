@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center"
+        android:layout_marginTop="@dimen/dp_75"
+        android:scaleType="centerCrop"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:src="@drawable/logo" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        style="@style/button"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="@dimen/dp_62"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_50"
+        android:text="@string/splash_get_started"
+        android:visibility="gone" />
+
+</FrameLayout>

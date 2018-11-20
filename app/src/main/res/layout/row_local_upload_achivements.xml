@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_round_corner_small_white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_6"
+    android:paddingEnd="@dimen/dp_7"
+    android:paddingStart="@dimen/dp_7">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_3"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:includeFontPadding="false"
+            android:padding="@dimen/dp_4"
+            android:text="@string/upload_achievements_achievements"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_12"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_7"
+            android:src="@drawable/certificates_close_icon" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_margin="@dimen/dp_5"
+        android:background="@color/greyLine" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_3"
+                android:clickable="false"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:padding="@dimen/dp_4"
+                android:text="@string/select_n_achivement"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/sp_8"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                android:id="@+id/imageViewCertificate"
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="@dimen/dp_65"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_3"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                app:siShape="@drawable/shape_rounded_rectangle"
+                app:siSquare="true" />
+
+
+            <ImageView
+                android:id="@+id/imageViewFilter"
+                android:layout_width="@dimen/dp_65"
+                android:layout_height="@dimen/dp_65"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_3"
+                android:gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/shape_rounded_rectangle_filt" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextCertificateTitle"
+                style="@style/upload_certificate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/upload_achievements_achievements_title"
+                android:inputType="text"
+                android:lines="1"
+
+                app:background="@null" />
+
+            <View style="@style/upload_certificate" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextCertificateType"
+                style="@style/upload_certificate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableRight="@drawable/certificates_down_arrow"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/upload_certification_Sport_type"
+                android:inputType="text"
+                app:background="@null" />
+
+            <View style="@style/upload_certificate" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextCertificateSubType"
+                style="@style/upload_certificate_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:drawableRight="@drawable/certificates_down_arrow"
+                android:editable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/upload_certification_Sport_sub_type"
+                android:inputType="text"
+                app:background="@null" />
+
+            <View
+                android:id="@+id/viewBottomLine"
+                style="@style/upload_certificate" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextCertificateDesc"
+        style="@style/upload_certificate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/upload_achievements_description"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:maxLines="9"
+        app:background="@null" />
+
+    <View style="@style/upload_certificate" />
+
+    <android.support.v7.widget.AppCompatEditText
+        style="@style/upload_certificate_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:editable="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/upload_achievements_add_tags"
+        android:inputType="text"
+        app:background="@null" />
+
+    <com.kooloco.util.FlowLayout
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:layout_marginStart="@dimen/dp_5" />
+
+    <View style="@style/upload_certificate" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_30"
+        android:layout_gravity="end"
+        android:layout_margin="@dimen/dp_5"
+        android:background="@drawable/drawable_button_shadow"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_9"
+        app:fontFamily="@font/opensans_regular" />
+</LinearLayout>

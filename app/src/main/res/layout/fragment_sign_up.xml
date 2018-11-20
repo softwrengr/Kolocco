@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_5"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:src="@drawable/back_arrow" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewToolbarTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:includeFontPadding="false"
+                android:text="@string/toolbar_sign_up"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                app:fontFamily="@font/aquatico_regular" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_75"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_2"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:background="@drawable/drawable_white_circul">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dp_11"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:src="@drawable/sign_up_avatar" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_11"
+                android:includeFontPadding="false"
+                android:text="@string/upload_profile_picture"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_10"
+                app:fontFamily="@font/opensans_regular_title" />
+
+
+            <com.kooloco.util.FirstCapEditText
+                android:id="@+id/signUpEditTextFirstName"
+                style="@style/login"
+                android:hint="@string/sign_up_first_name"
+                android:inputType="textPersonName|textCapSentences"
+                app:fontFamily="@font/opensans_regular" />
+
+            <com.kooloco.util.FirstCapEditText
+                android:id="@+id/signUpEditTextLastName"
+                style="@style/login"
+                android:hint="@string/sign_up_last_name"
+                android:inputType="textPersonName|textCapSentences"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/signUpEditTextEmail"
+                style="@style/login"
+                android:hint="@string/sign_up_email"
+                android:inputType="textEmailAddress"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/signUpEditTextCreatePassword"
+                style="@style/login"
+                android:hint="@string/sign_up_create_password"
+                android:inputType="textWebPassword"
+                app:fontFamily="@font/opensans_regular" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/signUpEditTextConfirmPassword"
+                style="@style/login"
+                android:hint="@string/sign_up_confirm_password"
+                android:inputType="textWebPassword"
+                app:fontFamily="@font/opensans_regular" />
+
+            <com.kooloco.util.FirstCapEditText
+                android:id="@+id/signUpEditTextReferralCode"
+                style="@style/login"
+                android:background="@drawable/drawable_edit_text_blue_border"
+                android:hint="@string/sign_up_referral_code"
+                android:textColor="@color/buttonColor"
+                android:textColorHint="@color/buttonColor"
+                android:inputType="text|textCapCharacters"
+                app:fontFamily="@font/opensans_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_12">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/signupTermsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_checkbox"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:text="@string/sign_up_please_agree_terms"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_2"
+                android:layout_marginStart="@dimen/dp_2"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonSignuUp"
+                    style="@style/button"
+                    android:layout_width="@dimen/dp_165"
+                    android:layout_gravity="center"
+                    android:src="@drawable/home_right_arrow"
+                    android:text="@string/button_sign_up" />
+
+                <ImageView
+                    android:id="@+id/buttonGooglePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_5"
+                    android:src="@drawable/login_with_google" />
+
+                <ImageView
+                    android:id="@+id/buttonFacebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_5"
+                    android:paddingTop="@dimen/dp_5"
+                    android:src="@drawable/login_with_facebook" />
+
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+

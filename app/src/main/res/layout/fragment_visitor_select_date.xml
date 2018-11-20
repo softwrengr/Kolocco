@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_select_date"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/dashboard_main_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_15"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_top_f" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/selectDateSelectDate"
+                style="@style/choose_languages"
+                android:drawableRight="@drawable/select_date_arrow"
+                android:hint="@string/select_date_select_date"
+                app:fontFamily="@font/opensans_regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/select_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_5"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:includeFontPadding="false"
+                        android:text="@string/select_date_start_time"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <ImageView
+                        android:id="@+id/imageViewStartTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_6"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:background="@drawable/drawable_dashboard_select_service_line"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/dp_5"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/select_date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_5"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:includeFontPadding="false"
+                        android:text="@string/end_time"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <ImageView
+                        android:id="@+id/imageViewEndTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_6"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:background="@drawable/drawable_dashboard_select_service_line"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerTimeSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:layout_marginTop="@dimen/dp_3"
+                tools:listitem="@layout/row_visitor_select_date_time" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewTitle"
+                style="@style/select_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:includeFontPadding="false"
+                android:text="@string/select_date_weather_forecast"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/checkboxChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:button="@null"
+                android:drawableLeft="@drawable/selector_duration"
+                android:drawablePadding="@dimen/dp_7"
+                android:text="@string/duration_let_choose"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_10"
+                app:fontFamily="@font/opensans_regular" />
+
+            <View
+                style="@style/bottom_line"
+                android:visibility="invisible"
+                android:layout_marginEnd="@dimen/dp_2"
+                android:layout_marginStart="@dimen/dp_2" />
+
+            <android.support.v7.widget.AppCompatTextView
+                style="@style/select_date_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_4"
+                android:includeFontPadding="false"
+                android:text="@string/select_date_weather_forecast"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@drawable/drawable_round_corner_small_white"
+                android:elevation="@dimen/dp_2"
+                android:visibility="gone"
+                android:translationZ="@dimen/dp_2">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="WebViewLayout" />
+
+            </FrameLayout>
+
+            <LinearLayout style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonNext"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_next" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "837918412734",
+    "firebase_url": "https://kooloco-186406.firebaseio.com",
+    "project_id": "kooloco-186406",
+    "storage_bucket": "kooloco-186406.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837918412734:android:59c8db822d49b377",
+        "android_client_info": {
+          "package_name": "com.kooloco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "837918412734-741rni8b2sf2682bvcnpigiuugqkjrs8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kooloco",
+            "certificate_hash": "c7172c695dc93ddac0f1dc105918136346a9ec1f"
+          }
+        },
+        {
+          "client_id": "837918412734-ij9uc9lm85dkuvt71jj9tiipa44qh1ih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSedW6pyLSJpUO4c2LmHkNpBt4rNppACg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "837918412734-9lj4kq8m0i7nm1kk6jdm2do6orhame4k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.kooloco"
+              }
+            },
+            {
+              "client_id": "837918412734-ij9uc9lm85dkuvt71jj9tiipa44qh1ih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

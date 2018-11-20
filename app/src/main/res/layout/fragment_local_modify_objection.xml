@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/toolbar_main_title"
+                android:includeFontPadding="false"
+                android:text="@string/toolbar_modify_objection"
+                app:fontFamily="@font/aquatico_regular" />
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="@dimen/dp_60"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_below="@+id/imageSlider"
+                        android:layout_centerHorizontal="true">
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/drawable_half_round">
+
+                            <ImageView
+                                android:id="@+id/imageViewProfile"
+                                android:layout_width="@dimen/dp_55"
+                                android:layout_height="@dimen/dp_55"
+                                android:layout_margin="@dimen/dp_2"
+                                android:src="@drawable/user_round" />
+
+                        </FrameLayout>
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewLocalName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dp_3"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <LinearLayout style="@style/dashboard_main_space">
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/dp_5"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewPriceTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center"
+                            android:clickable="false"
+                            android:includeFontPadding="false"
+                            android:padding="@dimen/dp_3"
+                            android:text=""
+                            android:textColor="@color/buttonColor"
+                            android:textSize="@dimen/sp_13"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|center"
+                            android:clickable="false"
+                            android:includeFontPadding="false"
+                            android:paddingBottom="@dimen/dp_3"
+                            android:paddingEnd="@dimen/dp_3"
+                            android:paddingStart="@dimen/dp_3"
+                            android:text="@string/will_be_receive_by_you"
+                            android:textColor="@color/greyText"
+                            android:textSize="@dimen/sp_11"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <View style="@style/bottom_line" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/checkboxDiscount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:checked="true"
+                            android:drawableLeft="@drawable/selector_org"
+                            android:padding="@dimen/dp_3" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                style="@style/filter_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/do_you_want_to_give_discount_new"
+                                android:textSize="@dimen/sp_11"
+                                app:fontFamily="@font/opensans_regular_title" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/editTextDiscount"
+                                style="@style/login"
+                                android:hint="@string/_00"
+                                android:inputType="numberDecimal"
+                                android:textColorHint="@color/greyText"
+                                app:fontFamily="@font/opensans_regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <CheckBox
+                            android:id="@+id/checkboxFlatAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/selector_org"
+                            android:padding="@dimen/dp_3" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/textViewFlatRate"
+                                style="@style/filter_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:includeFontPadding="false"
+                                android:text="@string/do_you_want_to_give_flat_rate_new"
+                                android:textSize="@dimen/sp_11"
+                                app:fontFamily="@font/opensans_regular_title" />
+
+                            <android.support.v7.widget.AppCompatEditText
+                                android:id="@+id/editTextFlat"
+                                style="@style/login"
+                                android:editable="false"
+                                android:hint="@string/__00"
+                                android:inputType="numberDecimal"
+                                android:textColorHint="@color/greyText"
+                                app:fontFamily="@font/opensans_regular" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:background="@drawable/drawable_round_corner_small_white"
+                        android:orientation="vertical">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/visitor_dashboard_details_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/dp_7"
+                            android:layout_marginStart="@dimen/dp_7"
+                            android:layout_marginTop="@dimen/dp_7"
+                            android:includeFontPadding="false"
+                            android:text="@string/cancellation_reason"
+                            android:textSize="@dimen/sp_12"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <View
+                            style="@style/bottom_line"
+                            android:layout_marginEnd="@dimen/dp_7"
+                            android:layout_marginStart="@dimen/dp_7" />
+
+                        <com.kooloco.util.FirstCapEditText
+                            android:id="@+id/customTexteditTextWriteNow"
+                            style="@style/visitor_dashboard_details_text_value"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/dp_5"
+                            android:background="@null"
+                            android:gravity="top"
+                            android:hint="@string/cancellation_type_here"
+                            android:lines="4"
+                            android:padding="@dimen/dp_12"
+                            android:textColor="@color/blackTextColor"
+                            android:textColorHint="@color/hintTextColor"
+                            android:textSize="@dimen/sp_12"
+                            app:fontFamily="@font/opensans_regular" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/button_next">
+
+                        <android.support.v7.widget.AppCompatButton
+                            android:id="@+id/buttonSubmit"
+                            style="@style/button"
+                            android:layout_width="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:text="@string/button_submit" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_25" />
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</LinearLayout>
+
+

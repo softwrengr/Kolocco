@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_round_corner_small_white_no_elevation"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayoutQ">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewQution"
+                style="@style/help_faq"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Q. Test"
+                android:clickable="false"
+                android:textColor="@color/greyText"
+                app:fontFamily="@font/opensans_regular" />
+
+            <ImageView
+                android:id="@+id/imageDrop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingStart="@dimen/dp_5"
+                android:clickable="false"
+                android:src="@drawable/help_drop_arrow" />
+        </LinearLayout>
+
+        <View style="@style/bottom_line" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewAns"
+            style="@style/help_faq_ans"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Eheu, altus boreas!Ecce, festus fluctui!Pol, a bene fides, albus imber!Nunquam imperium sensorem.Ecce.Castus zetas ducunt ad parma.Cum idoleum crescere, omnes medicinaes amor bassus, fortis consiliumes."
+            android:textColor="@color/greyText"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View style="@style/bottom_line" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

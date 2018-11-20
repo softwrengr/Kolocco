@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3fc1c9</color>
+    <color name="colorPrimaryDark">#34a2a9</color>
+    <color name="colorAccent">#1a1a1a</color>
+
+    <color name="buttonColor">#3fc1c9</color>
+    <color name="buttonColorTra">#593fc1c9</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#1a1a1a</color>
+    <color name="greyText">#727272</color>
+    <color name="greyLine">#dedede</color>
+    <color name="yellow">#e3922a</color>
+    <color name="green">#48a952</color>
+    <color name="red">#ef3a3a</color>
+    <color name="orange">#ff8a57</color>
+
+    <color name="blackFilter">#43000000</color>
+
+    <color name="shadow_00">#00e1e1e1</color>
+    <color name="shadow_10">#10e1e1e1</color>
+    <color name="shadow_20">#20e1e1e1</color>
+    <color name="shadow_30">#30e1e1e1</color>
+    <color name="shadow_50">#50e1e1e1</color>
+    <color name="shadow_70">#70e1e1e1</color>
+    <color name="shadow_90">#80e1e1e1</color>
+
+    <color name="whitetrans">#00ffffff</color>
+    <color name="ratingbarselect">#e3922a</color>
+    <color name="ratingbarunselect">#727272</color>
+
+    <color name="facebookText">#3B5999</color>
+
+    <color name="notificationLightGreen">#57d6c1</color>
+    <color name="blackSixFive">#77000000</color>
+
+    <color name="greyText_cal">#bfbfbf</color>
+
+    <color name="ripple">#5c000000</color>
+
+    <color name="whitetrans_indictor">#afffffff</color>
+
+    <color name="shimmer_background_color">#ececec</color>
+
+
+    <color name="hintTextColor">#727272</color>
+    <color name="blackTextColor">#1a1a1a</color>
+
+    <color name="buttonColorTraNew">#de3fc1c9</color>
+
+</resources>

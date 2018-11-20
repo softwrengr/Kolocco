@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        style="@style/dashboard_main_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/dp_4"
+            android:paddingBottom="@dimen/dp_7"
+            android:paddingEnd="@dimen/dp_7"
+            android:paddingTop="@dimen/dp_7"
+            android:src="@drawable/back_black" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOrgDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/drawable_half_round">
+
+                <ImageView
+                    android:id="@+id/imageViewOrgLogo"
+                    android:layout_width="@dimen/dp_75"
+                    android:layout_height="@dimen/dp_75"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_4"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_round" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewOrgName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:includeFontPadding="false"
+                    android:padding="@dimen/dp_3"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_15"
+                    app:fontFamily="@font/opensans_regular_title"
+                    tool:text="Biking the boro" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutOpenEditProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewStepCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:clickable="false"
+                android:padding="@dimen/dp_3"
+                android:text="@string/steps_left"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular" />
+
+            <com.carlosmuvi.segmentedprogressbar.SegmentedProgressBar
+                android:id="@+id/segmented_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_20"
+                android:clickable="false"
+                app:container_color="@color/greyLine"
+                app:fill_color="@color/buttonColor"
+                app:gap_size="@dimen/dp_1"
+                app:segment_count="3" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:clickable="false"
+                android:padding="@dimen/dp_3"
+                android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.  "
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_11"
+                app:fontFamily="@font/opensans_regular" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewAdminApprove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_3"
+            android:clickable="false"
+            android:text="@string/your_organization_has_been_completed_and_awaited_for_the_admin_approval"
+            android:textColor="@color/yellow"
+            android:textSize="@dimen/sp_10"
+            android:visibility="gone"
+            app:fontFamily="@font/opensans_regular" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewCreateOrg"
+            style="@style/profile_text"
+            android:includeFontPadding="false"
+            android:text="@string/create_organization"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <View style="@style/profile_botton" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewAddLocao"
+            style="@style/profile_text"
+            android:includeFontPadding="false"
+            android:text="@string/add_local_new"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <View style="@style/profile_botton" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCreOrg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewSetPaymentRules"
+                style="@style/profile_text"
+                android:includeFontPadding="false"
+                android:text="@string/set_payment_rules_new"
+
+                app:fontFamily="@font/opensans_regular_title" />
+
+            <View style="@style/profile_botton" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewOrgDashboard"
+            style="@style/profile_text"
+            android:includeFontPadding="false"
+            android:text="@string/organization_dashboard"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <View style="@style/profile_botton" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewPreview"
+            style="@style/profile_text"
+            android:includeFontPadding="false"
+            android:text="@string/organization_preview"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <View style="@style/profile_botton" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewBankDetails"
+            style="@style/profile_text"
+            android:includeFontPadding="false"
+            android:text="@string/org_bank_details"
+            app:fontFamily="@font/opensans_regular_title" />
+
+        <View style="@style/profile_botton" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_20" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

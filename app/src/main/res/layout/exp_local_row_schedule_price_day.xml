@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextViewDayCurrent"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginHorizontal="@dimen/dp_9"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:background="@drawable/drawable_exp_scheduel_price_current"
+        android:gravity="center"
+        android:text="S"
+        android:textAlignment="center"
+        android:textColor="@color/selector_blue_white"
+        android:textSize="@dimen/sp_9"
+        android:clickable="true"
+        android:visibility="gone"
+        app:fontFamily="@font/opensans_regular" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextViewDayNotCurrent"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_marginHorizontal="@dimen/dp_9"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:background="@drawable/drawable_exp_scheduel_price"
+        android:gravity="center"
+        android:text="S"
+        android:clickable="true"
+        android:textAlignment="center"
+        android:textColor="@color/selector_blue_white"
+        android:textSize="@dimen/sp_9"
+        app:fontFamily="@font/opensans_regular" />
+
+</LinearLayout>

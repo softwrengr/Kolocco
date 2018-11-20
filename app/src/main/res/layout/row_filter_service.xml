@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutSingle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewNameSingle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_10"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:text="Session"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View style="@style/bottom_line_s_m" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExpand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewNameExpand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/dp_10"
+            android:drawableRight="@drawable/selector_select_activity"
+            android:includeFontPadding="false"
+            android:paddingBottom="@dimen/dp_8"
+            android:paddingTop="@dimen/dp_8"
+            android:text="Session"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_10"
+            app:fontFamily="@font/opensans_regular" />
+
+        <View style="@style/bottom_line_s_m" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerExpand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_filter_sub_service" />
+    </LinearLayout>
+
+</LinearLayout>

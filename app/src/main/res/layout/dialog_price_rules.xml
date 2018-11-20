@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dp_5"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="@dimen/dp_270"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_6"
+                android:gravity="center"
+                android:text="@string/price_rules"
+                android:textColor="@color/buttonColor"
+                android:textSize="@dimen/sp_11"
+                app:fontFamily="@font/opensans_regular" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_5"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/sport_activity_group_booking" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:includeFontPadding="false"
+                        android:padding="@dimen/dp_5"
+                        android:text="@string/group_booking"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_10"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSelectRules"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/selector_settings"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_10" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:includeFontPadding="false"
+                        android:text="@string/u2022_set_price_per_hour"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextValuePrice"
+                        style="@style/price_rul_edittext"
+                        android:hint="$00"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:layout_gravity="top"
+                        android:layout_weight="0"
+                        android:includeFontPadding="false"
+                        android:paddingEnd="0dp"
+                        android:text="\u2022 "
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:includeFontPadding="false"
+                        android:text="@string/u_2022_set_pricing_rule_for_the_activity_cost_per_hour_for_every_new_participant_new"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextValuePer"
+                        style="@style/price_rul_edittext"
+                        android:background="@drawable/selector_select_date_time_background"
+                        android:hint="00%"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="@drawable/selector_select_date_time_text"
+                        android:textColor="@drawable/selector_select_date_time_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:includeFontPadding="false"
+                        android:inputType="number"
+                        android:text="@string/u2022_add_maximum_number_of_participants"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextValuePart"
+                        style="@style/price_rul_edittext"
+                        android:background="@drawable/selector_select_date_time_background"
+                        android:hint="0"
+                        android:textColorHint="@drawable/selector_select_date_time_text"
+                        android:inputType="number"
+                        android:textColor="@drawable/selector_select_date_time_text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:includeFontPadding="false"
+                        android:text="@string/u2022_minimum_duration_new"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextValueDuration"
+                        style="@style/price_rul_edittext"
+                        android:hint="3 hr"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/greyLine" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:layout_weight="0"
+                        android:includeFontPadding="false"
+                        android:text="@string/activities"
+                        android:textColor="@color/buttonColor"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/price_rul_text"
+                        android:includeFontPadding="false"
+                        android:text="Discovery,Skiing,Freeride"
+                        android:textColor="@color/greyText"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/greyLine" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/price_rul_text"
+                    android:layout_gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="@string/example"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/price_rul_text"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/mdp_9"
+                    android:text="Calculation"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <!--
+                        Price section start
+                -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewPriceText"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3h x $40"
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(3h x $40 x 50% = $180)"
+                            android:textColor="@color/greyText"
+                            android:textSize="@dimen/sp_9"
+                            android:visibility="invisible"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewPriceValue"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$120"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--
+                        Price section end
+                -->
+
+                <!--
+                Add participants section start
+        -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="+ 3 Addi.Participants x "
+                            app:fontFamily="@font/opensans_regular" />
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecAddParNote"
+                            style="@style/receipt_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="(3h x $40 x 50% )"
+                            android:textColor="@color/greyText"
+                            android:textSize="@dimen/sp_9"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewAddPartPrice"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$180"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--
+                        Add participants end
+                -->
+
+                <!--
+        Fees for booking section start
+        -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/fees_for_booking"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewFeesForBookingPrice"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$4"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--
+                        Fees for booking end
+                -->
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/greyLine" />
+
+                <!--Receipt total activity section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/appointment_summery_total_activity"
+                            android:textColor="@color/greyText"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecTotalAct"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="$180"
+                            android:textColor="@color/greyText"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Receipt total activity section section end -->
+
+                <!--Receipt total booking section start -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="@string/appointment_summery_total_booking"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="@dimen/sp_11"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            android:id="@+id/customTextViewRecTotalBooking"
+                            style="@style/receipt_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:includeFontPadding="false"
+                            android:text="$184"
+                            android:textColor="@color/buttonColor"
+                            android:textSize="@dimen/sp_11"
+                            app:fontFamily="@font/opensans_regular_title" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Receipt total booking section section end -->
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/greyLine" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_35"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/drawable_button_shadow"
+                    android:text="@string/ok"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_9"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_has_tag"
+        android:drawableEnd="@drawable/has_close_sign"
+        android:drawablePadding="@dimen/dp_12"
+        android:includeFontPadding="false"
+        android:paddingBottom="@dimen/dp_7"
+        android:paddingEnd="@dimen/dp_12"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingTop="@dimen/dp_7"
+        android:text="Tags"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:textColor="@color/buttonColor"
+        android:textSize="@dimen/sp_10"
+        app:fontFamily="@font/opensans_regular_title" />
+
+</LinearLayout>

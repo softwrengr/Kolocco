@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/drawable_ract"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:padding="@dimen/dp_16"
+        android:text="@string/add_other_equipment"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sp_14"
+        app:fontFamily="@font/opensans_regular_title" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/editTextEquipment"
+        style="@style/login"
+        android:layout_width="@dimen/dp_300"
+        android:hint="@string/add_other_equipment"
+        android:inputType="text"
+        app:fontFamily="@font/opensans_regular" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_width="@dimen/dp_170"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonOk"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_weight="1"
+            android:text="@string/ok" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

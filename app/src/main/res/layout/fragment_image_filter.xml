@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarTitle"
+                style="@style/toolbar_main_title"
+                android:includeFontPadding="false"
+                android:text="@string/image_filter"
+                app:fontFamily="@font/aquatico_regular" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toolbarDone"
+                style="@style/toolbar_main_title"
+                android:layout_alignParentEnd="true"
+                android:text="@string/apply"
+                app:fontFamily="@font/opensans_regular" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewFilterMain"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_320"
+             />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerNotification"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_110"
+            tools:listitem="@layout/row_image_filter" />
+
+    </LinearLayout>
+
+</LinearLayout>

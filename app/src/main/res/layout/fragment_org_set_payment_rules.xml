@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/set_payment_rules"
+                    app:fontFamily="@font/aquatico_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+            <ImageView
+                android:id="@+id/imageAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/org_plus"
+                android:tint="@color/white" />
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        style="@style/dashboard_main_space"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.AppCompatTextView
+            style="@style/exp_title_textview"
+            android:layout_marginStart="@dimen/dp_1"
+            android:layout_marginVertical="@dimen/dp_7"
+            android:text="@string/rules"
+            app:fontFamily="@font/opensans_regular" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerSetPaymentRules"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/row_org_set_payment" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutAddButton"
+                style="@style/button_next"
+                android:layout_width="@dimen/dp_250"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/local_side_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:layout_marginStart="0dp"
+                    android:gravity="center"
+                    android:text="@string/please_set_payment_rule_from_here"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/dp_12"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonAdd"
+                    style="@style/button"
+                    android:layout_width="@dimen/dp_180"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_add" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/button_next"
+                android:layout_gravity="bottom">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonDone"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_done" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

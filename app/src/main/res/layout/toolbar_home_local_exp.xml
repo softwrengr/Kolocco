@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/buttonColor"
+        android:fitsSystemWindows="true"
+        android:minHeight="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true">
+
+            <ImageView
+                android:id="@+id/imageViewNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/home_notification"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imageViewCount"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_gravity="end"
+                android:layout_marginEnd="@dimen/dp_7"
+                android:layout_marginTop="@dimen/dp_7"
+                android:background="@drawable/drawable_button_red"
+                android:visibility="invisible" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:background="@drawable/home_local_and_exp_drawable_toolbar"
+            android:elevation="@dimen/dp_2"
+            android:translationZ="@dimen/dp_2">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radioButtonLocal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="true"
+                    android:clickable="true"
+                    android:drawableBottom="@drawable/home_local_and_exp_drawable_bottom_line"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:foreground="@drawable/ripple_animation"
+                    android:paddingHorizontal="@dimen/dp_14"
+                    android:paddingTop="@dimen/dp_7"
+                    android:text="@string/home_new_local_experts"
+                    android:textAlignment="center"
+                    android:textColor="@color/home_local_and_exp_selector_text"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/radioButtonExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@null"
+                    android:clickable="true"
+                    android:drawableBottom="@drawable/home_local_and_exp_drawable_bottom_line"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:foreground="@drawable/ripple_animation"
+                    android:paddingHorizontal="@dimen/dp_14"
+                    android:paddingTop="@dimen/dp_7"
+                    android:text="@string/home_local_and_visitorexperiences"
+                    android:textAlignment="center"
+                    android:textColor="@color/home_local_and_exp_selector_text"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+</LinearLayout>

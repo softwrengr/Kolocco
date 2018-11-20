@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutExpRoot"
+        style="@style/exp_home_style"
+        android:layout_weight="1"
+        android:clickable="false">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:layout_marginStart="@dimen/dp_3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:ellipsize="end"
+                    android:includeFontPadding="false"
+                    android:maxLines="2"
+                    android:padding="@dimen/dp_3"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_13"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatRatingBar
+                        android:id="@+id/ratingBar"
+                        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/dp_3"
+                        android:paddingStart="@dimen/dp_2"
+                        android:paddingTop="@dimen/dp_3"
+                        android:progress="5"
+                        android:rating="0"
+                        android:theme="@style/RatingBar"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewRateCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_6"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="3"
+                        android:text="(0)"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/sp_10"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|start"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/map_pin_home"
+                    android:drawablePadding="@dimen/dp_3"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/dp_3"
+                    android:text=""
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageViewExp"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_47"
+                    android:layout_gravity="center|end"
+                    android:src="@drawable/place"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textExpCurrency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:text="@string/usd"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/sp_9"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewExpPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/dp_3"
+                        android:text="00.00"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="@dimen/sp_12"
+                        app:fontFamily="@font/opensans_regular_title"
+                        tools:text="20.20" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@color/greyLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/dp_7"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_7"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkBoxNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:button="@drawable/selector_settings"
+                    android:checked="false" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dp_7"
+                    android:background="@color/greyLine" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewStartTime1"
+                    style="@style/set_avaibility_time"
+                    android:hint="@string/start_date"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greyText"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/set_avaibility_to"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="@string/sch_to"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewEndTime1"
+                    style="@style/set_avaibility_time"
+                    android:hint="@string/end_date"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/greyText"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayoutAddPartUser"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/customTextViewAddParticipants"
+            style="@style/add_part_new_view"
+            android:layout_weight="1"
+            android:background="@null"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingEnd="@dimen/dp_5"
+            android:hint="@string/add_participants_add_email_new"
+            app:fontFamily="@font/opensans_regular"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="center"
+            android:padding="@dimen/dp_7"
+            android:src="@drawable/close_new" />
+
+    </LinearLayout>
+
+    <View style="@style/bottom_line" />
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="false"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_3"
+    android:paddingEnd="@dimen/dp_25"
+    android:paddingTop="@dimen/dp_3">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewServicePrice"
+            app:fontFamily="@font/opensans_regular_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:clickable="false"
+            android:includeFontPadding="false"
+            android:text="$50"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_10" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewAs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|bottom"
+            android:clickable="false"
+            app:fontFamily="@font/opensans_regular_title"
+            android:includeFontPadding="false"
+            android:text="/hr"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_8" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextViewServiceType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:clickable="false"
+        app:fontFamily="@font/opensans_regular"
+        android:paddingTop="@dimen/dp_2"
+        android:text="Session"
+        android:textColor="@color/greyText"
+        android:textSize="@dimen/sp_9" />
+
+</LinearLayout>

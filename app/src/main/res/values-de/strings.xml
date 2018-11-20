@@ -1,0 +1,1488 @@
+<resources>
+    <string name="app_name">Kooloco</string>
+    <!--
+        Splash screen text
+    -->
+    <string name="splash_get_started">Lasst es uns tun!</string>
+
+    <!--
+        Login screen text
+    -->
+    <string name="login_enter_email">E-Mail eingeben</string>
+    <string name="login_password">Passwort eingeben</string>
+    <string name="login_lost">Verloren?</string>
+    <string name="login_don_t_have_an_account">Sie haben noch kein Konto?</string>
+    <string name="login_dont_sign_up">Anmelden</string>
+
+    <!--
+        Sign up screen text
+    -->
+    <string name="sign_up_first_name">Vorname</string>
+    <string name="sign_up_last_name">Nachname</string>
+    <string name="sign_up_email">E-Mail</string>
+    <string name="sign_up_create_password">Passwort erstellen</string>
+    <string name="sign_up_confirm_password">Passwort bestätigen</string>
+    <string name="sign_up_referral_code">Empfehlungscode</string>
+    <string name="sign_up_referral_code_optional">(optional)</string>
+
+    <string name="sign_up_please_agree_terms">Bitte stimmen Sie den Allgemeinen Geschäftsbedingungen zu</string>
+
+    <!--
+        Become a local screen
+    -->
+    <string name="become_a_local_name">Name</string>
+    <string name="become_a_local_address">Address</string>
+    <string name="become_a_local_telephone">Telefon-/Handy-Nummer</string>
+    <string name="become_a_local_introduce_your">Introduce Yourself</string>
+    <string name="become_a_local_introduce_your_t">(100)</string>
+
+    <string name="become_a_local_type_here">Hier eingeben...</string>
+
+    <string name="become_a_local_type_here_new">Lassen Sie Besucher mehr über Sie erfahren</string>
+
+    <string name="become_a_local_please_agree_terms">Please Agree Terms &amp; Conditions</string>
+
+    <string name="become_a_local_introduce_your_new">Introduce Yourself (100)</string>
+
+    <string name="become_a_local_introduce_your_new_f">Stellen Sie sich vor (400)</string>
+    <!--
+    Choose Languages screen
+   -->
+    <string name="choose_languages_language_of_application">Sprache für Ihre Anwendung</string>
+    <string name="choose_languages_select_language">Sprachen auswählen</string>
+    <string name="choose_languages_select_language_n">Wählen Sie Sprache</string>
+
+    <string name="choose_languages_language_of_speak">Spachen</string>
+
+    <!--
+    Organization Details screen
+   -->
+    <string name="organization_details_activity_types">Activity Types</string>
+    <string name="organization_details_sport_types">Sport Types</string>
+    <string name="organization_details_location">Location</string>
+    <string name="organization_details_locals">Locals</string>
+    <string name="organization_details_images">Organization Images</string>
+
+    <!--
+    Add Participants screen
+    -->
+    <string name="add_participants_add_extra_participants">Add Extra Participants</string>
+    <string name="add_participants_add_extra_participants_n">Teilnehmer</string>
+
+    <string name="add_participants_add_email">Add Participant Email</string>
+    <string name="add_participants_add_email_new">Teilnehmer-E-Mail hinzufügen</string>
+
+    <string name="add_participants_min_duration">Min Duration</string>
+
+    <!--
+   Select activities screen
+   -->
+    <string name="select_activities_select">Select Activities</string>
+    <string name="select_activities_select_sport">Select Sport Activities</string>
+    <string name="select_activities_select_session">Session</string>
+    <string name="select_activities_select_session_des">Share a session</string>
+    <string name="select_activities_select_lesson">Lesson</string>
+    <string name="select_activities_select_lesson_des">Improve your skills</string>
+    <string name="select_activities_select_discovery">Discovery</string>
+    <string name="select_activities_select_discovery_des">Discover a spot</string>
+
+    <!--
+    Select date screen
+    -->
+    <string name="select_date_select_date">Select Date</string>
+    <string name="select_date_start_time">Start Time</string>
+    <string name="select_date_weather_forecast">Weather Forecast</string>
+    <string name="select_date_min_duration">Min Duration</string>
+
+    <!--
+    Dashboard details screen
+    -->
+    <string name="dashboard_nice_to_meet_you">Nice to meet you</string>
+    <string name="dashboard_activities_time_slot">Activities Time Slot</string>
+    <string name="dashboard_activities">Activities</string>
+    <string name="dashboard_languages">Sprachen</string>
+    <string name="dashboard_distance">Entfernung</string>
+    <string name="dashboard_location">Standort</string>
+
+    <string name="dashboard_sport_types">Sport Types</string>
+    <string name="dashboard_certificates">Zertifizierung</string>
+    <string name="dashboard_achievements">Leistungen</string>
+    <string name="dashboard_associated_with">Verbunden mit</string>
+    <string name="dashboard_cancellation_policy">Widerrufsbelehrung</string>
+    <string name="dashboard_reviews">Gutachten</string>
+    <string name="dashboard_review">Ansicht</string>
+
+    <string name="dashboard_read_all">Read all</string>
+    <string name="dashboard_cancellation_policy_value">Cancel up to 24 hours before your activity and get a full refund,\nincluding all fees. Cancel within 24 hours of activity and the first night is non-refundable except for fees.</string>
+
+    <!--
+    Duration screen
+    -->
+    <string name="duration_select_duration">Select Duration</string>
+    <string name="duration_let">Let</string>
+    <string name="duration_let_choose">choose the perfect duration</string>
+
+    <string name="has_no_ava">has no availabilities on that day.</string>
+
+    <string name="pleas_select_another_Date">Please select an other date.</string>
+
+
+    <!--
+    Meeting location screen
+    -->
+    <string name="meeting_location_let">Let ### choose the meeting spot for***the activity</string>
+    <string name="meeting_location_choose">choose the meeting spot for the activity</string>
+    <string name="meeting_location_set_location">Set Location</string>
+
+    <!--
+    Appointment summery screen
+    -->
+    <string name="appointment_summery_activities">Activities</string>
+    <string name="appointment_summery_date">Startdatum</string>
+    <string name="appointment_summery_time">Startzeit</string>
+    <string name="appointment_summery_duration">Dauer</string>
+    <string name="appointment_summery_participants">Teilnehmer</string>
+    <string name="appointment_summery_meeting_spot">Meeting Spot</string>
+    <string name="appointment_summery_sport_type">Sport Types</string>
+    <string name="appointment_summery_let_the_local">Stellen Sie sich vor</string>
+    <string name="appointment_summery_write_here">Lassen Sie den Einheimischen mehr über Sie wissen…</string>
+    <string name="appointment_summery_price">Price</string>
+    <string name="appointment_summery_additional_participants">Additional Participants</string>
+    <string name="appointment_summery_fees_for_booking">Fees For Booking</string>
+    <string name="appointment_summery_total_activity">Gesamte Aktivität</string>
+    <string name="appointment_summery_total_booking">Total</string>
+    <string name="appointment_summery_note">Note ### :</string>
+    <string name="appointment_summery_all_your_payment">Kooloco bietet eine zweistufige Zahlungsprüfung, die den Benutzer schützt. Wir sammeln, halten und auszahlen nur, wenn sowohl Käufer als auch Verkäufer zufrieden sind.</string>
+
+
+    <!--
+    Payment screen
+    -->
+    <string name="payment_add_new_card">Neue Karte hinzufügen</string>
+    <string name="payment_note">Note</string>
+    <string name="payment_all_your_payment_will">Kooloco provides two steps payment validation that protects users. We collect, hold and only
+disburse funds when both Buyers and Sellers are satisfied</string>
+
+    <string name="payment_add_card">Karte hinzufügen</string>
+
+    <!--
+    Payment screen
+    -->
+    <string name="appointment_booked_make_a_payment">Make a payment</string>
+    <string name="appointment_booked_in_escrow_account">In escrow account</string>
+    <string name="appointment_booked_complete_your_service">Complete your service</string>
+    <string name="appointment_booked_free_the_amount">Free the amount</string>
+    <string name="appointment_booked_thanks_for_the_booking">Thanks for the booking appointment\nlocal will get back to you soon</string>
+    <string name="appointment_booked_book_another_day">Buchen Sie einen anderen Tag.</string>
+
+    <string name="appointment_booked_your_experience">Abenteuer Gebucht</string>
+    <string name="appointment_booked_secure_your_payment">Zahlung gesichert</string>
+    <string name="appointment_booked_complete_your_activity">Abenteuer abgeschlossen</string>
+    <string name="appointment_booked_release_the_payment">Zahlung freigegeben</string>
+
+    <!--
+    Receipt screen
+    -->
+    <string name="receipt_activities">Activities</string>
+    <string name="receipt_sport_types">Sport Types</string>
+    <string name="receipt_date">Startdatum</string>
+    <string name="receipt_time">Startzeit</string>
+    <string name="receipt_duration">Dauer</string>
+    <string name="receipt_participants">Teilnehmer</string>
+    <string name="receipt_meeting_spot">Treffpunkt</string>
+    <string name="receipt_price">Price</string>
+    <string name="receipt_additional_participants">Additional Participants</string>
+    <string name="receipt_fees_for_booking">Fees For Booking</string>
+    <string name="receipt_total_activity">Total Activity</string>
+    <string name="receipt_total_booking">Total Booking</string>
+    <string name="receipt_raise_objection">Einspruch erheben</string>
+    <string name="receipt_do_you_want_total_refund">Möchten Sie eine vollständige Rückerstattung?</string>
+    <string name="receipt_do_you_want_percentage_discount">Do you want percentage discount.</string>
+    <string name="receipt_do_you_want_flat_amount_discount">Do you want flat amount discount.</string>
+    <string name="receipt_write_your_reason">Schreibe deinen Grund auf.....</string>
+
+    <!--
+    Rating screen
+    -->
+    <string name="rating_rate_your_experience">Bewerten Sie Ihr Abenteuer mit</string>
+    <string name="rating_thank_you_for_your_feedback">Vielen Dank für Ihr Feedback</string>
+    <string name="rating_share_the_love">Teilen Sie Ihre Zufriedenheit</string>
+    <string name="rating_facebook">Facebook</string>
+    <string name="rating_email">E-Mail</string>
+    <string name="rating_write_your_review">Schreiben Sie Ihre Bewertung....</string>
+    <string name="rating_book_another_day">Book Another Day</string>
+    <string name="rating_what_can_be_improved">Was kann verbessert werden?</string>
+    <string name="rating_what_went_wrong">Was lief schief?</string>
+    <string name="rating_quality_price">Qualität-Preis</string>
+    <string name="rating_arrival_time">Ankunftszeit</string>
+    <string name="rating_professionalism">Professionalität</string>
+    <string name="rating_guidance">Führung</string>
+    <string name="rating_meeting_spot">Treffpunkt</string>
+    <string name="rating_activity_duration">Dauer der Aktivität</string>
+    <string name="rating_other">Andere</string>
+
+    <!--
+    Profile screen
+    -->
+    <string name="profile_become_a_local">Werde ein Einheimischer</string>
+    <string name="profile_currency">Währung</string>
+    <string name="profile_languages">Languages</string>
+    <string name="profile_invite_friends">Freunde einladen</string>
+    <string name="profile_favorites">Favoriten</string>
+    <string name="profile_settings">Einstellungen</string>
+    <string name="profile_kooloco_help">Kooloco Hilfe</string>
+    <string name="profile_edit_profile">Profil bearbeiten</string>
+    <string name="profile_order_history">Auftragshistorie</string>
+
+    <string name="profile_become_a_visitor">Zum Besucher wechseln</string>
+    <string name="profile_create_your_own_organization">Create Your Own Organization</string>
+    <string name="profile_edit_your_own_organization">Ihre Organisation bearbeiten</string>
+
+    <string name="profile_set_availabilities">Set Availabilities</string>
+
+    <string name="profile_language">Sprache</string>
+
+    <!--1
+    View profile screen
+    -->
+    <string name="view_profile_edit_profile">Edit Profile</string>
+    <string name="view_profile_currency">Währung</string>
+    <string name="view_profile_languages">Languages</string>
+    <string name="view_profile_nice_to_meet_you">Nice to meet you</string>
+    <string name="view_profile_my_rating">Meine Bewertung</string>
+    <string name="view_profile_communication">Communication</string>
+    <string name="view_profile_sport_skills">Sport Skills</string>
+    <string name="view_profile_service">Services</string>
+    <string name="view_profile_quality_price">Quality - Price</string>
+    <string name="view_profile_reviews">Reviews</string>
+    <string name="view_profile_read_all">Read all</string>
+    <string name="view_profile_appointments">Termine</string>
+    <string name="view_profile_edit_details">Details bearbeiten</string>
+
+    <string name="view_profile_speak_languages">Meine Sprachen</string>
+
+    <!--
+    Order history screen
+    -->
+    <string name="order_history_pending_order">Pending Orders</string>
+    <string name="order_history_completed_order">Completed Orders</string>
+
+
+    <string name="order_history_pending_order_new">Anhängig</string>
+    <string name="order_history_completed_order_new">Abgeschlossen</string>
+
+    <string name="order_history_escrow">Garantiekonto</string>
+    <string name="order_history_paid">Bezahlt</string>
+
+    <!--
+    Order detail screen
+    -->
+    <string name="order_detail_activities">Activities</string>
+    <string name="order_detail_payment_status">Zahlungsstatus</string>
+    <string name="order_detail_date">Startdatum</string>
+    <string name="order_detail_time">Startzeit</string>
+    <string name="order_detail_duration">Dauer</string>
+    <string name="order_detail_participants">Teilnehmer</string>
+    <string name="order_detail_meeting_spot">Treffpunkt</string>
+    <string name="order_detail_sport_types">Sport Types</string>
+    <string name="order_detail_reviews">Reviews</string>
+    <string name="order_detail_read_all">Read all</string>
+    <string name="order_detail_price">Price</string>
+    <string name="order_detail_additional_participants">Additional Participants</string>
+    <string name="order_detail_fees_for_booking">Fees for Booking</string>
+    <string name="order_detail_total_activity">Total Activity</string>
+    <string name="order_detail_total_booking">Total Booking</string>
+
+    <string name="order_detail_appointment_status">Status des Termins</string>
+
+    <!--
+    cancellation screen
+    -->
+    <string name="cancellation_total_booking_amount">Gesamter Buchungsbetrag</string>
+    <string name="cancellation_will_by_receive_by_you">Wird von Ihnen erhalten.</string>
+    <string name="cancellation_reason">Vernunft</string>
+    <string name="cancellation_type_here">Hier eingeben....</string>
+
+    <!--
+    cancellation dialog screen
+    -->
+    <string name="cancellation_dialog_message">Sind Sie sicher, dass Sie absagen wollen?</string>
+
+    <!--
+    invite friends screen
+    -->
+
+
+    <string name="invite_friends_text_1">Sie erhalten $$$ bei Ihrer ersten Buchung und erhalten ### bei Ihrer nächsten Reservierung.</string>
+    <string name="invite_friends_terms_and_conditions">Terms and Conditions</string>
+    <string name="invite_friends_or">OR</string>
+    <string name="invite_friends_share_your_link">Share your link</string>
+    <string name="invite_friends_invite">Invite</string>
+    <string name="invite_friends_invite_plus">+ Invite</string>
+
+    <!--
+    notification screen
+    -->
+    <string name="notification_chat">Chat</string>
+    <string name="notification_notify">Notify</string>
+    <string name="notification_accept">Akzeptieren</string>
+    <string name="notification_decline">Ablehnen</string>
+    <string name="notification_request_admin">Anfrage an Admin</string>
+
+    <!--
+    Received objection screen
+    -->
+    <string name="received_objection_activities">Activities</string>
+    <string name="received_objection_sport_types">Sport Types</string>
+    <string name="received_objection_date">Date</string>
+    <string name="received_objection_time">Time</string>
+    <string name="received_objection_duration">Duration</string>
+    <string name="received_objection_participants">Participants</string>
+    <string name="received_objection_meeting_spot">Meeting Spot</string>
+    <string name="received_objection_reason">Grund für die Rückerstattung.</string>
+    <string name="received_objection_your_booking_amount">Your Booking Amount :</string>
+    <string name="received_objection_give_you_flat_rate">Doris Candiz give you flat rate :</string>
+    <string name="received_objection_total_refundable_amount">Total Refund</string>
+    <string name="received_objection_accept">Accept</string>
+    <string name="received_objection_request_to_admin">Request To admin</string>
+
+    <string name="received_objection_total_refundable_amount_new">Rückerstattet</string>
+
+    <!--
+    Check sport equipments screen
+    -->
+    <string name="check_sport_equipments_please_inform_the_local">Bitte informieren Sie den Einheimischen, wenn Sie einen Artikel vermissen.</string>
+    <string name="check_sport_equipments_selected">Ausgewählt</string>
+    <string name="check_sport_equipments_please_inform_the_visitor">Chatten Sie mit Ihrem Kunden, um zu erfahren, was fehlt und wie Sie helfen können?</string>
+
+    <!--
+    Chat screen
+    -->
+    <string name="chat_view_local_activities">View Local\'s Activities</string>
+
+    <!--
+    Filters screen
+    -->
+    <string name="filters_primary_filters">Primary Filters</string>
+    <string name="filters_filter_by_spot">Filter by sport</string>
+    <string name="filters_filter_by_spot_sub">Filter by sport sub types</string>
+    <string name="filters_filter_by_date">Filter by date</string>
+    <string name="filters_filter_by_start_time">Filter by start time</string>
+    <string name="filters_filter_by_location">Filter by location</string>
+    <string name="filters_filter_by_activity_type">Filter by activity\'s type</string>
+    <string name="filters_secondary_filters">Secondary Filters</string>
+    <string name="filters_filter_by_local_language">Filter by local\'s language</string>
+    <string name="filters_filter_by_price_range">Preisbereich/Std.</string>
+    <string name="filters_filter_by_rating">Bewertung</string>
+
+    <!--
+    Help & faq screen
+    -->
+    <string name="help_and_faq_ask_question">Ask a question or search by keyword...</string>
+    <string name="help_and_faq_suggested_topics">Vorgeschlagene Themen</string>
+    <string name="help_and_faq_Q">Q.</string>
+    <string name="help_and_faq_A">A.</string>
+
+    <!--
+    Settings screen
+    -->
+    <string name="settings_notification">Push-Benachrichtigungen</string>
+    <string name="settings_notification_by_email">E-Mail-Benachrichtigungen</string>
+    <string name="settings_change_password">Passwort ändern</string>
+    <string name="settings_add_payment_details">Fügen Sie Ihre Zahlungsdaten hinzu</string>
+    <string name="settings_add_bank_details">Fügen Sie Ihre Bankverbindung hinzu</string>
+    <string name="settings_terms_and_conditions">Allgemeine Geschäftsbedingungen</string>
+
+    <string name="forgot_password">Passwort vergessen</string>
+
+    <!--
+    Settings screen
+    -->
+    <string name="change_password_change_password">Change Password</string>
+    <string name="change_password_old_password">Altes Passwort</string>
+    <string name="change_password_new_password">Neues Passwort</string>
+    <string name="change_password_confirm_password">Passwort bestätigen</string>
+
+    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n\n</string>
+    <string name="dummy_1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</string>
+
+    <string name="button_sign_up">Sign Up</string>
+    <string name="button_book_now">Book Now</string>
+    <string name="button_next">Nächste</string>
+    <string name="button_book_now_new">Book now</string>
+
+    <string name="mapkey">AIzaSyBEdeBZVHwgLuo2-GaLte8-15h-Eolz7ms</string>
+
+    <string name="organization_details">Details zur Organisation</string>
+    <string name="organization_details_preivew">Vorschau der Organisationsdetails</string>
+
+    <string name="button_confirm_booking">Buchung bestätigen</string>
+    <string name="button_set_location">Standort festlegen</string>
+
+    <string name="button_pay">Bezahlen: ###</string>
+    <string name="button_ok_great">Ok Super</string>
+    <string name="button_ok_great_new">Okay, großartig!</string>
+
+    <string name="button_send_objection">Einspruch senden</string>
+    <string name="button_submit">Einreichen</string>
+    <string name="toolbar_recipt">REZEPT</string>
+    <string name="button_pay_now">Jetzt bezahlen</string>
+
+    <string name="button_see_receipt">Siehe Quittung</string>
+    <string name="button_cancel">Abbrechen</string>
+    <string name="button_yes">Ja</string>
+    <string name="button_no">Nein.</string>
+    <string name="button_invite_friends">Freunde einladen</string>
+    <string name="button_invite_all">Invite All</string>
+    <string name="button_update">Aktualisieren</string>
+    <string name="chat_send">SENDEN</string>
+    <string name="button_give_a_feedback">Geben Sie ein Feedback</string>
+    <string name="button_apply">Bewerben</string>
+    <string name="my_exp_total">Total</string>
+    <string name="my_exp_meeting_spot">Meeting Spot :</string>
+    <string name="my_exp_participants">Participants :</string>
+    <string name="my_exp_duration">Duration :</string>
+    <string name="check_equipments">Check Equipments</string>
+    <string name="sport_equipments">Sport Equipments</string>
+    <string name="amount_per_participants">Amount Per Participants</string>
+    <string name="toolbar_notification">Notification</string>
+    <string name="toolbar_notifications">BENACHRICHTIGUNGEN</string>
+
+    <string name="toolbar_received_objection">EINWAND ERHALTEN HAT</string>
+    <string name="view_local_s_activities">View Local\'s Activities</string>
+    <string name="toolbar_experience_details">Experience Details</string>
+    <string name="skip">Überspringen</string>
+    <string name="toolbar_orders_history">Orders History</string>
+    <string name="toolbar_cancellation">Stornierung</string>
+
+    <string name="sucess">Successfully ...</string>
+    <string name="cancel_fully">Cancellation successfully ...</string>
+    <string name="toolbar_invite_friends">FREUNDE EINLADEN</string>
+    <string name="help_faq"><![CDATA[HILFE & FAQ]]></string>
+    <string name="toolbar_settings">EINSTELLUNGEN</string>
+    <string name="toolbar_favorites">FAVORITEN</string>
+
+    <string name="toolbar_activities">Select Activities</string>
+    <string name="toolbar_select_date">Select Date</string>
+    <string name="toolbar_add_participants">Add Participants</string>
+    <string name="toolbar_add_participants_n">TEILNEHMER</string>
+
+    <string name="toolbar_duration">Duration</string>
+    <string name="toolbar_meeting_location">Meeting Location</string>
+    <string name="toolbar_appointment_summery">TERMINÜBERSICHT</string>
+    <string name="toolbar_payment">ZAHLUNG</string>
+    <string name="toolbar_check_sport_eaquipments">Ausrüstungs-Checkliste</string>
+    <string name="gallery">Galerie</string>
+    <string name="lost">Verloren?</string>
+
+    <string name="toolbar_eaquipments">AUSRÜSTUNG</string>
+    <string name="view_order_details">Auftragsdetail anzeigen</string>
+
+
+    <!--Visitor Side set
+    -->
+
+    <!--
+    add_images screen
+    -->
+    <string name="add_images_sport_type">Sport</string>
+    <string name="add_images_sport_type_desc">Description</string>
+
+    <!--
+    Upload  Certifications
+    -->
+    <string name="upload_certification_add_y_c">Lassen Sie unsere Besucher wissen, dass Sie ein Experte sind, fügen Sie Ihre Zertifizierung hinzu....</string>
+    <string name="upload_certification_certificate">Certificate</string>>
+    <string name="upload_certification_certificate_title">Certificate Title</string>
+    <string name="upload_certification_Sport_type">Sport Types</string>
+    <string name="upload_certification_Sport_sub_type">Sport Sub Types</string>
+
+    <string name="upload_certification_Sport_type_n">Meine Sportarten</string>
+    <string name="upload_certification_Sport_sub_type_n">Sport Unterkategorie</string>
+
+    <string name="upload_certification_description">Beschreibung der Zertifizierung</string>
+    <string name="upload_certification_description_n">Certificate Description</string>
+
+    <!--
+    Upload  Achievements
+    -->
+    <string name="upload_achievements_add_y_c">Lassen Sie sich von unseren Besuchern wahrnehmen, fügen Sie Ihre Leistungen hinzu....</string>
+    <string name="upload_achievements_achievements">Achievement</string>>
+    <string name="upload_achievements_achievements_title">Achievement Title</string>
+    <string name="upload_achievements_Sport_type">Sport Types</string>
+    <string name="upload_achievements_description">Achievement Description...</string>
+    <string name="upload_achievements_description_n">Achievements Description</string>
+
+    <string name="upload_achievements_add_tags">Tags hinzufügen</string>
+
+    <string name="upload_achievements_tags">Tags</string>
+
+    <!--
+    Choose Languages
+    -->
+    <string name="choose_languages_application">Language of the application</string>
+    <string name="choose_languages_speak_during">Language i can speak during the activities</string>
+    <string name="become_a_local">Lokal werden</string>
+    <string name="toolbar_add_images">Bilder aus der Kategorie Sport</string>
+    <string name="toolbar_edit_images">Set Images</string>
+
+    <string name="toolbar_upload_certifications">Zertifizierung</string>
+    <string name="toolbar_upload_achivements">Leistungen</string>
+    <string name="save">Save</string>
+    <string name="select_n_certificate">Select\nCertificate</string>
+    <string name="select_n_achivement">Select\nAchievement</string>
+    <string name="toolbar_choose_languages">Choose Languages</string>
+    <string name="toolbar_create_your_experience">Create Your Experience</string>
+    <string name="toolbar_choose_sport_activities">Choose Sport Activities</string>
+    <string name="toolbar_choose_speak_languages">Choose Speak Languages</string>
+
+    <string name="toolbar_choose_language">SPRACHE WÄHLEN</string>
+
+    <string name="price_rules">PRICE RULES</string>
+    <string name="are_you_agree_for_multiple_nparticipants_booking">Are you agree for multiple\nparticipants booking</string>
+    <string name="u_2022_set_pricing_rule_for_the_activity_cost_per_hour_for_every_new_participant">Set pricing rule for the activity cost per hour for every new participant.</string>
+
+    <string name="u2022_add_maximum_number_of_participants">• Add maximum number of participants</string>
+    <string name="u2022_minimum_duration">• Minimum Duration</string>
+    <string name="activities">Activities :</string>
+    <string name="example">Price Example :</string>
+    <string name="example_n">Price Example</string>
+
+    <string name="fees_for_booking">+ Fees For Booking</string>
+    <string name="ok">Ok</string>
+    <string name="request_an_other_sport">Request an other sport</string>
+    <string name="you_need_to_prices_add_per_hour">You need to prices add per hour.</string>
+    <string name="session">SESSION</string>
+    <string name="discovery">DISCOVERY</string>
+    <string name="lesson">LESSON</string>
+    <string name="toolbar_set_location">Ihr Standort</string>
+    <string name="set_cancellation_policies">Stornierungsrichtlinien festlegen</string>
+    <string name="strict_policy">Strict Policy</string>
+    <string name="cancel_up_to_30_days_before_your_activity_and_get_a_full_refund_including_all_fees_cancel_within_30_days_of_the_activity_and_get_a_50_refund_of_the_total_nightly_rate_as_well_as_a_full_refund">Cancel up to 30 days before your activity and get a full refund, including all fees. Cancel within 30 days of the activity and get a 50% refund of the total nightly rate, as well as a full refund of fees.</string>
+    <string name="cancel_up_to_7_days_before_your_activity_and_get_a_full_refund_including_all_fees_cancel_within_7_days_of_the_activity_and_get_a_50_refund_of_the_total_nightly_rate_as_well_as_a_full_refund">Cancel up to 7 days before your activity and get a full refund, including all fees. Cancel within 7 days of the activity and get a 50% refund of the total nightly rate, as well as a full refund of fees.</string>
+
+    <string name="moderate">Moderate</string>
+    <string name="search_your_location">Suchen Sie Ihren Standort</string>
+    <string name="my_activity_area">My activity area</string>
+
+    <!--
+    Set availabilities section start
+    -->
+    <string name="set_availabilities_days">Days</string>
+    <string name="set_availabilities_start_time">Start Time</string>
+    <string name="set_availabilities_end_time">End Time</string>
+    <string name="set_availabilities_select_here">Hier auswählen</string>
+
+    <string name="set_availabilities_to">To</string>
+    <string name="set_availabilities_mon">Mon</string>
+    <string name="set_availabilities_tue">Tue</string>
+    <string name="set_availabilities_wed">Wed</string>
+    <string name="set_availabilities_thu">Thu</string>
+    <string name="set_availabilities_fri">Fri</string>
+    <string name="set_availabilities_sat">Sat</string>
+    <string name="set_availabilities_sun">Sun</string>
+    <string name="toolbar_set_availabilities">Set Availabilities</string>
+    <string name="to">To</string>
+    <string name="valid_opening_time">Please select first start time</string>
+    <string name="success_thanks_for_sending">Vielen Dank für die Zusendung Ihrer Daten. Ein Admin überprüft sie und benachrichtigt Sie sobald Ihre Abenteur genehmigt ist.</string>
+    <string name="modify">Modifizieren</string>
+    <string name="complete">Vollständig</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="send_payment_req">Send Payment Req.</string>
+
+    <string name="send_payment_req_new">Zahlung beantragen</string>
+
+    <string name="objection_has_been_raised">Es wurde Einspruch erhoben.</string>
+
+
+    <string name="compete_orders">Compete Orders</string>
+    <string name="about_me">Lokaler Profilbildschirm</string>
+    <string name="sport_equipments_n">Sportausrüstung</string>
+    <string name="your_payment_request_is_sent_to_the_visitor_will_come_back_to_you_shortly">Ihre Zahlungsaufforderung wurde an den Besucher gesendet und wird in Kürze an Sie zurückgesendet.</string>
+    <string name="thanks">Danke!</string>
+    <string name="which_option_you_want_to_modify">Which option you want\nto modify</string>
+    <string name="duration">Duration</string>
+    <string name="meeting_spot">Treffpunkt</string>
+    <string name="button_send">Send</string>
+    <string name="report_title">Report Title</string>
+
+    <string name="total_earnings">Gesamterträge.</string>
+    <string name="total_month">### Ergebnis</string>
+    <string name="view_month_wise_earnings">Monatliche Erträge anzeigen.</string>
+    <string name="accept_orders">Accepted Orders</string>
+    <string name="accept_orders_new">Akzeptiert</string>
+
+    <string name="my_rating">Meine Punktzahl</string>
+    <string name="rate">Ergebnis</string>
+    <string name="improved">Verbessern</string>
+    <string name="wrong">Falsch</string>
+    <string name="toolbar_month_wise_earnings">Monatliches Einkommen</string>
+    <string name="experience_images">Experience Images</string>
+    <string name="completed">Completed</string>
+    <string name="complete_orders">Erledigte Aufträge</string>
+    <string name="total_refund">Total Refund</string>
+    <string name="toolbar_modify_objection">Einspruch ändern</string>
+    <string name="_00">00 %</string>
+    <string name="do_you_want_to_give_discount">Do you want to give discount</string>
+    <string name="__00">$ 00</string>
+    <string name="do_you_want_to_give_flat_rate">Do you want to give flat rate</string>
+
+    <string name="my_images">Meine Bilder</string>
+
+    <!--
+    Set availabilities section end
+    -->
+
+    <!--
+        Create your organization section start
+        -->
+    <string name="c_y_o_organization_name">Name der Organisation</string>
+    <string name="c_y_o_select_activities_types">Art der Aktivitäten</string>
+    <string name="c_y_o_activities_types">Activities Types</string>
+    <string name="c_y_o_select_sport_types">Sport</string>
+    <string name="c_y_o_sport_types">Sport Types</string>
+
+    <string name="c_y_o_location">Standort</string>
+    <string name="c_y_o_website_url">Website-URL</string>
+    <string name="c_y_o_search_local_name">Search Local Name</string>
+    <string name="c_y_o_upload_organization_logo">Importieren Sie das Logo der Organisation</string>
+
+    <string name="c_y_o_upload_organization_image">Importieren Sie Bilder aus der Organisation</string>
+    <string name="c_y_o_payment_managements">Payment Managements</string>
+    <string name="c_y_o_receive_payment">Receive payments from every affiliated locals</string>
+    <string name="c_y_o_let_the_local">Let the local receive the payments</string>
+    <string name="c_y_o_define_percentage">Define Percentage</string>
+
+    <!--
+      Create your organization section end
+        -->
+
+    <!--
+    Add bank details section start
+    -->
+    <string name="a_b_d_bank_name">Bankname</string>
+    <string name="a_b_d_account_holder_name">Account Holder Name</string>
+    <string name="a_b_d_account_number">Account Number</string>
+    <string name="a_b_d_routing_numbers">Routing Nummer</string>
+    <string name="a_b_d_note">Note ### :</string>
+    <string name="a_b_d_please_add_bank_details_of">Please add bank details of organization</string>
+    <string name="a_b_d_please_enter_your_percentage_which_would">Please enter your percentage which would you like the total</string>
+    <string name="a_b_d_define_percentage">Define Percentage for Org.</string>
+    <string name="a_b_d_please_add_bank">Please enter add bank details of organization</string>
+    <string name="toolbar_create_your_own_organization">Erstellen Sie Ihre Organisation</string>
+    <string name="toolbar_edit_organization">Organisationsdetails bearbeiten</string>
+
+    <string name="a_b_d_account_number_iban">Account Number / IBAN</string>
+
+
+    <string name="button_done">Erledigt</string>
+    <string name="button_preview">Preview</string>
+    <string name="button_confirm">Bestätigen</string>
+    <string name="toolbar_preview_details">Preview Details</string>
+    <string name="website_url">Website URL</string>
+    <string name="button_change">Change</string>
+    <string name="and">And</string>
+    <string name="per_add_bank_details">Bankinformationen</string>
+    <string name="define_percentage">Define Percentage</string>
+    <string name="toolbar_organization_dashboard">Organisation Dashboard</string>
+
+    <!--
+      Add bank details section end
+    -->
+
+    <array name="weekDayTitle">
+        <item name="S">S</item>
+        <item name="M">M</item>
+        <item name="T">D</item>
+        <item name="W">M</item>
+        <item name="T">D</item>
+        <item name="F">F</item>
+        <item name="S">S</item>
+    </array>
+
+    <string name="day_month_year">day month year</string>
+    <string name="first_day_selected">First day selected</string>
+    <string name="last_day_selected">Last day selected</string>
+    <string name="visitors">Besucher</string>
+    <string name="button_save">Speichern</string>
+    <string name="set_special_availabilities">Set Special Availabilities</string>
+    <string name="disable_sports">Disable Sports</string>
+    <string name="toolbar_set_special_availabilities">Besondere Verfügbarkeiten einstellen</string>
+    <string name="i_am_not_available_today">Ich bin nicht verfügbar.</string>
+    <string name="toolbar_disable_sports">Disable Sports</string>
+    <string name="end_date">Enddatum</string>
+    <string name="start_date">Startdatum</string>
+    <string name="button_set">Set</string>
+    <string name="toolbar_edit_personal_details">PERSÖNLICHE DATEN BEARBEITEN.</string>
+
+
+    <!--
+Profile screen
+-->
+    <string name="profile_first_name">Vorname</string>
+    <string name="profile_last_name">Nachname</string>
+    <string name="profile_email">E-Mail</string>
+    <string name="profile_password">Password</string>
+    <string name="profile_introduce_your_self">Stellen Sie sich vor</string>
+
+    <string name="profile_introduce_your_self_100">Introduce yourself (100)</string>
+    <string name="profile_introduce_your_self_400">Stellen Sie sich vor (400)</string>
+
+    <!--
+    Rate and review screen
+    -->
+    <string name="rate_review_how_was_your_experience">Wie war dein Abenteuer?</string>
+    <string name="rate_review_on_time">On Time</string>
+    <string name="rate_review_friendly">Friendly</string>
+    <string name="rate_review_respectful">Respectful</string>
+    <string name="rate_review_enjoyable">Enjoyable</string>
+    <string name="_60">(100)</string>
+    <string name="toolbar_edit_achievements">Set Achievements</string>
+    <string name="button_exit_group">Organisation verlassen</string>
+    <string name="val_enter_name">Please enter name</string>
+    <string name="val_enter_address">Please enter address</string>
+    <string name="cal_enter_tel_mob">Bitte geben Sie Ihre Telefon-/Handynummer ein</string>
+    <string name="val_please_agree_terms_conditions"><![CDATA[Please agree terms & conditions]]></string>
+    <string name="cal_please_enter_sport">Please enter sport</string>
+    <string name="val_plese_enter_desc">Please enter description</string>
+    <string name="cal_plese_select_image">Please select image</string>
+
+    <string name="val_certificate_title">Please enter certificate title</string>
+    <string name="val_cert_desc">Bitte geben Sie eine Beschreibung Ihrer Zertifizierung ein.</string>
+    <string name="val_select_image_cert">Bitte wählen Sie ein Zertifizierungsbild</string>
+    <string name="val_select_sport_type">Bitte wählen Sie Ihre Sportarten aus</string>
+    <string name="val_select_sub_sport_type">Bitte wählen Sie Ihre Sportunterkategorie aus</string>
+
+    <string name="val_achiv_title">Please enter achievement title</string>
+    <string name="val_achiv_desc">Please enter achievement description</string>
+    <string name="val_select_image_achiv">Bitte wählen Sie Ihre Leistungsbild aus</string>
+    <string name="val_app_language">Please select language of the application</string>
+    <string name="val_during_lang_speak">Bitte wählen Sie die gewünschte Sprache aus</string>
+    <string name="val_please_select_your_exp">Please select your experience</string>
+    <string name="val_enter_flat_rate">Bitte geben Sie einen festen Betrag ein</string>
+    <string name="val_enter_discount_amount">Bitte geben Sie Rabatt ein</string>
+    <string name="val_org_name">Bitte geben Sie den Namen der Organisation ein</string>
+    <string name="cal_selec_activities">Bitte wählen Sie die Art der Aktivität</string>
+    <string name="val_select_sport">Bitte wählen Sie Sport</string>
+    <string name="val_enter_location">Bitte geben Sie den Standort ein</string>
+    <string name="val_enter_web_url">Bitte geben Sie die URL der Website ein</string>
+    <string name="val_enter_bank_name">Bitte geben Sie den Banknamen ein</string>
+    <string name="val_account_holder_name">Please enter account holder name</string>
+    <string name="val_account_number">Bitte geben Sie die Kontonummer ein</string>
+    <string name="val_IBAN_number">Please enter IBAN</string>
+
+    <string name="val_routing_number">Please enter routing number</string>
+    <string name="val_digit_routing_number">Please enter valid routing number</string>
+    <string name="val_define_per">Please enter define percentage for Org.</string>
+    <string name="val_enter_password">Bitte geben Sie Ihr Passwort ein</string>
+    <string name="val_enter_first_name">Bitte Vorname eingeben</string>
+    <string name="val_enter_last_name">Bitte Nachname eingeben.</string>
+    <string name="val_enter_email">Bitte Email eingeben</string>
+    <string name="val_email_valid">Bitte geben Sie eine gültige E-Mail ein</string>
+    <string name="val_password_max">Please enter minimum 4 characters for password</string>
+    <string name="select_here_time">@string/set_availabilities_select_here</string>
+    <string name="select_here_time_new">@string/set_availabilities_select_here</string>
+
+    <string name="val_select_strat_date">Bitte wählen Sie das Startdatum</string>
+    <string name="string_kool">Kool</string>
+    <string name="tool_earnings">### Earnings</string>
+    <string name="explore_kooloco">Explore Kooloco</string>
+    <string name="toolbar_title_explore">Explore</string>
+    <string name="blog_desc_duration_of_the_activity">Duration of the Activity</string>
+    <string name="blog_spot">Spot</string>
+    <string name="blog_desc_local_info">Local Info</string>
+    <string name="blog_desc_book">Book ###</string>
+    <string name="blog_comments">Comments</string>
+    <string name="button_post">Post</string>
+    <string name="write_your_comment">Write your comment</string>
+    <string name="share_you_experience">Share your experience</string>
+    <string name="edit_you_experience">Edit your experience</string>
+
+    <string name="write_about_your_experience">Write about your experience..</string>
+    <string name="experience_rating">Experience Rating</string>
+    <string name="duration_of_the_activity">Duration of the Activity</string>
+    <string name="spot">Spot</string>
+    <string name="embarrassing">Embarrassing</string>
+    <string name="infancy">Infancy</string>
+    <string name="treatise">Treatise</string>
+    <string name="containing">Containing</string>
+
+
+    <string name="filter_normal">NORMAL</string>
+    <string name="filter_amaro">AMARO</string>
+    <string name="filter_rise">RISE</string>
+    <string name="filter_hudson">HUDSON</string>
+    <string name="filter_xproii">XPROII</string>
+    <string name="filter_sierra">SIERRA</string>
+    <string name="filter_lomo">LOMOFI</string>
+    <string name="filter_earlybird">EARLYBIRD</string>
+    <string name="filter_sutro">SUTRO</string>
+    <string name="filter_toaster">TOASTER</string>
+    <string name="filter_brannan">BRANNAN</string>
+    <string name="filter_inkwell">INKWELL</string>
+    <string name="filter_walden">WALDEN</string>
+    <string name="filter_hefe">HEFE</string>
+    <string name="filter_valencia">VALENCIA</string>
+    <string name="filter_nashville">NASHVILLE</string>
+    <string name="filter_1977">1977</string>
+    <string name="filter_lordkelvin">LORDKELVIN</string>
+    <string name="save_tip">The filtered image saved to %1$s</string>
+    <string name="save_new">Save</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="recode_video">Record Video</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="select_video">Select Video</string>
+    <string name="group_booking">Group booking</string>
+    <string name="sport">Sport</string>
+    <string name="select_n_image">Select\nimage</string>
+    <string name="sport_title">Sport Title</string>
+    <string name="sport_description">Sport Description...</string>
+    <string name="sport_title_s">Sport</string>
+
+    <string name="val_select_image_add">Bitte wähle Ihre Sportbilder aus</string>
+    <string name="val_add_images_title">Please enter sport title</string>
+    <string name="val_add_image_desc">Please enter sport description</string>
+    <string name="val_select_images">Please select first sport type</string>
+    <string name="val_filter_sport">Please select first filter by sport</string>
+
+
+    <!--
+        New string with add content
+    -->
+
+    <string name="receipt_do_you_want_percentage_discount_new">Möchten Sie einen prozentualen Rabatt (%)?</string>
+    <string name="receipt_do_you_want_flat_amount_discount_new">Möchten Sie einen festen Betrag ($) abziehen?</string>
+
+    <string name="do_you_want_to_give_flat_rate_new">Möchten Sie einen festen Betrag geben? ($)</string>
+    <string name="do_you_want_to_give_discount_new">Möchten Sie einen Rabatt geben? (%)</string>
+    <string name="my_activity_area_new">My activity area (km)</string>
+    <string name="my_c_d">($)</string>
+    <string name="u2022_minimum_duration_new">• Minimum Duration (hr)</string>
+    <string name="u_2022_set_pricing_rule_for_the_activity_cost_per_hour_for_every_new_participant_new">Set pricing rule for the activity cost per hour for every new participant. ($)</string>
+    <string name="u2022_set_price_per_hour">• Set price per hour ($)</string>
+    <string name="facebook_app_id">1965833773432300</string>
+    <string name="add_other_equipment">Add other equipment</string>
+    <string name="sport_for">Sport for ###</string>
+    <string name="price">Price</string>
+    <string name="price_new">Prices</string>
+
+    <string name="val_price_per_hour">Please enter price per hour of</string>
+    <string name="val_min_duration">Please enter minimum duration of</string>
+    <string name="val_per_new_part">Please enter pricing rule for the activity cost per hour for every new participants of</string>
+    <string name="val_part">Please enter add maximum number of participants of</string>
+    <string name="val_select_service">Please select at least one sport service of </string>
+    <string name="val_select_service_new">Please select sports for </string>
+    <string name="val_add_other_equipment">Bitte fügen Sie Sportgeräte hinzu.</string>
+    <string name="val_activity_area">Please enter your activity area</string>
+    <string name="ok_new">OK</string>
+    <string name="closed">Closed</string>
+    <string name="crop_image_menu_rotate_left">Left</string>
+    <string name="crop_image_menu_rotate_right">Right</string>
+    <string name="crop_image_menu_crop">Crop</string>
+    <string name="add_equipment">Hinzufügen</string>
+    <string name="add_sport_equipment">Sportgeräte hinzufügen</string>
+    <string name="button_upload">Import</string>
+
+    <string name="toolbar_edit_certifications">Set Certifications</string>
+    <string name="val_ach_select_tag">Please select tag</string>
+    <string name="choose_sport_equipments">Choose sport equipments</string>
+    <string name="no_local_found">No local found</string>
+    <string name="no_order_found">Keine Bestellung gefunden</string>
+
+    <string name="hr">hr</string>
+    <string name="toolbar_experiences">EXPERIENCES</string>
+    <string name="toolbar_map_view">MAP VIEW</string>
+    <string name="toolbar_my_experiences">MY EXPERIENCES</string>
+    <string name="toolbar_messages">BOTSCHAFTEN</string>
+    <string name="toolbar_my_orders">MEINE BESTELLUNGEN</string>
+    <string name="toolbar_dashboard_new">Armaturenbrett</string>
+    <string name="toolbar_completed_orders">Erledigte Aufträge</string>
+    <string name="tags">Tags</string>
+
+    <string name="sport_type_n">Sportart</string>
+    <string name="end_time">End Time</string>
+    <string name="val_start_time">Please select first start time</string>
+    <string name="choose_your_strat_time">Choose your start time.</string>
+    <string name="choose_your_end_time_or_you_can">Choose your end time or you can.</string>
+    <string name="the_activity_duration">The activity\'s duration will be</string>
+    <string name="val_select_start_time">Please select start time</string>
+    <string name="val_end_Tiem">Please select end time</string>
+    <string name="val_select_date">Please select date</string>
+    <string name="val_add_participants">Die Anzahl der Teilnehmer muss mindestens eins sein.</string>
+    <string name="person">Person</string>
+    <string name="add_extra_participants">Add Extra Participants</string>
+
+    <string name="add_extra_participants_n">Add Extra Participants</string>
+    <string name="reset_all">Reset all</string>
+
+    <string name="date_today">Today</string>
+    <string name="date_yestrday">Yesterday</string>
+    <string name="val_rasi_per">Bitte geben Sie einen prozentualen Rabatt ein.</string>
+    <string name="val_f_amount_discount">Bitte Geben Sie einen festen Betrag ein.</string>
+    <string name="val_w_reason">Bitte geben Sie Ihren Grund an</string>
+    <string name="val_enter_reason">Please enter reason</string>
+    <string name="set_duration">Set Duration</string>
+    <string name="tol_duration">Modify Duration</string>
+    <string name="modify_meeting_location">Modify Meeting Location</string>
+    <string name="no_data_found">No data found</string>
+    <string name="val_write_your_comment">Please write your comment</string>
+    <string name="image_filter">Image Filter</string>
+    <string name="select_add_images">Please select video or image to upload</string>
+    <string name="local_experts">LOCAL EXPERTS</string>
+    <string name="book_me">Book me</string>
+    <string name="book_me_new">Lass uns gehen</string>
+
+    <string name="users_stories">Users stories</string>
+    <string name="click_on_the_map_to_set_the_matting_spot">Click on the map to set the meeting spot</string>
+    <string name="apply">Apply</string>
+    <string name="select_st_end">Please select start time and end time</string>
+    <string name="sport_date_time_location_activity_language">Where - sport - when - start time - duration - experience - recommended level - perfect for - language - price - rating</string>
+    <string name="description">Description</string>
+    <string name="assign_local">Lokaler Partner</string>
+    <string name="add_local_n">Lokaler Partner</string>
+    <string name="description_100">Beschreibung (100)</string>
+
+    <string name="set_payment_rules">Zahlungsregeln festlegen</string>
+    <string name="payment_entirely_transferred_to_the_organization">Payment entirely transferred to the organization.</string>
+    <string name="continue_new">Continue</string>
+    <string name="rules">Regeln</string>
+    <string name="add_new_payment_rule">Neue Zahlungsregel hinzufügen</string>
+    <string name="rule_name">Name der Regel</string>
+    <string name="payment_rules">Zahlungsregeln</string>
+    <string name="location">Lokalisierung</string>
+    <string name="affiliated_locals_by_sports">Angeschlossene Einheimische nach Sportarten.</string>
+    <string name="please_select_org_logo">Bitte wählen Sie Organisationslogo.</string>
+    <string name="val_org_desc">Bitte geben Sie die Organisationsbeschreibung ein</string>
+    <string name="val_please_val_image">Bitte laden Sie mindestens ein Bild hoch</string>
+    <string name="set_price_rules"><u>Set Payment Rules</u></string>
+    <string name="add_local"><u>Add Locals</u></string>
+    <string name="val_select_local">Bitte wählen Sie mindestens ein Lokal</string>
+    <string name="val_rul_name">Bitte geben Sie den Regelnamen ein</string>
+    <string name="val_select_at_least_one_local">Bitte weisen Sie sie einem lokalen Benutzer zu</string>
+    <string name="val_per_local">Bitte geben Sie die Zahlungsart Überwiesen auf Lokal ein.</string>
+    <string name="title_story">Story</string>
+    <string name="select_sport_n">Select Sport</string>
+    <string name="what_are_you_up_to">Wählen Sie Ihr Abenteuer</string>
+    <string name="select_activity">Select Activity</string>
+    <string name="fil_where">Wo</string>
+    <string name="fil_sport">Sport</string>
+    <string name="fil_when">Startdatum</string>
+    <string name="fil_start_time">Startzeit</string>
+    <string name="fil_duration">Dauer</string>
+
+    <string name="fil_experience_type">Kategorie Abenteuer</string>
+    <string name="fil_local_s_language">Gesprochene Sprachen</string>
+    <string name="experiences">Experience prices</string>
+    <string name="experiences_new">Abenteuer</string>
+
+    <string name="button_add">hinzufügen</string>
+    <string name="enjoy_your_experience">Genießen Sie Ihr Abenteuer.</string>
+    <string name="reset_filters">Filter zurücksetzen</string>
+    <string name="text_no_local_found">Kein lokaler gefunden. Wäre es du, der nächste?</string>
+    <string name="text_no_exp_found">Kein Abenteuer gefunden.</string>
+
+    <string name="choose_less_filters_to_get_more_changes_to_find_local_around_you">Hey, %s, kannst du hier ein Abenteuer erschaffen?</string>
+    <string name="there_nothing">Hier ist nichts.</string>
+    <string name="no_order_for_the_moment_go_back_to_the_home_listing_and_discover_what_you_can_experience">Sie haben im Moment keine Befehle…</string>
+    <string name="you_have_no_experience_for_the_moment_n_find_a_local_expert_and_send_him_a_booking_re_quest_to_start_your_next_experience">Sie haben noch nichts gebucht.\nFinden Sie einen lokalen Experten und buchen Sie Ihr nächstes Abenteuer.</string>
+    <string name="let_s_find_a_local">Einen Einheimischen suchen</string>
+
+    <string name="let_s_find_a_local_new">Einen Einheimischen suchen</string>
+
+    <string name="button_ok_go_it">Ok, verstanden!</string>
+    <string name="upgrad_your_profile">Aktualisieren Sie Ihr Profil.</string>
+    <string name="don_t_loose_hope_read_some_tips_on_our_blog_to_attract_new_visitors">Vertrauen Sie Kooloco und der Technologie.</string>
+    <string name="thanks_i_need_tips">Es ist weg!</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="inv_freinds">Laden Sie Ihre Freunde ein!</string>
+    <string name="amount_per_participant_Activity">Amount per participant for the activity</string>
+    <string name="activity_duration_time">Activity Order Summary</string>
+    <string name="booking_fee">Buchungsgebühr</string>
+    <string name="commission_per">Kommission</string>
+    <string name="local_earning">Lokales Einkommen</string>
+
+    <string name="booking_fee_adapted">Buchungsgebühr angepasst</string>
+
+    <string name="activity_duration_summery_new">Zusammenfassung der Bestellung</string>
+
+
+    <string name="set_the_meeting_spot">Set the meeting spot</string>
+    <string name="set_the_duration">Set the duration</string>
+
+    <string name="set_the_meeting_spot_local">Local set the meeting spot</string>
+    <string name="set_the_duration_local">Local set the duration</string>
+    <string name="currency">$</string>
+    <string name="hr_new">/hr</string>
+    <string name="online_chat">Online</string>
+    <string name="offline_chat">Offline</string>
+    <string name="please_write_your_review">Bitte schreiben Sie Ihre Bewertung.</string>
+    <string name="it_seems_that_you_didn_t_connect_with_anyone_yet_book_your_first_experience_and_connect_with_the_local_to_get_next_level">Buchen Sie Ihre erste Erfahrung und lassen Sie uns chatten</string>
+
+    <string name="it_seems_that_you_didn_t_connect_with_anyone_yet_book_your_first_experience_and_connect_with_the_local_to_get_next_level_new">Es scheint, als hättest du noch keine Verbindung zu jemandem.</string>
+    <string name="readmore">Mehr erfahren</string>
+
+    <string name="readless">Weniger lesen</string>
+    <string name="no_review_found">Keine Bewertung gefunden.</string>
+    <string name="upload_profile_picture">Upload profile picture</string>
+    <string name="order_id">Auftrags-ID:</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="local_earning_amount">Local Earning Amount</string>
+    <string name="steps_left">Schritte nach links</string>
+    <string name="let_s_complete_your_local_expert_profile">Let\'s complete your local expert profile!</string>
+    <string name="no_thanks">Nein, danke</string>
+    <string name="start_now">Jetzt starten</string>
+    <string name="what_s_left">Was bleibt</string>
+    <string name="allready_completed">Bereits abgeschlossen</string>
+    <string name="add_sport_experience_and_price_rules">Add sport experience and price rules</string>
+    <string name="set_location_new">Set Location</string>
+    <string name="add_certificates">Zertifikate hinzufügen</string>
+    <string name="add_achivements">Leistungen hinzufügen</string>
+    <string name="add_sport_equipments">Add sport equipments</string>
+    <string name="add_experience_images">Add experience images</string>
+    <string name="set_cancellation_policy">Set cancellation policy</string>
+    <string name="complete_now_your_local_profile_to_get_the_most_out_of_the_kooloco_ranking_it_takes_only_a_couple_clicks">Ergänzen Sie Ihr lokales Profil, um alle Ihre Chancen auf Ihre Seite zu legen und das Kooloco-Ranking optimal zu nutzen. Ein paar mehr Klicks ...</string>
+    <string name="create_organization">Erstellen Sie Ihre Organisation</string>
+    <string name="edit_organization">Edit Your Own Organization</string>
+    <string name="add_my_images">Zu meinen Bildern hinzufügen</string>
+
+    <string name="add_local_new">Lokal hinzufügen</string>
+    <string name="set_payment_rules_new">Zahlungsregeln festlegen</string>
+    <string name="organization_dashboard">Organisation Dashboard</string>
+    <string name="organization_preview">Organisationsvorschau</string>
+    <string name="organization">Organisation</string>
+    <string name="no_local_found_new">Kein Ortsgespräch gefunden</string>
+    <string name="no_local_assign">No Local Assign</string>
+
+    <string name="pending">Anhängig</string>
+    <string name="unassign">Zuweisung aufheben</string>
+    <string name="assign">Zuordnen</string>
+    <string name="org_req">Org Anf. :</string>
+    <string name="payment_rule">Zahlungsregel:</string>
+    <string name="local">Local :</string>
+
+    <string name="button_delete_org">Organisation löschen</string>
+    <string name="org_not_assign_payment_rul">Organisation weist keine Zahlungsregel zu</string>
+    <string name="are_you_sure_you_want_to_delete">Sind Sie sicher, dass Sie löschen wollen?</string>
+    <string name="are_you_sure_you_want_to_edit">Sind Sie sicher, dass Sie es bearbeiten wollen?</string>
+    <string name="are_you_sure_you_want_to_add">Are you sure you want to add?</string>
+
+    <string name="are_you_sure_you_want_to_is_not_available">Sind Sie sicher, dass Sie sich als nicht verfügbar markieren wollen?</string>
+
+    <string name="delete_org_message">Wenn Sie eine Organisation löschen, dann werden alle lokalen und Zahlungsregeln gelöscht.</string>
+
+    <string name="delete_local_message">Wenn Sie ein Lokal von Ihrer Organisation nicht anbinden, gilt die Zahlungsregel nicht mehr für sie.</string>
+    <string name="val_delete_org_image">At least one organization image required so you can not delete this image.</string>
+    <string name="your_local_profile_has_been_completed_and_awaited_for_the_kooloco_approval">Ihr lokales Profil wurde fertiggestellt und wartet auf die Genehmigung eines Administrators</string>
+    <string name="your_organization_has_been_completed_and_awaited_for_the_admin_approval">Your organization awaited for the admin approval</string>
+    <string name="uploading_images">Import</string>
+
+    <string name="your_exp_is_wait">Ihr Abenteuer wartet auf die Zustimmung eines Administrators. </string>
+
+    <string name="no_data_found_new">Keine Daten gefunden</string>
+    <string name="we_just_need_your_registered_email_to_send_you_password_reset_instruction">Ihre registrierte E-Mail-Adresse ist erforderlich, um das Passwort zurückzusetzen.</string>
+
+    <string name="notification_accept_new">Akzeptiert</string>
+    <string name="experiences_title">Abenteuer</string>
+    <string name="usd">USD</string>
+    <string name="edit_experiences_title">Abenteuer bearbeiten</string>
+
+    <string name="schedule_amp_price"><![CDATA[Zeitplan & Preis]]></string>
+    <string name="exp_sport">Sport</string>
+    <string name="exp_sport_cat">Sport &amp; Kategorie</string>
+
+    <string name="exp_category">Category</string>
+    <string name="exp_details">Details</string>
+    <string name="exp_meeting_spot">Treffpunkt</string>
+    <string name="exp_schedule">Schedule</string>
+    <string name="exp_other_details">Andere Details</string>
+    <string name="exp_set_special_availabilities">Spezielle Verfügbarkeiten einstellen</string>
+    <string name="exp_disable_the_experience">Deaktivieren Sie das Abenteuer</string>
+    <string name="exp_cancellation_policy">Stornobedingungen</string>
+    <string name="equipment_checklist">Ausrüstungs-Checkliste</string>
+    <string name="toolbar_title_sport">Sport</string>
+    <string name="select_the_sport_you_will_practice_during_the_experience">Wählen Sie die Sportart, die Sie während Ihres Abenteuers anbieten möchten</string>
+    <string name="start_by_choosing_the_experience_you_want_to_offer">Wählen Sie eine Kategorie für Ihr Abenteuer aus</string>
+    <string name="toolbar_title_experience">Abenteuer</string>
+    <string name="create_a_new_exp">Neues Abenteuer erstellen</string>
+    <string name="toolbar_title_add_details">Details hinzufügen</string>
+    <string name="experience_title_60">Abenteuer Titel (60)</string>
+    <string name="required_details">Erforderliche Angaben</string>
+    <string name="experience_description_400">Beschreibung des Abenteuers (500)</string>
+    <string name="exp_pictures">Erlebnisbild</string>
+    <string name="add_pictures">Add pictures</string>
+    <string name="vla_exp_title">Bitte fügen Sie einen Abenteuer Titel hinzu</string>
+    <string name="exp_val_desc">Bitte fügen Sie eine Abenteuebeschreibung hinzu</string>
+    <string name="val_exp_picture">Bitte wählen Sie mindestens ein Erlebnisbild hinzu</string>
+    <string name="toolvar_title_other_details">weitere Details</string>
+    <string name="highlights">Highlights</string>
+    <string name="list_the_exp_highlight">List the experience highlights</string>
+    <string name="list_the_exp_highlight_new">Highlights des Abenteuers auflisten (400)</string>
+
+    <string name="included_exp">Inklusive</string>
+    <string name="what_is_include">What is included?</string>
+    <string name="what_is_include_new">Was ist inbegriffen? (500)</string>
+
+    <string name="title_what_is_not_include">What is not included?</string>
+    <string name="title_what_is_not_include_new">Was ist nicht inbegriffen? (500)</string>
+
+    <string name="title_experience_tags">Abenteuer Tags</string>
+    <string name="val_other_details_list_exp_highlights">Bitte geben Sie hier die Abenteuer-Highlights ein</string>
+    <string name="val_other_details_not_include">Bitte geben Sie ein, was nicht enthalten ist</string>
+    <string name="val_other_details_include">Bitte geben Sie ein, was enthalten ist</string>
+    <string name="val_other_details_exp_tags">Bitte fügen Sie mindestens einen Adventure Tag hinzu.</string>
+    <string name="do_you_want_add_other_fields">Möchten Sie weitere Felder hinzufügen? Programmbeschreibung, Reiseroute, Wichtige Buchungsinformationen....</string>
+    <string name="name_of_the_new_fields">Name des neuen Feldes eingeben</string>
+    <string name="picture_new_fields">Bild für das neue Feld</string>
+    <string name="row_text_name_of_the_new_fields">Name of the new fields</string>
+    <string name="add_another_fields">Ein weiteres Feld hinzufügen</string>
+    <string name="val_other_details_add_fields">Bitte geben Sie den Namen des neuen Feldes ein.</string>
+    <string name="val_other_details_add_fields_desc">Bitte geben Sie die Beschreibung des neuen Feldes ein.</string>
+
+    <string name="val_other_details_new_filds_picyure">Bitte wählen Sie mindestens ein Bild für das neue Feld aus.</string>
+
+    <string name="set_the_weekly_availibilities_of_the_nexperience">Set the weekly availabilities of the\nexperience</string>
+    <string name="days_availabilities_and_price">Verfügbarkeit und Preis</string>
+    <string name="button_edit">Edit</string>
+    <string name="button_delete">Delete</string>
+
+    <string name="sch_from">Von</string>
+    <string name="sch_to">Bis</string>
+    <string name="multiple_day_experience">Mehrtägiges Abenteuer</string>
+    <string name="price_per_participants">Preis pro Teilnehmer</string>
+    <string name="maximum_participants">Höchstteilnehmerzahl</string>
+    <string name="duration_in_days">Dauer in Tagen</string>
+    <string name="select_start_time_and_end_time">Start- und Endzeit auswählen</string>
+    <string name="val_duration_day">Bitte geben Sie die Dauer in Tagen ein.</string>
+    <string name="val_duration_strat_time">Bitte wählen Sie Startzeit</string>
+    <string name="val_duration_start_end_time">Bitte wählen SienStart- und Endzeit aus</string>
+    <string name="val_duration_part">Bitte fügen Sie die Höchstteilnehmerzahl hinzu</string>
+    <string name="val_duration_price">Bitte fügen Sie den Preis pro Teilnehmer hinzu</string>
+    <string name="set_meeting_spot">Treffpunkt festlegen</string>
+    <string name="toolbar_title_disable_experience">Abenteuer deaktivieren</string>
+    <string name="local_profile_experiences">Abenteuer</string>
+    <string name="let_s_complete_your_local_exp">Let\'s complete your experience!</string>
+    <string name="title_categorise">Ihr Abenteuer in</string>
+    <string name="title_highlights">Highlights</string>
+    <string name="title_including">Inklusive</string>
+    <string name="title_not_including">Nicht inbegriffen</string>
+    <string name="description_of_the_local_when_he_sign_up_as_a_local_should_comes_here">Description of the local when he sign up as a local should comes here.</string>
+    <string name="capecity">Kapazität:</string>
+    <string name="participants">Teilnehmer</string>
+    <string name="title_no_thanks">Nein, Danke</string>
+    <string name="action_sports_adventures">Action Sport &amp; Abenteuer</string>
+    <string name="recommended_experiences">Empfohlene Abenteuer</string>
+    <string name="trendy_exp">Trendige Abenteuer</string>
+    <string name="new_exp">Neue Abenteuer</string>
+    <string name="staff_picks">Unsere Favoriten</string>
+    <string name="text_sports">Sport gelistet</string>
+    <string name="near_local_exp">Nächste lokale Experten</string>
+    <string name="top_sport_destination">Top-Sport-Destinationen</string>
+    <string name="home_new_local_experts">Lokale Experten.</string>
+    <string name="home_local_and_visitorexperiences">Abenteuer</string>
+    <string name="toolbar_title_select_experience">Wählen Sie Abenteuer</string>
+    <string name="title_select_date_time">DATUM WÄHLEN</string>
+    <string name="visitor_booking_when">Wann möchten Sie anfangen?</string>
+    <string name="button_select">Auswählen</string>
+    <string name="button_full">Voll</string>
+
+    <string name="appointment_summery_experience">Ihr Abenteuer</string>
+    <string name="appointment_summery_experience_new">Abenteuer</string>
+
+    <string name="where_when_where">Was, Wann, Wo?</string>
+    <string name="val_select_exp_first">Bitte wählen Sie Adventure</string>
+    <string name="note_no_more_choose_meeting_spot">Note : No more choose meeting spot</string>
+    <string name="title_certifications">Zertifizierungen</string>
+    <string name="verified_and_approved">Verifiziert und Genehmigt</string>
+    <string name="total_of_usd">USD</string>
+    <string name="add_paeticipants">Teilnehmer</string>
+    <string name="hours_exp">Stunden</string>
+    <string name="usd_0_usd_500">USD 0 - USD 5000</string>
+    <string name="recommended_level">Empfohlenes Niveau</string>
+    <string name="perfect_for">Perfekt für</string>
+    <string name="val_set_location">Please set location</string>
+    <string name="allow_maximum_3">Allow maximum 3 selection</string>
+    <string name="recomand_all">All</string>
+
+    <string name="val_set_meeting_spot_location">Please set meeting spot location</string>
+    <string name="val_other_details_perfect_for">Bitte wählen Sie Perfekt für</string>
+    <string name="val_other_details_recommanded_level">Bitte wählen Sie Empfohlene Stufe</string>
+    <string name="schdule_price_start_time">Startzeit</string>
+    <string name="schdule_and_price_for">für</string>
+    <string name="schdule_price_days">Tage</string>
+    <string name="disable_exp_select_date">Please select date</string>
+    <string name="delete_exp_schdule">Wenn Sie dieses Zeitfenster löschen und eine Buchung für dieses Zeitfenster akzeptiert haben, bleibt die Buchung unverändert.</string>
+    <string name="edit_exp_schdule">Sie können ein Zeitfenster ändern, aber wenn ein Besucher vor Ihren Änderungen gebucht hat, bleibt diese Reservierung unverändert.</string>
+
+    <string name="add_multiday_exp_schdule">Sie können ein Zeitfenster an mehreren Tagen hinzufügen, aber wenn ein Besucher vor Ihren Änderungen gebucht hat, bleibt diese Reservierung unverändert.</string>
+
+    <string name="error_message_add_info_schdule">Sie können nicht mehr als ein Zeitfenster für diesen Tag hinzufügen.</string>
+    <string name="error_maximum_slots">Maximale Schlitzbegrenzung überschritten</string>
+
+    <string name="edit_exp_schdule_not_available">If you set not available then for this day no availability will consider, but if any visitor booked experience in old time slot than that will be remain as it is</string>
+    <string name="val_upload_again">Please upload again</string>
+
+    <string name="delete_exp">Jede Buchung, die vor dem Löschen dieses Abenteuers vorgenommen wurde, bleibt unverändert.</string>
+    <string name="error_message_exp_first">Dein Abenteuer ist unvollständig, bitte ergänze die fehlenden Elemente.</string>
+    <string name="var_ok">Ok</string>
+
+    <string name="add_experiences_no_data">No data found</string>
+    <string name="exp_details_hours">Stunden</string>
+    <string name="exp_level">Empfohlenes Niveau:</string>
+
+    <string name="exp_duration">Dauer:</string>
+    <string name="experiences_location">Experiences</string>
+    <string name="certification_details_certificates">Experte für</string>
+    <string name="certification_details_certificate">certificate</string>
+    <string name="participant">Participant</string>
+    <string name="order_status">Status :</string>
+    <string name="ready_start">Bereit zum Start</string>
+    <string name="pending_for_approval">Vorbehaltlich der Genehmigung.</string>
+    <string name="_000">$000</string>
+
+    <string name="wants_tooal_refaund">Möchten Sie eine vollständige Rückerstattung geben?</string>
+    <string name="persentage_discount">Möchten Sie einen prozentualen Rabatt gewähren?</string>
+    <string name="flat_amount_discount">Möchten Sie einen festen Betrag angeben?</string>
+
+    <string name="give_total_refaund">give you total refund :</string>
+    <string name="rec_pr_flat_discount">give you percentage discount</string>
+    <string name="rec_obj_flat_discount">give you flat rate :</string>
+
+    <string name="give_total_refaund_new">Wollen Sie eine vollständige Rückerstattung?</string>
+    <string name="rec_pr_flat_discount_new">Wollen Sie eine prozentuale Rückerstattung?</string>
+    <string name="rec_obj_flat_discount_new">Möchten Sie einen festen Betrag erstatten?</string>
+
+    <string name="filter_reset">Zurücksetzen</string>
+    <string name="what_are_you_nup_to">WAS HAST\nDU VOR?</string>
+    <string name="discover_your_next_sport_adventure_with_kooloco">Entdecken Sie\nIhr nächstes\nSportabenteuer mit\nKooloco.</string>
+    <string name="button_let_s_start">Fangen wir an</string>
+    <string name="profile_notifications">Benachrichtigungen</string>
+    <string name="skip_intro"><![CDATA[Intro überspringen >]]></string>
+    <string name="home_tab_explore">Erforschen</string>
+    <string name="home_tab_search">Suche</string>
+    <string name="home_tab_adventures">Abenteuer</string>
+    <string name="home_tab_chat">Chat</string>
+    <string name="home_tab_account">Konto</string>
+    <string name="home_tab_orders">Bestellung</string>
+    <string name="home_tab_completed">Abgeschlossen</string>
+    <string name="home_tab_dashboard">Armaturenbrett</string>
+    <string name="duration_prior_to_reservation">Dauer vor der Reservierung</string>
+    <string name="refund">Erstattung</string>
+    <string name="exp_see_all_date"><![CDATA[Alle Termine ansehen >]]></string>
+    <string name="schedule_price_set_the_maximum_number_of_participants">Set the maximum number of participants</string>
+    <string name="schedule_price_add_the_weekly_availabilities">Wöchentliche Verfügbarkeiten hinzufügen</string>
+    <string name="no_order_for_the_complete">Keine Befehle im Moment. Gehen Sie zurück zum Startseite.</string>
+    <string name="experience_delete_local">Das Abenteuer ist nicht verfügbar, da es von den lokalen Behörden entfernt wurde.</string>
+    <string name="experience_disable_val">Das Abenteuer ist nicht verfügbar, da es von einem Administrator deaktiviert wurde.</string>
+    <string name="availabilities">Verfügbarkeiten / Check Verfügbare Termine</string>
+    <string name="please_set_payment_rule_from_here">Bitte stellen Sie hier die Zahlungsregel ein</string>
+
+    <string name="toolbar_experience_details_new">ABENTEUER-DETAILS</string>
+    <string name="val_select_error_message">Please select at least one equipments</string>
+    <string name="equ_unchecked">Nicht geprüft</string>
+    <string name="equ_checked">Überprüft</string>
+    <string name="check_equipment">Ausrüstung prüfen</string>
+    <string name="check_equipment_completed">Abgeschlossen</string>
+    <string name="check_equipment_missing_equipment">Fehlender Artikel</string>
+    <string name="equipment_check">Ausrüstungs-Check</string>
+
+    <string name="check_equipment_local">Anhängig</string>
+    <string name="check_equipment_missing_equipment_local">Fehlende Gegenstände</string>
+    <string name="check_equipment_completed_local">Abgeschlossen</string>
+
+    <string name="val_first_select_sport_category">Please select first sport and category</string>
+    <string name="add_bank_last_name">Nachname</string>
+    <string name="add_bank_first_name">Vorname</string>
+    <string name="hint_card_number">Kartennummer</string>
+    <string name="card_cvv">CVV</string>
+    <string name="button_give_rate">Geben Sie Rate</string>
+    <string name="add_payment_details">ZAHLUNGSDETAILS HINZUFÜGEN</string>
+    <string name="card_holder_s_name">Name des Karteninhabers</string>
+    <string name="expiry_date">Verfallsdatum</string>
+
+
+    <string name="valid_cvv">Bitte geben Sie eine gültige CVV ein.</string>
+    <string name="valid_empty_cvv">Bitte geben Sie CVV ein.</string>
+    <string name="valid_empty_car_number">Bitte geben Sie die Kartennummer ein.</string>
+    <string name="valid_card_number">Bitte geben Sie eine gültige Kartennummer ein.</string>
+    <string name="valid_card_holder_name">Bitte geben Sie den Namen des Karteninhabers ein.</string>
+    <string name="valid_select_expiry_date">Bitte wählen Sie Verfallsdatum.</string>
+    <string name="exp_month">Month</string>
+    <string name="exp_year">Year</string>
+    <string name="ssn">SSN</string>
+    <string name="address">Adresse</string>
+    <string name="country">Land</string>
+    <string name="zipcode">Postleitzahl</string>
+    <string name="date_of_birth">Geburtsdatum</string>
+
+    <string name="driver_s_license">(Führerschein, Personalausweis, Reisepass)</string>
+    <string name="add_identity_document">Identitätsdokument hinzufügen</string>
+    <string name="note_stripe">Hinweis: Wir arbeiten mit unserem Zahlungspartner Stripe.com zusammen, um alle unsere Zahlungsvorgänge abzuwickeln. Stripe verwaltet Online-Zahlungen für Unternehmen wie Best Buy, Facebook, Twitter, Lyft usw. Wir speichern Ihren Lichtbildausweis oder Ihre finanziellen Daten nicht auf unseren Servern.</string>
+    <string name="val_bank_first_name">Bitte Vorname eingeben</string>
+    <string name="val_bank_last_name">Bitte Nachname eingeben</string>
+    <string name="val_bank_address">Bitte Adresse eingeben</string>
+    <string name="val_bank_select_country">Bitte wählen Sie ein Land aus</string>
+    <string name="val_bank_zip_code">Bitte geben Sie die Postleitzahl ein</string>
+    <string name="val_bank_date_of_birth">Bitte wählen Sie das Geburtsdatum</string>
+    <string name="val_bank_id_document">Bitte laden Sie ein Ausweisdokument hoch</string>
+    <string name="val_add_bank">Bank hinzufügen</string>
+    <string name="org_bank_details">Bankverbindung</string>
+    <string name="check_equipment_read">Lesen Sie</string>
+    <string name="message_add_bank_details">Please add bank details first</string>
+    <string name="order_status_cancelled">Abgesagt</string>
+    <string name="order_status_completed">Abgeschlossen</string>
+    <string name="order_status_rejected">Abgelehnt</string>
+    <string name="order_status_decline">Dekliniert</string>
+    <string name="order_status_pending">pending</string>
+
+    <string name="order_payment_status_refunded">Rückerstattet</string>
+    <string name="order_cancellation_reason">Grund für die Stornierung</string>
+    <string name="toolbar_title_select_currency">WÄHRUNG</string>
+    <string name="currency_of_application">Wählen Sie Währung</string>
+    <string name="currency_select_language_n">Select Currency</string>
+    <string name="iban_account_number">Kontonummer ODER IBAN</string>
+
+    <string name="iban_number">IBAN-Nummer</string>
+
+    <string name="bic_swift">BIC/SWIFT</string>
+    <string name="bsb_bank_number">BSB Bankleitzahl</string>
+    <string name="bsb_branch_id_number">BSB-Niederlassungs-ID-Nummer</string>
+    <string name="account_number">Kontonummer</string>
+    <string name="bank_code">Bankleitzahl</string>
+    <string name="branch_code_i_e_3826_1">Branchencode (z.B. 3826-1)</string>
+    <string name="account_number_i_e_98987689_1">Kontonummer (z.B. 98987689-1)</string>
+    <string name="transit_number">Transit-Nummer</string>
+    <string name="branch_name">Name der Niederlassung</string>
+    <string name="city">Stadt</string>
+    <string name="province">Provinz</string>
+    <string name="ifsc_code">IFSC-Code</string>
+    <string name="bank_address">Bank Address</string>
+    <string name="branch_code">Branchencode</string>
+    <string name="bank_code_branch_code_eg_1111222">Bankleitzahl + Filialcode (z.B.: 1111222).</string>
+    <string name="clabe_number">CLABE-Nummer</string>
+    <string name="building_society_account">Gebäude-Gesellschaft-Konto Account</string>
+    <string name="branch_sorting_code">Branche Sorti0ng Code</string>
+
+    <string name="val_bank_bic_swift">Bitte geben Sie BIC/SWIFT ein</string>
+
+    <string name="val_bank_iban_account_number">Bitte IBAN/Kontonummer eingeben</string>
+
+    <string name="val_bank_iban">Please enter IBAN number</string>
+
+    <string name="val_bsb_bank_id_number">Bitte geben Sie die BSB Bankleitzahl ein</string>
+
+    <string name="val_bank_bcb_branch_id_number">Bitte geben Sie die BSB-Niederlassungsnummer ein</string>
+    <string name="val_bank_account_number">Bitte geben Sie die Kontonummer ein</string>
+    <string name="val_bank_branch_code">Bitte geben Sie den Branchencode ein</string>
+    <string name="val_bank_code">Bitte geben Sie die Bankleitzahl ein</string>
+    <string name="val_trabsit_number">Bitte geben Sie die Transitnummer ein</string>
+    <string name="val_bank_province">Bitte geben Sie die Provinz ein</string>
+    <string name="val_bank_city">Please enter city</string>
+    <string name="val_bank_branch_name">Bitte geben Sie den Filialnamen ein</string>
+    <string name="val_bank_ifsc_code">Bitte geben Sie den IFSC-Code ein</string>
+    <string name="val_bank_code_branch_code">Bitte geben Sie Bankleitzahl + Filialcode ein</string>
+    <string name="val_bank_clabe_number">Bitte geben Sie die CLABE-Nummer ein</string>
+    <string name="val_bank_routing_number">Please enter routing number</string>
+    <string name="val_bank_branch_sorting_code">Bitte geben Sie den Branche Sorting Code ein</string>
+    <string name="val_bank_building_society_account">Bitte geben Sie ein Bausparkonto ein</string>
+    <string name="place_additional_instructions">Zusätzliche Informationen</string>
+    <string name="bank_code_digits">Bankleitzahl (2-stellig)</string>
+    <string name="add_bank_bank_account_type">Bankkontoart</string>
+    <string name="val_add_bank_account_type">Please select bank account type</string>
+    <string name="tax_id_bank_account_holder_tax_id">Steuer-ID (Bankkonto Goldsteuer-ID)</string>
+    <string name="val_account_type">Please select account type</string>
+    <string name="become_a_local_select_currency">Währung auswählen</string>
+    <string name="val_select_currency">Bitte wählen Sie eine Währung aus</string>
+    <string name="new_camera">Kamera</string>
+    <string name="start_time">Startzeit</string>
+    <string name="new_image">Bild</string>
+    <string name="new_video">Video</string>
+    <string name="we_get_between_3_and_7_commission_on_each_ntransaction_in_order_to_cover_our_platform_s_costs_nand_better_connect_the_adventures">Kooloco erhält für jede Transaktion eine Provision zwischen 3% und 7% zur Deckung der Plattformkosten.</string>
+    <string name="search_locals">Einheimische suchen....</string>
+    <string name="search_locals_new">Search</string>
+
+    <string name="new_filters">Filters</string>
+    <string name="your_made_it">Du hast es geschafft!</string>
+    <string name="currency_during_the_activities">Meine Währung</string>
+    <string name="title_publish_your_experience">Publish Your Experience</string>
+    <string name="_1_5">1 - 5</string>
+    <string name="toolbar_filters">FILTER</string>
+    <string name="select_all">Select All</string>
+    <string name="will_be_receive_by_you">wird auf Sie übertragen.</string>
+    <string name="toolbar_order_details">Bestelldetails</string>
+    <string name="_0_km">0 km</string>
+    <string name="toolbar_sign_up">Inscrivez-vous</string>
+    <string name="organization_set_payment_rule_for_you">Organisation Zahlungsregel für Sie festlegen Zahlungsregel für Organisation.</string>
+    <string name="wow">Wow!</string>
+    <string name="oops">Oops!</string>
+    <string name="uh">Hat</string>
+    <string name="did_the_postman_forget_you">der Postbote dich vergessen</string>
+    <string name="no_request">Keine Anfrage?</string>
+    <string name="new_no_order_found">Keine Befehle gefunden</string>
+    <string name="min_duration">Min Duration</string>
+    <string name="button_new_cancel">Cancel</string>
+    <string name="button_new_done">Done</string>
+    <string name="read_all">Siehe andere</string>
+    <string name="reviews">Kritiken</string>
+    <string name="selected">Ausgewählt</string>
+    <string name="val_enter_old_password">Bitte geben Sie das alte Passwort ein.</string>
+    <string name="val_enter_new_password">Bitte geben Sie ein neues Passwort ein.</string>
+    <string name="val_eneter_new_password_min_four">Bitte geben Sie mindestens 4 Zeichen für ein neues Passwort ein.</string>
+    <string name="val_confirm_password">Bitte bestätigen Sie Ihr Passwort</string>
+    <string name="val_password_mismatch">Kennwörter stimmen nicht überein</string>
+    <string name="val_enter_message">Please enter valid email</string>
+    <string name="val_enter_create_password">Bitte erstellen Sie ein Passwort</string>
+    <string name="val_enter_password_minimum_4">Bitte geben Sie mindestens 4 Zeichen ein, um ein Passwort zu erstellen</string>
+    <string name="val_enter_conformpassword">Bitte geben Sie das Passwort ein.</string>
+    <string name="val_agress_terms_conditions"><![CDATA[Bitte stimmen Sie den Allgemeinen Geschäftsbedingungen zu]]></string>
+    <string name="val_aprticipant_email">Bitte geben Sie eine gültige Teilnehmer-E-Mail ein.</string>
+    <string name="val_select_card">Bitte wählen Sie eine Karte aus.</string>
+    <string name="referral_amount">Empfehlungsbetrag</string>
+    <string name="kooloco_referral">Kooloco Empfehlung</string>
+    <string name="referral">Hey, Ich habe gerade die Kooloco App gefunden, schau dir das an! Benutzen Sie meinen Empfehlungscode, um einen Rabatt von CHF 10 auf Ihre erste Buchung zu erhalten. \"<b>%s</b>b\", Laden Sie es jetzt herunter!</string>
+    <string name="referral_amount_new">Empfehlungsbetrag : CHF %s</string>
+    <string name="country_code">AUSWAHL LÄNDERCODE</string>
+    <string name="firebase_source">Experience</string>
+    <string name="firebase_social">social</string>
+    <string name="firebase_share_exp">Experience Share</string>
+    <string name="kooloco_exp_share">Kooloco Experience</string>
+    <string name="toolbat_terms_conditions">@string/settings_terms_and_conditions</string>
+
+    <string name="review_new">Siehe</string>
+    <string name="reviews_new">Bewertungen</string>
+    <string name="let_our_visitors_notice_you">Lassen Sie unsere Besucher einen Blick auf Ihren Sport werfen.</string>
+    <string name="select_sport_image">Bilder aus der Kategorie Sport auswählen</string>
+    <string name="select_certification_image">Wählen Sie eine Kopie Ihrer Zertifizierung aus</string>
+    <string name="select_achivement_images">Leistungsbild auswählen</string>
+    <string name="make_it_appealing">Machen Sie es attraktiv....</string>
+    <string name="make_it_desirable">Machen Sie es erstrebenswert....</string>
+    <string name="are_you_sure_want_to_add_another_time_slots">Sind Sie sicher, dass Sie ein weiteres Zeitfenster hinzufügen möchten?</string>
+    <string name="otherdetails_tags">#Tags</string>
+    <string name="spoken_languages">Gesprochene Sprachen</string>
+    <string name="my_images_new">Meine Bilder</string>
+    <string name="toolbar_new_equipments">Ausrüstungen</string>
+    <string name="affilated_local_delete">Bist du sicher, dass du dich von der Gemeinschaft trennen willst?</string>
+    <string name="assign_local_new">Zu lokal zuweisen</string>
+    <string name="reason_new_local">Vernunft</string>
+    <string name="checking">Überprüfen</string>
+    <string name="saving">Einsparungen</string>
+    <string name="individual">Einzelpersonen</string>
+    <string name="individual_enterprice">Einzelunternehmer</string>
+    <string name="payment_request_sent">Bezahlung gesendet</string>
+    <string name="val_set_one_day_schedule">Please set at least one day schedule</string>
+
+    <string name="customer_review_on_time">Pünktlich</string>
+    <string name="customer_review_friendly">Freundlich</string>
+    <string name="customer_review_respectful">Respektvoll</string>
+    <string name="customer_review_enjoyable">Angenehm</string>
+
+    <string name="local_review_quality_price">Qualität-Preis</string>
+    <string name="local_review_arrival_time">Ankunftszeit</string>
+    <string name="local_review_professionalism">Professionalität</string>
+    <string name="local_review_guidance">Führung</string>
+    <string name="local_review_meeting_point">Treffpunkt</string>
+    <string name="local_review_activity_duration">Dauer der Aktivität</string>
+    <string name="local_review_other">Andere</string>
+    <string name="send_to_support">Senden Sie an den Support</string>
+    <string name="share_rating_exp">I just took part in this amazing Adventure, you should too!</string>
+
+</resources>

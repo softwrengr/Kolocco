@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/viewFast"
+        android:layout_width="@dimen/dp_7"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="@dimen/dp_260"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/exp_local_row_layout" />
+
+        <ImageView
+            android:id="@+id/imageViewTick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:clickable="false"
+            android:src="@drawable/ic_checked" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/viewLast"
+        android:layout_width="@dimen/dp_7"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+</LinearLayout>

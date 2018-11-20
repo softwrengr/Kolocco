@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRefundFlatAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_7"
+        android:paddingTop="@dimen/dp_7">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            style="@style/raise_obj_radio"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center|start" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewLabel"
+            style="@style/raise_obj_radio_text"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:gravity="center|start"
+            android:text="Payment entirely transferred to the organization"
+            app:fontFamily="@font/opensans_regular" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/ediTextPer"
+            style="@style/raise_obj_edit_text"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="center"
+            android:hint="00%"
+            android:inputType="numberDecimal"
+            app:fontFamily="@font/opensans_regular" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/greyLine" />
+
+</LinearLayout>

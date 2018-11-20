@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbar"
+            app:contentInsetStart="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_filters"
+                    app:fontFamily="@font/aquatico_regular" />
+
+                <ImageView
+                    android:id="@+id/imageViewClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_7"
+                    android:src="@drawable/back_arrow" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewReset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="@string/filter_reset"
+                    android:paddingStart="@dimen/dp_10"
+                    android:paddingEnd="@dimen/dp_7"
+                    android:paddingVertical="@dimen/dp_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/dp_10"
+                android:orientation="vertical">
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_where"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewLocation"
+                    style="@style/choose_languages"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawableRight="@drawable/filt_location"
+                    android:editable="true"
+                    android:ellipsize="end"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/fil_where"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:text=""
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_sport"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewSport"
+                    style="@style/choose_languages"
+                    android:hint="@string/fil_sport"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSport"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerSportType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_7"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter_service" />
+
+                </LinearLayout>
+
+                <!--
+                            As per client request set view visibility gone start
+                -->
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/filters_filter_by_spot_sub"
+                    android:visibility="gone"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewSportSub"
+                    style="@style/choose_languages"
+                    android:hint="@string/filters_filter_by_spot_sub"
+                    android:visibility="gone"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSportSub"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerSportSubType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        tools:listitem="@layout/row_filter_service" />
+
+                </LinearLayout>
+
+                <!--
+                As per client request set view visibility gone end
+    -->
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_when"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewDate"
+                    style="@style/choose_languages"
+                    android:drawableRight="@drawable/fil_calendar"
+                    android:hint="@string/fil_when"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_start_time"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewStartTime"
+                    style="@style/choose_languages"
+                    android:hint="@string/fil_start_time"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTime"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_duration"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewDuration"
+                    style="@style/choose_languages"
+                    android:hint="@string/fil_duration"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutDuration"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerDuration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_experience_type"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewActivites"
+                    style="@style/choose_languages"
+                    android:hint="@string/fil_experience_type"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutActivityType"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerActivitytype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/recommended_level"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/textViewRecommendedLevel"
+                    style="@style/choose_languages"
+                    android:hint="@string/recommended_level" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutRecommendedLevel"
+                    style="@style/select_language"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerRecommendedLevel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        tools:listitem="@layout/row_choose_language" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/perfect_for"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/textViewPerfectFor"
+                    style="@style/choose_languages"
+                    android:hint="@string/perfect_for" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutPerfectFor"
+                    style="@style/select_language"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerPerfectFor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        tools:listitem="@layout/row_choose_language" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/filter_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fil_local_s_language"
+                    android:textColor="@color/black"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewLanguage"
+                    style="@style/choose_languages"
+                    android:textColor="@color/black"
+                    android:hint="@string/fil_local_s_language"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutLanguage"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerLanguage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/filter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:text="@string/filters_filter_by_price_range"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewPrice"
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/usd_0_usd_500"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+
+                <com.kooloco.util.DaysSeekBar
+                    android:id="@+id/daySeekBarRadus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginTop="@dimen/dp_5"
+                    app:activeColor="@color/buttonColor"
+                    app:defaultColor="@color/buttonColor"
+                    app:postFixString=""
+                    app:postFixStringS=""
+                    app:barHeight="@dimen/dp_1"
+                    app:textSizeSeekBar="12"
+                    app:valuesAboveThumbs="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_12"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/filter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_weight="1"
+                        android:text="@string/filters_filter_by_rating"
+                        android:textColor="@color/black"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <ImageView
+                        style="@style/filter_seeek_rat"
+                        android:layout_width="@dimen/dp_15"
+                        android:layout_height="@dimen/dp_15"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="0dp"
+                        android:src="@drawable/rating_sel_star" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/textViewRating"
+                        style="@style/visitor_dashboard_details_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_3"
+                        android:layout_marginTop="0dp"
+                        android:text="@string/_1_5"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mdp_1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_marginStart="@dimen/dp_3"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/mdp_5"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <View style="@style/seekbar_line" />
+
+                            <ImageView
+                                android:id="@+id/imageViewRating1"
+                                style="@style/filter_seeek_rat"
+                                android:src="@drawable/rating_sel_star" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/mdp_6"
+                            android:layout_marginStart="@dimen/mdp_14"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+
+                            <View style="@style/seekbar_line" />
+
+                            <ImageView
+                                android:id="@+id/imageViewRating2"
+                                style="@style/filter_seeek_rat"
+                                android:src="@drawable/rating_sel_star" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/mdp_13"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <View style="@style/seekbar_line" />
+
+                            <ImageView
+                                android:id="@+id/imageViewRating3"
+                                style="@style/filter_seeek_rat"
+                                android:src="@drawable/rating_sel_star" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/mdp_21"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <View style="@style/seekbar_line" />
+
+                            <ImageView
+                                android:id="@+id/imageViewRating4"
+                                style="@style/filter_seeek_rat"
+                                android:src="@drawable/rating_sel_star" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="@dimen/dp_12"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="@dimen/dp_3"
+                        android:orientation="vertical">
+
+                        <View style="@style/seekbar_line" />
+
+                        <ImageView
+                            android:id="@+id/imageViewRating5"
+                            style="@style/filter_seeek_rat"
+                            android:src="@drawable/rating_sel_star" />
+
+                    </LinearLayout>
+
+                    <com.kooloco.util.DaysSeekBar
+                        android:id="@+id/daySeekBarRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="visible"
+                        app:activeColor="@color/buttonColor"
+                        app:defaultColor="@color/buttonColor"
+                        app:postFixString=""
+                        app:postFixStringS=""
+                        app:textSizeSeekBar="12"
+                        app:barHeight="@dimen/dp_1"
+                        app:valuesAboveThumbs="false" />
+
+                </FrameLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70" />
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/button_next"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonApply"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_apply" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/buttonResetAll"
+                    style="@style/textViewClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/reset_all"
+                    android:visibility="gone"
+                    android:textColor="@color/greyText" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>
+

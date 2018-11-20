@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextTitle"
+            style="@style/notification_main_title"
+            android:includeFontPadding="false"
+            android:text="Local name has notify on meet location for your appointment"
+            app:fontFamily="@font/opensans_regular_title" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|top"
+            android:layout_marginStart="@dimen/dp_5"
+            android:clickable="false"
+            android:padding="@dimen/dp_5"
+            android:text="Now"
+            android:textColor="@color/buttonColor"
+            android:textSize="@dimen/sp_8"
+            app:fontFamily="@font/opensans_regular" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/customTextSubTitle"
+        style="@style/notification_main_title"
+        android:text="Cum valebat persuadere, omnes compateres .."
+        android:textColor="@color/greyText"
+        android:textSize="@dimen/sp_10"
+        app:fontFamily="@font/opensans_regular" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutObjection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_3">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextAccept"
+            style="@style/home_icon_title"
+            android:drawableLeft="@drawable/home_accept"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/notification_accept"
+            android:textColor="@color/notificationLightGreen"
+            app:fontFamily="@font/opensans_regular" />
+
+
+        <View
+            style="@style/line_home"
+            android:layout_marginStart="@dimen/dp_5" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextModify"
+            style="@style/home_icon_title"
+            android:drawableLeft="@drawable/home_modify"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/modify"
+            android:textColor="@color/buttonColor"
+            app:fontFamily="@font/opensans_regular" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOrganization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_3"
+        android:visibility="gone">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextOrgAccept"
+            style="@style/home_icon_title"
+            android:drawableLeft="@drawable/home_accept"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/notification_accept"
+            android:textColor="@color/notificationLightGreen"
+            app:fontFamily="@font/opensans_regular" />
+
+
+        <View
+            style="@style/line_home"
+            android:layout_marginStart="@dimen/dp_5" />
+
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/customTextOrgDecline"
+            style="@style/home_icon_title"
+            android:drawableLeft="@drawable/home_decline"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/notification_decline"
+            android:textColor="@color/red"
+            app:fontFamily="@font/opensans_regular" />
+
+    </LinearLayout>
+
+    <View style="@style/bottom_line" />
+
+</LinearLayout>

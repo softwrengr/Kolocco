@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/toolbar"
+            app:contentInsetStart="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_create_your_own_organization"
+                    app:fontFamily="@font/aquatico_regular" />
+
+                <ImageView
+                    android:id="@+id/imageViewBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_7"
+                    android:src="@drawable/back_arrow" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp_75"
+                android:layout_height="@dimen/dp_75"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@drawable/drawable_white_circul">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    android:clickable="false"
+                    android:src="@drawable/org_cre_n" />
+
+                <ImageView
+                    android:id="@+id/imageViewBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop" />
+
+
+            </FrameLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:text="@string/c_y_o_upload_organization_logo"
+                android:textColor="@color/greyText"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular_title" />
+
+
+            <LinearLayout
+                style="@style/dashboard_main_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.kooloco.util.FirstCapEditText
+                    android:id="@+id/customTextOrgName"
+                    style="@style/choose_languages"
+                    android:cursorVisible="true"
+                    android:drawableRight="@null"
+                    android:editable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/c_y_o_organization_name"
+                    android:imeOptions="actionNext"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/drawable_round_corner_white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_12">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.AppCompatTextView
+                            style="@style/become_a_local"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:padding="@dimen/dp_3"
+                            android:text="@string/description_100"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/sp_12"
+                            app:fontFamily="@font/opensans_regular" />
+
+                    </LinearLayout>
+
+                    <View style="@style/bottom_line" />
+
+                    <com.kooloco.util.FirstCapEditText
+                        android:id="@+id/editTextDescripation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_3"
+                        android:layout_marginHorizontal="@dimen/dp_4"
+                        android:layout_marginTop="@dimen/dp_3"
+                        android:background="@null"
+                        android:gravity="top"
+                        android:hint="@string/become_a_local_type_here"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:lines="5"
+                        android:maxLength="100"
+                        android:textColor="@color/greyText"
+                        android:textColorHint="@color/greyText"
+                        android:textSize="@dimen/sp_12"
+                        app:background="@null"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewActivitiesType"
+                    style="@style/choose_languages"
+                    android:hint="@string/c_y_o_select_activities_types"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutActivitiesType"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerActivitiesType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextViewSport"
+                    style="@style/choose_languages"
+                    android:hint="@string/c_y_o_select_sport_types"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutSport"
+                    style="@style/filter_drop"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerSportType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginEnd="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/mdp_10"
+                        tools:listitem="@layout/row_filter" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextLocation"
+                    style="@style/choose_languages"
+                    android:clickable="true"
+                    android:cursorVisible="false"
+                    android:drawableRight="@drawable/filt_location"
+                    android:editable="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/c_y_o_location"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/customTextWebSiteUrl"
+                    style="@style/choose_languages"
+                    android:cursorVisible="true"
+                    android:drawableRight="@null"
+                    android:editable="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/c_y_o_website_url"
+                    android:imeOptions="actionDone"
+                    android:inputType="textWebEditText"
+                    app:fontFamily="@font/opensans_regular" />
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginBottom="@dimen/dp_7"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_marginTop="@dimen/dp_7"
+                    android:includeFontPadding="false"
+                    android:text="@string/c_y_o_upload_organization_image"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutImageSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_142"
+                        android:background="@drawable/drawable_round_corner_small_white">
+
+                        <com.github.siyamed.shapeimageview.mask.PorterShapeImageView
+                            android:id="@+id/imageViewSlide"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/temp_2"
+                            app:siShape="@drawable/shape_rounded_rectangle" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerImageList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:listitem="@layout/row_local_add_image" />
+
+
+                        <ImageView
+                            android:id="@+id/imageViewAdd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:clickable="false"
+                            android:src="@drawable/add_image_plus" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    style="@style/bottom_line"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:layout_marginStart="@dimen/dp_4" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_10" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutStep2"
+                style="@style/dashboard_main_space"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout style="@style/button_next">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/buttonNext"
+                        style="@style/button"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="@string/button_next" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_45" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
+

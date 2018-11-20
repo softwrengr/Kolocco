@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewImageSlide"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_165"
+            tools:listitem="@layout/row_home_slider_image" />
+
+        <com.rd.PageIndicatorView
+            android:id="@+id/pageIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:paddingBottom="@dimen/dp_10"
+            app:piv_radius="@dimen/dp_3"
+            app:piv_selectedColor="@color/white"
+            app:piv_unselectedColor="@color/white" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/dp_7"
+                android:layout_marginStart="@dimen/dp_9"
+                android:layout_weight="1"
+                android:clickable="false"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="Doris Cadiz"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_12"
+                    android:layout_marginTop="@dimen/dp_4"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_3" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerServiceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/row_home_service_type" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_3" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false"
+                    android:orientation="horizontal"
+                    android:paddingEnd="@dimen/dp_5">
+
+                    <ImageView
+                        android:id="@+id/imageViewProfile"
+                        android:layout_width="@dimen/dp_31"
+                        android:layout_height="@dimen/dp_31"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@+id/ratingView"
+                        android:background="@drawable/user_round"
+                        android:clickable="false"
+                        android:visibility="visible" />
+
+                    <FrameLayout
+                        android:id="@+id/ratingView"
+                        android:layout_width="@dimen/dp_38"
+                        android:layout_height="@dimen/dp_38"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="@dimen/mdp_10"
+                        android:background="@drawable/drawable_white_circul"
+                        android:clickable="false">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:src="@drawable/home_star" />
+
+                            <android.support.v7.widget.AppCompatTextView
+                                android:id="@+id/customTextViewRatingValue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:clickable="false"
+                                android:includeFontPadding="false"
+                                android:paddingTop="@dimen/dp_2"
+                                android:text="4"
+                                android:textColor="@color/yellow"
+                                android:textSize="@dimen/sp_8"
+                                app:fontFamily="@font/opensans_regular_title" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginEnd="@dimen/dp_9"
+                    android:clickable="false"
+                    android:drawableLeft="@drawable/home_distance"
+                    android:drawablePadding="@dimen/dp_8"
+                    android:paddingTop="@dimen/dp_2"
+                    android:text="8 km"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_9"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/row_home_service_image" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_5" />
+
+</LinearLayout>

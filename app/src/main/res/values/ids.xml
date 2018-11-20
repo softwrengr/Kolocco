@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="toolbar" type="id" />
+    <item name="toolbarTitle" type="id" />
+    <item name="cropView" type="id" />
+    <item name="crop_image_menu_rotate_left" type="id" />
+    <item name="crop_image_menu_rotate_right" type="id" />
+    <item name="crop_image_menu_crop" type="id" />
+</resources>

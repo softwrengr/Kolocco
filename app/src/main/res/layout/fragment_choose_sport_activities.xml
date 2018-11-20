@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/toolbar_choose_sport_activities"
+                    app:fontFamily="@font/aquatico_regular" />
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@string/skip"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_10"
+                app:fontFamily="@font/opensans_regular" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            style="@style/dashboard_main_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_9"
+                android:layout_marginStart="@dimen/dp_9"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/choose_sport_type"
+                        android:includeFontPadding="false"
+                        android:paddingStart="0dp"
+                        android:text="@string/session"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/choose_sport_type"
+                        android:layout_gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/lesson"
+                        android:textColor="@color/greyLine"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/choose_sport_type"
+                        android:layout_gravity="end"
+                        android:includeFontPadding="false"
+                        android:paddingEnd="0dp"
+                        android:text="@string/discovery"
+                        android:textColor="@color/greyLine"
+                        app:fontFamily="@font/opensans_regular_title" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                style="@style/bottom_line_s_m"
+                android:layout_marginEnd="@dimen/dp_9"
+                android:layout_marginStart="@dimen/dp_9" />
+            <!--Note section start -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_9"
+                android:layout_marginStart="@dimen/dp_9"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_9"
+                android:layout_marginStart="@dimen/dp_9"
+                android:gravity="center|start"
+                android:orientation="horizontal">
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewNote"
+                    style="@style/visitor_dashboard_details_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/appointment_summery_note"
+                    android:textSize="@dimen/sp_8"
+                    android:layout_gravity="center"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    style="@style/receipt_value_n"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/you_need_to_prices_add_per_hour"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_8"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+            <!--Note section end -->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerServiceActivities"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:visibility="visible"
+                tools:listitem="@layout/row_local_choose_sport_activites" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_50"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/customTextViewAddCard"
+                    style="@style/receipt_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/payment_plus_icon"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:includeFontPadding="false"
+                    android:text="@string/request_an_other_sport"
+                    android:textColor="@color/buttonColor"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular_title" />
+
+                <View style="@style/bottom_line" />
+
+            </LinearLayout>
+
+            <LinearLayout style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonNext"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:text="@string/button_next" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

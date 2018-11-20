@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        style="@style/toolbar"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/toolbarTitle"
+                    style="@style/toolbar_main_title"
+                    android:includeFontPadding="false"
+                    android:text="@string/become_a_local"
+                    app:fontFamily="@font/aquatico_regular" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_7"
+                android:src="@drawable/back_arrow" />
+
+
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/dashboard_main_space"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/becomALocalEditTextName"
+                style="@style/become_a_local"
+                android:clickable="false"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/become_a_local_name"
+                android:inputType="text"
+                android:text=""
+                app:fontFamily="@font/opensans_regular" />
+
+            <com.kooloco.util.FirstCapEditText
+                android:id="@+id/becomALocalEditTextAdress"
+                style="@style/become_a_local"
+                android:hint="@string/become_a_local_address"
+                android:inputType="textPostalAddress|textCapSentences"
+                android:visibility="gone"
+                app:fontFamily="@font/opensans_regular" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/becomALocalEditTextTelphone"
+                    style="@style/become_a_local"
+                    android:hint="@string/become_a_local_telephone"
+                    android:inputType="phone"
+                    android:maxLength="15"
+                    android:paddingStart="@dimen/dp_75"
+                    app:fontFamily="@font/opensans_regular" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/editTextCountryCode"
+                    style="@style/choose_languages"
+                    android:layout_width="@dimen/dp_82"
+                    android:layout_gravity="center|start"
+                    android:drawableRight="@drawable/sport_activity_down_arrow"
+                    android:background="@null"
+                    android:text="+41" />
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/drawable_round_corner_white"
+                android:orientation="vertical"
+                android:padding="@dimen/dp_12">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        style="@style/become_a_local"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:padding="@dimen/dp_3"
+                        android:text="@string/become_a_local_introduce_your_new_f"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/sp_12"
+                        app:fontFamily="@font/opensans_regular" />
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingEnd="@dimen/dp_3"
+                        android:text="@string/become_a_local_introduce_your_t"
+                        android:textColor="@color/greyText"
+                        android:textSize="@dimen/sp_9"
+                        android:visibility="gone"
+                        app:fontFamily="@font/opensans_regular" />
+
+                </LinearLayout>
+
+                <View style="@style/bottom_line" />
+
+                <com.kooloco.util.FirstCapEditText
+                    android:id="@+id/becomeALocalIntroduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_3"
+                    android:layout_marginTop="@dimen/dp_3"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/become_a_local_type_here_new"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:lines="5"
+                    android:maxLength="400"
+                    android:textColor="@color/greyText"
+                    android:textColorHint="@color/greyText"
+                    android:textSize="@dimen/sp_12"
+                    app:background="@null"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:text="@string/choose_languages_language_of_speak"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/chooseLanguageSelectLocalLanguage"
+                style="@style/choose_languages"
+                android:hint="@string/choose_languages_select_language" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutLocalSpeakLanguage"
+                style="@style/select_language"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_10"
+                    tools:listitem="@layout/row_choose_language" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_10"
+                android:includeFontPadding="false"
+                android:text="@string/currency_during_the_activities"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_12"
+                app:fontFamily="@font/opensans_regular" />
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/chooseCurrency"
+                style="@style/choose_languages"
+                android:hint="@string/become_a_local_select_currency" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutCurrency"
+                style="@style/select_language"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dp_10"
+                    tools:listitem="@layout/row_choose_language" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:layout_marginStart="@dimen/dp_5"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_12"
+                android:paddingTop="@dimen/dp_12">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/signupTermsAndConditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/selector_checkbox"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:text="@string/sign_up_please_agree_terms"
+                    android:textColor="@color/greyText"
+                    android:textSize="@dimen/sp_10"
+                    app:fontFamily="@font/opensans_regular" />
+
+            </LinearLayout>
+
+
+            <LinearLayout style="@style/button_next">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/buttonNext"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/button_next" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_25" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
