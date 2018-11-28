@@ -217,7 +217,7 @@ disburse funds when both Buyers and Sellers are satisfied</string>
     <string name="rating_professionalism">Professionalisme</string>
     <string name="rating_guidance">Guide</string>
     <string name="rating_meeting_spot">Point de rendez-vous</string>
-    <string name="rating_activity_duration">Durée d\''activité</string>
+    <string name="rating_activity_duration">Durée d\'\'activité</string>
     <string name="rating_other">Autre</string>
 
     <!--
@@ -1070,7 +1070,7 @@ Profile screen
 
     <string name="delete_local_message">Si vous désafilliez un local de votre organisation, la règle de paiement sera automatiquement désactivée.</string>
     <string name="val_delete_org_image">At least one organization image required so you can not delete this image.</string>
-    <string name="your_local_profile_has_been_completed_and_awaited_for_the_kooloco_approval">Votre profil local a été complété et attend l\'approbation d'un administrateur</string>
+    <string name="your_local_profile_has_been_completed_and_awaited_for_the_kooloco_approval">Votre profil local a été complété et attend l\'approbation d\'un administrateur</string>
     <string name="your_organization_has_been_completed_and_awaited_for_the_admin_approval">Your organization awaited for the admin approval</string>
     <string name="uploading_images">Importer</string>
 
@@ -1434,7 +1434,7 @@ Profile screen
     <string name="val_enter_password_minimum_4">Veuillez entrer 4 caractères minimums pour créer un mot de passe</string>
     <string name="val_enter_conformpassword">Veuillez Confirmer mot de passe</string>
     <string name="val_agress_terms_conditions"><![CDATA[Veuillez accepter les Termes et Conditions]]></string>
-    <string name="val_aprticipant_email">Veuillez entrer l\'Email valide d'un participant.</string>
+    <string name="val_aprticipant_email">Veuillez entrer l\'Email valide d\'un participant.</string>
     <string name="val_select_card">Veuillez sélectionner une carte</string>
     <string name="referral_amount">Montant parrainage</string>
     <string name="kooloco_referral">Kooloco Référence</string>
@@ -1480,7 +1480,7 @@ Profile screen
     <string name="local_review_professionalism">Professionalisme</string>
     <string name="local_review_guidance">Guide</string>
     <string name="local_review_meeting_point">Point de rencontre</string>
-    <string name="local_review_activity_duration">Durée d\''activité</string>
+    <string name="local_review_activity_duration">Durée d\'\'activité</string>
     <string name="local_review_other">Autre</string>
     <string name="send_to_support">Envoyer pour soutenir</string>
     <string name="share_rating_exp">I just took part in this amazing Adventure, you should too!</string>

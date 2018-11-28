@@ -5,13 +5,9 @@ package com.kooloco.ui.authantication.presenter;/**
 
 import android.os.Bundle;
 
-import javax.inject.Inject;
-
-
 import com.google.gson.Gson;
 import com.kooloco.core.AppPreferences;
 import com.kooloco.core.Session;
-import com.kooloco.data.datasource.KoolocoDataSource;
 import com.kooloco.data.repository.KoolocoRepository;
 import com.kooloco.di.PerActivity;
 import com.kooloco.exception.ServerException;
@@ -26,15 +22,11 @@ import com.kooloco.ui.navigation.AppNavigator;
 import com.kooloco.util.ImagePicker;
 import com.kooloco.util.SubscribeWithView;
 
-import java.io.File;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import okhttp3.MediaType;
-import okhttp3.MultipartBody;
-import okhttp3.RequestBody;
+import javax.inject.Inject;
 
 @PerActivity
 public class SignUpPresenter extends BasePresenter<SignUpView> {
@@ -109,6 +101,7 @@ public class SignUpPresenter extends BasePresenter<SignUpView> {
                 map.put("device_type", session.DEVICE_TYPE);
                 map.put("device_id", session.getDeviceId());
                 map.put("timezone", Calendar.getInstance().getTimeZone().getID());
+                map.put("API-KEY", "kooloco");
 
                 if (!referalCode.isEmpty()) {
                     map.put("referral_code", referalCode);

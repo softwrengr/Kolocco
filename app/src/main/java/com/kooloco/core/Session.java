@@ -8,9 +8,9 @@ import com.kooloco.model.User;
  */
 public interface Session {
 
-    String API_KEY = "API-KEY";
-    String USER_SESSION = "token";
-    String USER_ID = "USER_ID";
+    String API_KEY = "kooloco";
+    String USER_SESSION = "szg9wyUj6z0hbVDU6nM2vuEmbyigN3PgC5q8EksKTs25";
+    String USER_ID = "24";
     String DEVICE_TYPE = "A";
 
     String getApiKey();

@@ -60,11 +60,12 @@ public class LoginPresenter extends BasePresenter<LoginView> {
         HashMap<String, String> map = new HashMap<>();
         map.put("email", emailAddress);
         map.put("password", password);
-        map.put("latitude", "" + BaseFragment.latitude);
-        map.put("longitude", "" + BaseFragment.longitude);
-        map.put("device_type", session.DEVICE_TYPE);
-        map.put("device_id", session.getDeviceId());
-        map.put("timezone", Calendar.getInstance().getTimeZone().getID());
+        map.put("API-KEY", "kooloco");
+//        map.put("latitude", "" + BaseFragment.latitude);
+//        map.put("longitude", "" + BaseFragment.longitude);
+//        map.put("device_type", session.DEVICE_TYPE);
+//        map.put("device_id", session.getDeviceId());
+//        map.put("timezone", Calendar.getInstance().getTimeZone().getID());
         kooocoRepository.postLogin(map).subscribe(new SubscribeWithView<Response<User>>(view) {
             @Override
             public void onSuccess(Response<User> userResponse) {

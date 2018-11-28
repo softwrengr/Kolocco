@@ -1,7 +1,5 @@
 package com.kooloco.data.service;
 
-import android.app.Activity;
-
 import com.kooloco.data.URLFactory;
 import com.kooloco.data.entity.ResponseEntity;
 import com.kooloco.data.entity.SportActivityEntity;
@@ -19,7 +17,6 @@ import com.kooloco.model.CheckEquipment;
 import com.kooloco.model.CheckEquipmentResponse;
 import com.kooloco.model.CheckPaymentRules;
 import com.kooloco.model.CountryList;
-import com.kooloco.model.CreditCard;
 import com.kooloco.model.Currency;
 import com.kooloco.model.DashboardDetails;
 import com.kooloco.model.DisableDateListResposne;
@@ -35,7 +32,6 @@ import com.kooloco.model.ExperienceResponse;
 import com.kooloco.model.FilterGetData;
 import com.kooloco.model.HomeLocalAndExpResponse;
 import com.kooloco.model.HomeNewResponse;
-import com.kooloco.model.Language;
 import com.kooloco.model.LanguageResponse;
 import com.kooloco.model.LocalNew;
 import com.kooloco.model.MultiFile;
@@ -44,8 +40,6 @@ import com.kooloco.model.NotificationReadCheck;
 import com.kooloco.model.ObjectionDetails;
 import com.kooloco.model.Order;
 import com.kooloco.model.OrderDetails;
-import com.kooloco.model.OrderNew;
-import com.kooloco.model.OrderOrg;
 import com.kooloco.model.OrgLocal;
 import com.kooloco.model.OrganizationDashboard;
 import com.kooloco.model.OrganizationDetails;
@@ -64,7 +58,6 @@ import com.kooloco.model.ScheduleAndPriceResponse;
 import com.kooloco.model.SchedulePrice;
 import com.kooloco.model.SelectActivites;
 import com.kooloco.model.SetSpecialAvability;
-import com.kooloco.model.SportActivity;
 import com.kooloco.model.SportPriceRules;
 import com.kooloco.model.Tag;
 import com.kooloco.model.Time;
@@ -80,14 +73,10 @@ import io.reactivex.Single;
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.http.Body;
-import retrofit2.http.FieldMap;
-import retrofit2.http.FormUrlEncoded;
-import retrofit2.http.GET;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
 import retrofit2.http.PartMap;
-import retrofit2.http.QueryMap;
 
 
 /**
@@ -111,6 +100,7 @@ public interface Service {
 
     @POST(URLFactory.SIGNUP)
     Single<Response<User>> signUp(@Body() Map<String, String> map);
+
 
     @POST(URLFactory.LOGIN)
     Single<Response<User>> login(@Body() Map<String, String> map);

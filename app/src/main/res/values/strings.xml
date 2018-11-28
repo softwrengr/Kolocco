@@ -1397,7 +1397,7 @@ Profile screen
     <string name="start_time">Start Time</string>
     <string name="new_image">Image</string>
     <string name="new_video">Video</string>
-    <string name="we_get_between_3_and_7_commission_on_each_ntransaction_in_order_to_cover_our_platform_s_costs_nand_better_connect_the_adventures">Kooloco receives a commission of between 3% and 7% on each transaction to cover its platform's cost.</string>
+    <string name="we_get_between_3_and_7_commission_on_each_ntransaction_in_order_to_cover_our_platform_s_costs_nand_better_connect_the_adventures">Kooloco receives a commission of between 3% and 7% on each transaction to cover its platform\'s cost.</string>
     <string name="search_locals">Search Locals...</string>
     <string name="search_locals_new">Search</string>
 

@@ -12,12 +12,12 @@ public class URLFactory {
     // server details
     private static boolean isLocal = false;
 
-    private static final String SCHEME = isLocal ? "http" : "http";
-//    private static final String HOST =  isLocal ? "aventure-privee.com" : "aventure-privee.com";
+    private static final String SCHEME = isLocal ? "http" : "https";
+    private static final String HOST =  isLocal ? "aventure-privee.com" : "aventure-privee.com";
    // private static final String HOST = isLocal ? "192.168.1.131" : "132.148.17.145"; //za sta khbra poha shuma kho ta mata postman yo exmpale ukhay
-    private static final String HOST = isLocal ? "52.47.196.211" : "52.47.196.211";
+//    private static final String HOST = isLocal ? "52.47.196.211" : "52.47.196.211";
 //    private static final String API_PATH = isLocal ? "project/kooloco/v1/" : "~hyperlinkserver/koolocoNEW/v1/";
-    private static final String API_PATH = isLocal ? "v1\\" : "v1\\";
+    private static final String API_PATH = isLocal ? "v1/" : "v1/";
     private static final String EXTRA_URL = "http://aventure-privee.com/~hyperlinkserver/koolocoNEW/assets/upload/icon";
     private static final String EXTRA_URL_NEW = "http://aventure-privee.com/~hyperlinkserver/koolocoNEW/";
 
@@ -30,7 +30,7 @@ public class URLFactory {
         return new HttpUrl.Builder()
                 .scheme(SCHEME)
                 .host(HOST)
-                .addPathSegment(API_PATH)
+                .addPathSegments(API_PATH)
                 .build();
     }
     //crashed postmanopen ka

@@ -37,14 +37,13 @@ public class NetModule {
 
     @Singleton
     @Provides
-    OkHttpClient provideClient(@Named("header") Interceptor headerInterceptor, @Named("pre_validation") Interceptor networkInterceptor, @Named("aes") Interceptor aesInterceptor) {
+    OkHttpClient provideClient(@Named("header") Interceptor headerInterceptor, @Named("pre_validation") Interceptor networkInterceptor) {
         HttpLoggingInterceptor httpLoggingInterceptor = new HttpLoggingInterceptor();
         httpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         return new OkHttpClient
                 .Builder()
                 .addInterceptor(headerInterceptor)
                 .addInterceptor(httpLoggingInterceptor)
-                .addInterceptor(aesInterceptor)
                 .addNetworkInterceptor(networkInterceptor)
                 .connectTimeout(10, TimeUnit.MINUTES)
                 .readTimeout(10, TimeUnit.MINUTES)
@@ -55,6 +54,9 @@ public class NetModule {
     @Provides
     @Singleton
     Retrofit provideRetrofit(OkHttpClient okHttpClient) {
+        HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        okHttpClient.newBuilder().addInterceptor(interceptor).build();
         return new Retrofit.Builder()
                 .baseUrl(URLFactory.provideHttpUrl())
                 .client(okHttpClient)
